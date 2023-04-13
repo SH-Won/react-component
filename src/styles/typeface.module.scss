@@ -1,0 +1,115 @@
+// Font size
+$typeface-size-map: (
+  "Heading_1": 24px,
+  "Heading_2": 20px,
+  "Heading_2_m": 20px,
+  "Heading_3": 18px,
+  "Paragraph_1_b": 16px,
+  "Paragraph_1_sb": 16px,
+  "Paragraph_1_m": 16px,
+  "Paragraph_2": 14px,
+  "Paragraph_2b": 14px,
+  "Paragraph_2_b": 16px,
+  "Paragraph_3": 12px,
+  "Paragraph_3_b": 12px,
+  "Buttons_1_b": 15px,
+  "Buttons_1_m": 15px,
+  "Buttons_2": 13px,
+  "Tag_1": 10px,
+  "Chip_1": 13px,
+  "Chip_2": 14px,
+  "Title_1": 20px,
+  "Title_2": 28px,
+  "Footer": 12px,
+  "Detail_1": 10px,
+);
+@function typeface-size($name) {
+  @return map-get($map: $typeface-size-map, $key: $name);
+};
+
+// Font line height
+$typeface-line-height-map: (
+  "Heading_1": 32px,
+  "Heading_2": 30px,
+  "Heading_2_m": 30px,
+  "Heading_3": 26px,
+  "Paragraph_1_b": 24px,
+  "Paragraph_1_sb": 24px,
+  "Paragraph_1_m": 24px,
+  "Paragraph_2": 22px,
+  "Paragraph_2b": 22px,
+  "Paragraph_2_b": 20px,
+  "Paragraph_3": 16px,
+  "Paragraph_3_b": 16px,
+  "Buttons_1_b": 22px,
+  "Buttons_1_m": 22px,
+  "Buttons_2": 20px,
+  "Tag_1": 20px,
+  "Chip_1": 20px,
+  "Chip_2": 20px,
+  "Title_1": 24px,
+  "Title_2": 30px,
+  "Footer": 30px,
+  "Detail_1": 12px,
+);
+@function typeface-line-height($name) {
+  @return map-get($map: $typeface-line-height-map, $key: $name);
+};
+
+// Font weight
+$typeface-weight-map: (
+  "Heading_1": 600,
+  "Heading_2": 600,
+  "Heading_2_m": 400,
+  "Heading_3": 600,
+  "Paragraph_1_b": 600,
+  "Paragraph_1_sb": 500,
+  "Paragraph_1_m": 400,
+  "Paragraph_2": 400,
+  "Paragraph_2b": 600,
+  "Paragraph_2_b": 500,
+  "Paragraph_3": 400,
+  "Paragraph_3_b": 600,
+  "Buttons_1_b": 600,
+  "Buttons_1_m": 400,
+  "Buttons_2": 400,
+  "Tag_1": 600,
+  "Chip_1": 500,
+  "Chip_2": 500,
+  "Title_1": 600,
+  "Title_2": 600,
+  "Footer": 700,
+  "Detail_1": 600
+);
+@function typeface-weight($name) {
+  @return map-get($map: $typeface-weight-map, $key: $name);
+};
+
+@mixin typeface($name) {
+  font-size: typeface-size($name);
+  font-weight: typeface-weight($name);
+  line-height: typeface-line-height($name);
+  font-family: SUIT, sans-serif;
+}
+
+@mixin typeface-inconsolata($name) {
+  font-size: typeface-size($name);
+  font-weight: typeface-weight($name);
+  line-height: typeface-line-height($name);
+  font-family: Inconsolata, sans-serif;
+}
+
+:export {
+  @each $key, $value in $typeface-weight-map {
+    #{unquote($key)}_weight: $value
+  }
+  @each $key, $value in $typeface-size-map {
+    #{unquote($key)}_size: $value
+  }
+  @each $key, $value in $typeface-line-height-map {
+    #{unquote($key)}_line_height: $value
+  }
+  @each $key in map-keys($map: $typeface-size-map) {
+    #{unquote($key)}_key: $key
+  }
+}

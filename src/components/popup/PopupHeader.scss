@@ -1,0 +1,21 @@
+@import '../../styles/colors.module.scss';
+@import '../../styles/typeface.module.scss';
+.popup-header {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  place-items: center;
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    @include typeface('Heading_2_m');
+    color: color('grey_111');
+    text-align: center;
+  }
+  .icon {
+    user-select: none;
+    cursor: pointer;
+  }
+}

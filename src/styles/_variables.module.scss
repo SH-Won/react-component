@@ -1,0 +1,9 @@
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 1024px;
+
+:export {
+  mobile:$breakpoint-mobile;
+  tablet:$breakpoint-tablet;
+  desktop:$breakpoint-desktop;
+}

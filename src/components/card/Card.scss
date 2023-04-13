@@ -1,0 +1,12 @@
+.card-container {
+  position: relative;
+  .card {
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    & > img {
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+}

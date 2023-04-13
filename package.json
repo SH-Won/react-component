@@ -1,0 +1,38 @@
+{
+  "name": "my-react-component",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./dist/my-react-component.mjs",
+  "types": "./src/index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "sass": "^1.61.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0",
+    "vite-tsconfig-paths": "^4.1.0"
+  },
+  "packageManager": "yarn@3.5.0"
+}

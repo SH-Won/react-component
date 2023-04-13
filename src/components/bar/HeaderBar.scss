@@ -1,0 +1,15 @@
+@import '../../styles/colors.module.scss';
+@import '../../styles/typeface.module.scss';
+.appBar {
+  display: flex;
+  gap: 10px;
+  background-color: #fff;
+  padding: 14px 40px;
+  border-bottom: 1px solid color('line_02');
+  &.mobile {
+    padding: 14px 20px;
+  }
+  & > span {
+    @include typeface('Heading_3');
+  }
+}
