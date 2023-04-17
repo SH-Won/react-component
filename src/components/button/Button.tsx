@@ -1,18 +1,17 @@
-import { Colors } from "@/index"
+import { Colors } from '@/index'
 import './Button.scss'
 interface Props {
   size?: string
-  color : string
-  children? :  string | JSX.Element | JSX.Element[] 
-  disable? : boolean,
-  width? : string,
-  fontColor? : string,
-  border? :string,
-  click? :() => void 
+  color: string
+  children?: string | JSX.Element | JSX.Element[]
+  disable?: boolean
+  width?: string
+  fontColor?: string
+  border?: string
+  click?: (() => void) | (() => Promise<void>)
 }
 
-const Button = (props :Props) => {
-
+const Button = (props: Props) => {
   const computedStyle = () => {
     if (props.disable) {
       return {
@@ -33,7 +32,11 @@ const Button = (props :Props) => {
     }
   }
   return (
-    <div className="common-button" style={computedStyle()} onClick={props.click}>
+    <div
+      className="common-button"
+      style={computedStyle()}
+      onClick={props.click}
+    >
       {props.children}
     </div>
   )
