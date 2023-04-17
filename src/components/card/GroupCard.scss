@@ -1,0 +1,26 @@
+@import '../../styles/colors.module.scss';
+@import '../../styles/typeface.module.scss';
+.group-card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  & >.card {
+    width: 100%;
+    flex-grow: 1;
+    & > .card-image {
+      width: 80px;
+      height: 80px;
+    }
+    background-color: color('white');
+    display: flex;
+    gap: 30px;
+    padding: 16px;
+    border-radius: 8px;
+    align-items: center;
+    & > .card-explain {
+      @include typeface('Heading_3');
+    }
+  }
+}

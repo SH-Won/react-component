@@ -1,18 +1,25 @@
-// import styles from './HeaderBar.module.scss';
-import './HeaderBar.scss';
+import { Colors } from '@/index'
+import { Element } from '../elements'
+import './HeaderBar.scss'
 
 interface Props {
-  isMobile? : boolean
-  title? : string
+  isMobile?: boolean
+  title?: string
+  back: (() => void) | undefined
 }
-const HeaderBar = (props :Props) => {
+const HeaderBar = (props: Props) => {
+  const isBackFunc = typeof props.back === 'function'
 
   const className = props.isMobile ? 'appBar mobile' : 'appBar'
   return (
     <div className={className}>
-    <span>{ props.title }</span>
-    <span>{props.isMobile}</span>
-  </div>
+      {isBackFunc && (
+        <div onClick={props.back}>
+          <Element name="ArrowLeft" size="big" color={Colors.grey_111} />
+        </div>
+      )}
+      <span>{props.title}</span>
+    </div>
   )
 }
 
