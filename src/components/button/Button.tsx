@@ -1,4 +1,4 @@
-import { Colors } from '@/index'
+import Colors from '../../styles/colors.module.scss'
 import './Button.scss'
 interface Props {
   size?: string

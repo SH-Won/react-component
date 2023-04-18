@@ -1,4 +1,4 @@
-import { OverLay } from '@/layout'
+import OverLay from '../../layout/OverLay'
 import './LoadingSpinner.scss'
 interface LoadingSpinnerProps {
   opacity: number

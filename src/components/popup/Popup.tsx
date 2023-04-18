@@ -1,4 +1,4 @@
-import { OverLay } from '@/layout'
+import OverLay from '../../layout/OverLay'
 import './Popup.scss'
 interface Props {
   isOpen: boolean
