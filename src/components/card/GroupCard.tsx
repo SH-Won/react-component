@@ -1,4 +1,4 @@
-import { Colors } from '@/index'
+import Colors from '../../styles/colors.module.scss'
 import { Element } from '../elements'
 import './GroupCard.scss'
 
