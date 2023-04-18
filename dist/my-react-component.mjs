@@ -1203,19 +1203,27 @@ const dt = (r) => {
     /* @__PURE__ */ n("span", { children: r.title })
   ] });
 };
-const ft = (r) => /* @__PURE__ */ n("div", { className: "common-button", style: (() => r.disable ? {
-  backgroundColor: A.bg_disable,
-  padding: r.size === "big" ? "14px 24px" : "12px 20px",
-  border: r.border ? `1px solid ${r.border}` : "",
-  width: r.width,
-  color: r.fontColor
-} : {
-  backgroundColor: r.color,
-  padding: r.size === "big" ? "14px 24px" : "12px 20px",
-  border: r.border ? `1px solid ${r.border}` : "",
-  width: r.width,
-  color: r.fontColor
-})(), onClick: r.click, children: r.children });
+const ft = (r) => /* @__PURE__ */ n(
+  "div",
+  {
+    className: "common-button",
+    style: (() => r.disable ? {
+      backgroundColor: A.bg_disable,
+      padding: r.size === "big" ? "14px 24px" : "12px 20px",
+      border: r.border ? `1px solid ${r.border}` : "",
+      width: r.width,
+      color: r.fontColor
+    } : {
+      backgroundColor: r.color,
+      padding: r.size === "big" ? "14px 24px" : "12px 20px",
+      border: r.border ? `1px solid ${r.border}` : "",
+      width: r.width,
+      color: r.fontColor
+    })(),
+    onClick: r.click,
+    children: r.children
+  }
+);
 const ht = (r) => {
   const o = () => ({
     height: r.height ?? "280px",
