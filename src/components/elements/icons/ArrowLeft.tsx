@@ -1,31 +1,41 @@
-import { IconProps } from "../Element"
-const ArrowLeft = (props : IconProps) => {
-  const size = props.size === 'big' ? '30' : props.size === 'medium' ? '24' : '20'
+import { IconProps } from '../Element'
+const ArrowLeft = (props: IconProps) => {
+  const size =
+    props.size === 'big' ? '30' : props.size === 'medium' ? '24' : '20'
   return (
     <svg
-    width={size}
-    height={size}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <mask
-      id="a"
-      style={{maskType: "alpha"}}
-      maskUnits="userSpaceOnUse"
-      x="0"
-      y="0"
+      xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      viewBox="0 0 24 24"
+      fill="none"
     >
-      <path fill={"#D9D9D9"} d={"M0 0h30v30H0z"} />
-    </mask>
-    <g mask="url(#a)">
-      <path
-        d="M15 23.53 6.47 15 15 6.47l1.16 1.19-6.57 6.53h13.94v1.62H9.6l6.57 6.53-1.16 1.2Z"
-        fill={props.color}
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-    </g>
-  </svg>
+
+      <g id="SVGRepo_iconCarrier">
+        {' '}
+        <path
+          d="M4 12L20 12"
+          stroke={props.color}
+          strokeWidth="0.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />{' '}
+        <path
+          d="M10 6L4.0625 11.9375V11.9375C4.02798 11.972 4.02798 12.028 4.0625 12.0625V12.0625L10 18"
+          stroke={props.color}
+          strokeWidth="0.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />{' '}
+      </g>
+    </svg>
   )
 }
 
