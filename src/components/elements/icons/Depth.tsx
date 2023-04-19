@@ -6,17 +6,34 @@ const Depth = (props: IconProps) => {
 
   return (
     <svg
-      data-v-1cb5ec28=""
+      xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      viewBox="0 0 24 24"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        data-v-1cb5ec28=""
-        d="M1 30H.5v.5H1V30Zm15.35.35a.5.5 0 0 0 0-.7l-3.18-3.19a.5.5 0 1 0-.7.71L15.28 30l-2.83 2.83a.5.5 0 1 0 .71.7l3.18-3.18ZM.5 0v30h1V0h-1ZM1 30.5h15v-1H1v1Z"
-        fill="#CFD4DD"
-      ></path>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <g id="SVGRepo_iconCarrier">
+        {' '}
+        <g id="Arrow / Arrow_Sub_Down_Right">
+          {' '}
+          <path
+            id="Vector"
+            d="M13 11L18 16M18 16L13 21M18 16H10.1969C9.07899 16 8.5192 16 8.0918 15.7822C7.71547 15.5905 7.40973 15.2839 7.21799 14.9076C7 14.4798 7 13.9201 7 12.8V3"
+            stroke={props.color}
+            strokeWidth="0.24000000000000005"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />{' '}
+        </g>{' '}
+      </g>
     </svg>
   )
 }
