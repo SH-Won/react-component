@@ -1,5 +1,5 @@
 import re, { lazy as Cr, Suspense as Rr } from "react";
-var H = {}, Sr = {
+var H = {}, xr = {
   get exports() {
     return H;
   },
@@ -17,20 +17,20 @@ var H = {}, Sr = {
  * LICENSE file in the root directory of this source tree.
  */
 var Ee;
-function xr() {
+function Sr() {
   if (Ee)
     return D;
   Ee = 1;
   var r = re, o = Symbol.for("react.element"), b = Symbol.for("react.fragment"), y = Object.prototype.hasOwnProperty, E = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, A = { key: !0, ref: !0, __self: !0, __source: !0 };
   function T(R, g, L) {
-    var _, k = {}, S = null, W = null;
-    L !== void 0 && (S = "" + L), g.key !== void 0 && (S = "" + g.key), g.ref !== void 0 && (W = g.ref);
+    var _, k = {}, x = null, W = null;
+    L !== void 0 && (x = "" + L), g.key !== void 0 && (x = "" + g.key), g.ref !== void 0 && (W = g.ref);
     for (_ in g)
       y.call(g, _) && !A.hasOwnProperty(_) && (k[_] = g[_]);
     if (R && R.defaultProps)
       for (_ in g = R.defaultProps, g)
         k[_] === void 0 && (k[_] = g[_]);
-    return { $$typeof: o, type: R, key: S, ref: W, props: k, _owner: E.current };
+    return { $$typeof: o, type: R, key: x, ref: W, props: k, _owner: E.current };
   }
   return D.Fragment = b, D.jsx = T, D.jsxs = T, D;
 }
@@ -47,7 +47,7 @@ var $ = {};
 var Le;
 function Er() {
   return Le || (Le = 1, process.env.NODE_ENV !== "production" && function() {
-    var r = re, o = Symbol.for("react.element"), b = Symbol.for("react.portal"), y = Symbol.for("react.fragment"), E = Symbol.for("react.strict_mode"), A = Symbol.for("react.profiler"), T = Symbol.for("react.provider"), R = Symbol.for("react.context"), g = Symbol.for("react.forward_ref"), L = Symbol.for("react.suspense"), _ = Symbol.for("react.suspense_list"), k = Symbol.for("react.memo"), S = Symbol.for("react.lazy"), W = Symbol.for("react.offscreen"), te = Symbol.iterator, Ge = "@@iterator";
+    var r = re, o = Symbol.for("react.element"), b = Symbol.for("react.portal"), y = Symbol.for("react.fragment"), E = Symbol.for("react.strict_mode"), A = Symbol.for("react.profiler"), T = Symbol.for("react.provider"), R = Symbol.for("react.context"), g = Symbol.for("react.forward_ref"), L = Symbol.for("react.suspense"), _ = Symbol.for("react.suspense_list"), k = Symbol.for("react.memo"), x = Symbol.for("react.lazy"), W = Symbol.for("react.offscreen"), te = Symbol.iterator, Ge = "@@iterator";
     function Ie(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -75,7 +75,7 @@ function Er() {
     var He = !1, Ue = !1, Ye = !1, qe = !1, Xe = !1, ne;
     ne = Symbol.for("react.module.reference");
     function Ze(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === y || e === A || Xe || e === E || e === L || e === _ || qe || e === W || He || Ue || Ye || typeof e == "object" && e !== null && (e.$$typeof === S || e.$$typeof === k || e.$$typeof === T || e.$$typeof === R || e.$$typeof === g || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === y || e === A || Xe || e === E || e === L || e === _ || qe || e === W || He || Ue || Ye || typeof e == "object" && e !== null && (e.$$typeof === x || e.$$typeof === k || e.$$typeof === T || e.$$typeof === R || e.$$typeof === g || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -125,7 +125,7 @@ function Er() {
           case k:
             var a = e.displayName || null;
             return a !== null ? a : w(e.type) || "Memo";
-          case S: {
+          case x: {
             var c = e, u = c._payload, l = c._init;
             try {
               return w(l(u));
@@ -136,7 +136,7 @@ function Er() {
         }
       return null;
     }
-    var x = Object.assign, z = 0, oe, ae, se, le, ce, ue, de;
+    var S = Object.assign, z = 0, oe, ae, se, le, ce, ue, de;
     function fe() {
     }
     fe.__reactDisabledLog = !0;
@@ -172,25 +172,25 @@ function Er() {
             writable: !0
           };
           Object.defineProperties(console, {
-            log: x({}, e, {
+            log: S({}, e, {
               value: oe
             }),
-            info: x({}, e, {
+            info: S({}, e, {
               value: ae
             }),
-            warn: x({}, e, {
+            warn: S({}, e, {
               value: se
             }),
-            error: x({}, e, {
+            error: S({}, e, {
               value: le
             }),
-            group: x({}, e, {
+            group: S({}, e, {
               value: ce
             }),
-            groupCollapsed: x({}, e, {
+            groupCollapsed: S({}, e, {
               value: ue
             }),
-            groupEnd: x({}, e, {
+            groupEnd: S({}, e, {
               value: de
             })
           });
@@ -285,8 +285,8 @@ function Er() {
       } finally {
         X = !1, Y.current = u, Qe(), Error.prepareStackTrace = c;
       }
-      var P = e ? e.displayName || e.name : "", xe = P ? F(P) : "";
-      return typeof e == "function" && N.set(e, xe), xe;
+      var P = e ? e.displayName || e.name : "", Se = P ? F(P) : "";
+      return typeof e == "function" && N.set(e, Se), Se;
     }
     function rr(e, t, i) {
       return he(e, !1);
@@ -314,7 +314,7 @@ function Er() {
             return rr(e.render);
           case k:
             return G(e.type, t, i);
-          case S: {
+          case x: {
             var a = e, c = a._payload, u = a._init;
             try {
               return G(u(c), t, i);
@@ -591,7 +591,7 @@ Check the top-level render call using <` + i + ">.");
         e.ref !== null && (O(e), v("Invalid attribute `ref` supplied to `React.Fragment`."), O(null));
       }
     }
-    function Se(e, t, i, a, c, u) {
+    function xe(e, t, i, a, c, u) {
       {
         var l = Ze(e);
         if (!l) {
@@ -622,18 +622,18 @@ Check the top-level render call using <` + i + ">.");
       }
     }
     function pr(e, t, i) {
-      return Se(e, t, i, !0);
+      return xe(e, t, i, !0);
     }
     function yr(e, t, i) {
-      return Se(e, t, i, !1);
+      return xe(e, t, i, !1);
     }
     var kr = yr, wr = pr;
     $.Fragment = y, $.jsx = kr, $.jsxs = wr;
   }()), $;
 }
 (function(r) {
-  process.env.NODE_ENV === "production" ? r.exports = xr() : r.exports = Er();
-})(Sr);
+  process.env.NODE_ENV === "production" ? r.exports = Sr() : r.exports = Er();
+})(xr);
 const n = H.jsx, d = H.jsxs, Lr = "#6440dd", jr = "#5934D8", Or = "#F5222D", Pr = "#111111", Tr = "#666666", zr = "#333333", Mr = "#999999", Dr = "#bbbbbb", $r = "#cccccc", Vr = "#f4f4f4", Ar = "#f5f6f8", Wr = "#f2f4f7", Fr = "#dbd6eb", Nr = "#eeebff", Gr = "#b6b7b9", Ir = "#e7e9ef", Br = "#cfd4dd", Hr = "#d42a21", Ur = "#1968e5", Yr = "#27c4b8", qr = "#fff", Xr = "#f4f0ff", Zr = "#ABAEBF", V = {
   main: Lr,
   main_sub: jr,
@@ -1318,7 +1318,7 @@ const mt = (r) => {
       r.title && /* @__PURE__ */ n("div", { children: /* @__PURE__ */ n("span", { className: "title", children: r.title }) }),
       r.close && /* @__PURE__ */ n("div", { className: "popup-icon", onClick: r.close, children: /* @__PURE__ */ n(U, { name: "Close", size: "big", color: V.grey_999 }) })
     ] }),
-    /* @__PURE__ */ n("div", { className: "popup-header-progress", children: Array(r.maxProgress).fill(1).map((b, y) => /* @__PURE__ */ n(
+    /* @__PURE__ */ n("div", { className: "popup-header-progress", children: r.maxProgress && Array(r.maxProgress).fill(1).map((b, y) => /* @__PURE__ */ n(
       "span",
       {
         className: `${y + b === r.progress ? "selected" : ""}`

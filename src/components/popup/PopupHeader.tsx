@@ -37,14 +37,15 @@ const PopupHeader = (props: Props) => {
         )}
       </div>
       <div className="popup-header-progress">
-        {Array(props.maxProgress)
-          .fill(1)
-          .map((v, i) => (
-            <span
-              key={`progress${i}`}
-              className={`${i + v === props.progress ? 'selected' : ''}`}
-            ></span>
-          ))}
+        {props.maxProgress &&
+          Array(props.maxProgress)
+            .fill(1)
+            .map((v, i) => (
+              <span
+                key={`progress${i}`}
+                className={`${i + v === props.progress ? 'selected' : ''}`}
+              ></span>
+            ))}
       </div>
     </div>
   )
