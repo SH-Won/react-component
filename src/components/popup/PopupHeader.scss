@@ -1,21 +1,40 @@
 @import '../../styles/colors.module.scss';
 @import '../../styles/typeface.module.scss';
-.popup-header {
-  display: grid;
-  grid-template-columns: 30px 1fr 30px;
-  place-items: center;
-  & > div {
-    display: flex;
+.popup-header-container {
+  .popup-header {
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    place-items: center;
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .title {
+      @include typeface('Heading_2_m');
+      color: color('grey_111');
+      text-align: center;
+    }
+    .icon {
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+  .popup-header-progress{
+    height:30px;
+    display:flex;
     justify-content: center;
     align-items: center;
-  }
-  .title {
-    @include typeface('Heading_2_m');
-    color: color('grey_111');
-    text-align: center;
-  }
-  .icon {
-    user-select: none;
-    cursor: pointer;
+    gap:4px;
+    > span {
+      width:20px;
+      height:3px;
+      border-radius: 2px;
+      background-color: color('grey_ccc');
+      &.selected {
+        background-color: color('main');
+      }
+    }
+
   }
 }
