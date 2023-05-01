@@ -14,12 +14,12 @@ const PosterCard = (props: PosterCardProps) => {
   return (
     <div className="poster-card-container">
       <RatioImage ratio={ratio} imageUrl={props.imageUrl} />
-      <div className="progress-bar">
-        <CircularProgressBar percent={props.voteAverage} size={34} />
-      </div>
       {/* <div className="poster-card-explain"> */}
 
       <div className="poster-card-info">
+        <div className="progress-bar">
+          <CircularProgressBar percent={props.voteAverage} size={34} />
+        </div>
         <span className="title">{props.title}</span>
         <span className="release-date">{props.releaseDate}</span>
       </div>

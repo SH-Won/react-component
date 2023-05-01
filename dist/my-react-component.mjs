@@ -1342,8 +1342,8 @@ const gt = (r) => {
   const i = r.ratio ? r.ratio : 1;
   return /* @__PURE__ */ u("div", { className: "poster-card-container", children: [
     /* @__PURE__ */ t(gt, { ratio: i, imageUrl: r.imageUrl }),
-    /* @__PURE__ */ t("div", { className: "progress-bar", children: /* @__PURE__ */ t(ht, { percent: r.voteAverage, size: 34 }) }),
     /* @__PURE__ */ u("div", { className: "poster-card-info", children: [
+      /* @__PURE__ */ t("div", { className: "progress-bar", children: /* @__PURE__ */ t(ht, { percent: r.voteAverage, size: 34 }) }),
       /* @__PURE__ */ t("span", { className: "title", children: r.title }),
       /* @__PURE__ */ t("span", { className: "release-date", children: r.releaseDate })
     ] })

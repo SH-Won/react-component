@@ -19,7 +19,7 @@ export const _PosterCard: Story = {
     imageUrl:
       'https://image.tmdb.org/t/p/w220_and_h330_face/lCUvpSvjAPU82HvJ8XfR74Chv5r.jpg',
     voteAverage: 95,
-    title: '그레이 아나토미',
+    title: '그레이 아나토미 시즌 3040400205',
     releaseDate: '3월 27, 2005',
     ratio: 1.5,
   },
