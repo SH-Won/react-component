@@ -2,6 +2,7 @@ import CircularProgressBar from '../bar/CircularProgressBar'
 import './PosterCard.scss'
 import RatioImage from './RatioImage'
 interface PosterCardProps {
+  width?: string
   imageUrl: string
   voteAverage: number
   ratio?: number
@@ -11,8 +12,9 @@ interface PosterCardProps {
 }
 const PosterCard = (props: PosterCardProps) => {
   const ratio = !props.ratio ? 1 : props.ratio
+  const width = props.width ?? '150px'
   return (
-    <div className="poster-card-container">
+    <div className="poster-card-container" style={{ width }}>
       <RatioImage ratio={ratio} imageUrl={props.imageUrl} />
       {/* <div className="poster-card-explain"> */}
 
