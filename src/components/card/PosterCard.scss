@@ -1,0 +1,25 @@
+.poster-card-container {
+  position: relative;
+
+  // & > .poster-card-explain {
+  //   position : absolute;
+  //   bottom : -70px;
+  //   left : 10px;
+  //   display:flex;
+  //   flex-direction: column;
+  //   gap:10px;
+  // }
+  & > .progress-bar {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+  }
+
+  & > .poster-card-info{
+    padding-top : 25px;
+    padding-left : 10px;
+    display:flex;
+    flex-direction: column;
+    gap:4px;
+  }
+}
