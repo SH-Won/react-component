@@ -1,0 +1,49 @@
+@import '../../styles/colors.module.scss';
+@import '../../styles/typeface.module.scss';
+$PI : 3.14159265359;
+$rad : calc(45 * $PI / 180);
+$base-length : 20px;
+.page-loading-container{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  .page-loading-wrapper {
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: infinite-rotate 3s linear infinite;;
+    -webkit-animation: infinite-rotate 3s linear infinite;
+    .loader {
+      position :absolute;
+      border-radius: 50%;
+      width:10px;
+      height:10px;
+      background-color: color('main');
+    }
+    @for $i from 1 through 8 {
+      $multi : calc($i - 3);
+      $sin : calc($base-length * sin($rad * $multi));
+      $cos : calc($base-length * cos($rad * $multi));
+      .loader:nth-child(#{$i}){
+        transform : translate($cos,$sin)
+      }
+    }
+    
+  }
+  @keyframes infinite-rotate {
+    to {
+      transform : rotate(360deg)
+    }
+  }
+  .text{
+    @include typeface('Heading_3');
+    color : color('grey_333')
+  }
+}
