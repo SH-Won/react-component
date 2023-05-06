@@ -1,4 +1,3 @@
-import { Colors } from '@/index'
 import type { Meta, StoryObj, StoryFn } from '@storybook/react'
 import Element from '../elements/Element'
 import { bigElements, mediumElements, smallElements } from '@/const/IconElement'

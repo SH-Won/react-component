@@ -22,5 +22,8 @@ export const colors: {
   white: '#fff'
   option_hover: '#f4f0ff'
   m_gnb_normal: '#ABAEBF'
+  green: '#03c75a'
+  orange: '#e1a016'
+  red: '#da1c26'
 }
 export default colors
