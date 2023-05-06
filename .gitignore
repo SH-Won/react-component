@@ -6,7 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-stories
+/src/stories
+Card.stories.tsx
+Popup.stories.tsx
 node_modules
 dist-ssr
 *.local
