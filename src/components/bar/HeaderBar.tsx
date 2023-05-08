@@ -6,6 +6,7 @@ interface Props {
   isMobile?: boolean
   title?: string
   back: (() => void) | undefined
+  children?: JSX.Element | JSX.Element[] | string
 }
 const HeaderBar = (props: Props) => {
   const isBackFunc = typeof props.back === 'function'
@@ -19,6 +20,7 @@ const HeaderBar = (props: Props) => {
         </div>
       )}
       <span>{props.title}</span>
+      {props.children}
     </div>
   )
 }
