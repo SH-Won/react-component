@@ -14,12 +14,14 @@ const HeaderBar = (props: Props) => {
   const className = props.isMobile ? 'appBar mobile' : 'appBar'
   return (
     <div className={className}>
-      {isBackFunc && (
-        <div onClick={props.back}>
-          <Element name="ArrowLeft" size="big" color={Colors.grey_111} />
-        </div>
-      )}
-      <span>{props.title}</span>
+      <div className="logo">
+        {isBackFunc && (
+          <div onClick={props.back} className="logo-icon">
+            <Element name="ArrowLeft" size="big" color={Colors.grey_111} />
+          </div>
+        )}
+        <span>{props.title}</span>
+      </div>
       {props.children}
     </div>
   )

@@ -1263,8 +1263,10 @@ const t = H.jsx, u = H.jsxs, Er = "#6440dd", jr = "#5934D8", Pr = "#F5222D", Or 
 const mt = (r) => {
   const i = typeof r.back == "function", h = r.isMobile ? "appBar mobile" : "appBar";
   return /* @__PURE__ */ u("div", { className: h, children: [
-    i && /* @__PURE__ */ t("div", { onClick: r.back, children: /* @__PURE__ */ t(V, { name: "ArrowLeft", size: "big", color: x.grey_111 }) }),
-    /* @__PURE__ */ t("span", { children: r.title }),
+    /* @__PURE__ */ u("div", { className: "logo", children: [
+      i && /* @__PURE__ */ t("div", { onClick: r.back, className: "logo-icon", children: /* @__PURE__ */ t(V, { name: "ArrowLeft", size: "big", color: x.grey_111 }) }),
+      /* @__PURE__ */ t("span", { children: r.title })
+    ] }),
     r.children
   ] });
 };
