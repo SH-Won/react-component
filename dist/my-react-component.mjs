@@ -1338,7 +1338,7 @@ const pt = (r) => /* @__PURE__ */ u("div", { className: "group-card", children: 
 ] });
 const gt = (r) => {
   const i = r.ratio * 100 + "%";
-  return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: i }, children: /* @__PURE__ */ t("img", { src: r.imageUrl }) });
+  return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: i }, children: /* @__PURE__ */ t("img", { src: r.imageUrl, loading: "lazy" }) });
 }, yt = (r) => {
   const i = r.ratio ? r.ratio : 1;
   return /* @__PURE__ */ u("div", { className: "poster-card-container", children: [
