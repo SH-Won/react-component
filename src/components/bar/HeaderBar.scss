@@ -6,12 +6,23 @@
   padding: 14px 40px;
   border-bottom: 1px solid color('line_02');
   align-items: center;
+  justify-content: space-between;
   &.mobile {
     padding: 14px 20px;
   }
-  & > span {
-    display:inline-block;
-    padding: 4px 10px;
-    @include typeface('Heading_2');
+  & >.logo {
+    & >.logo-icon{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    display:flex;
+    align-items: center;
+    gap:10px;
+    & > span {
+      display:inline-block;
+      padding: 4px 10px;
+      @include typeface('Heading_2');
+    }
   }
 }
