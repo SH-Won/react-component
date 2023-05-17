@@ -1,0 +1,33 @@
+@import '../../styles//typeface.module.scss';
+.basic-accordion {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+
+  & > .children {
+    max-height: 0;
+    transition: all 0.2s cubic-bezier(0.1, 1.19, 1, 1);
+    &.slide {
+      max-height: 100vw;
+      transition: all 0.35s cubic-bezier(0.93, -0.19, 1, 1);
+    }
+  }
+
+  & > .header {
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include typeface('Paragraph_1_b');
+    & > .icon {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      transition : transform 0.3s ease-in-out;
+      &.slide {
+        transform : rotateZ(90deg)
+      }
+    }
+  }
+}
