@@ -19,12 +19,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include typeface('Paragraph_1_b');
+    @include typeface('Heading_3');
     & > .icon {
       display:flex;
       justify-content: center;
       align-items: center;
       transition : transform 0.3s ease-in-out;
+      cursor: pointer;
       &.slide {
         transform : rotateZ(90deg)
       }
