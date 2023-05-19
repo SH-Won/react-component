@@ -39,10 +39,10 @@ const useCloseEvent = (closeEvent: () => void) => {
 const Accordion = ({ title, children }: AccordionProps) => {
   const [open, isOpen] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string>('hidden')
-  const { ref: container } = useCloseEvent(() => {
-    isOpen(false)
-    setOverflow('hidden')
-  })
+  // const { ref: container } = useCloseEvent(() => {
+  //   isOpen(false)
+  //   setOverflow('hidden')
+  // })
   const onTranstionEnd = () => {
     if (open) {
       setOverflow('unset')
@@ -62,7 +62,11 @@ const Accordion = ({ title, children }: AccordionProps) => {
       // onClick={onClickOpen}
       onTransitionEnd={onTranstionEnd}
     >
-      <div className="header" ref={container} onClick={onClickOpen}>
+      <div
+        className="header"
+        // ref={container}
+        onClick={onClickOpen}
+      >
         <span className="title">{title}</span>
         <div
           // onClick={() => isOpen((prev) => !prev)}
