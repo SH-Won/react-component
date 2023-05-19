@@ -49,13 +49,14 @@ const Accordion = ({ title, children }: AccordionProps) => {
       className="basic-accordion"
       ref={container}
       style={{ overflow }}
+      onClick={onClickOpen}
       onTransitionEnd={onTranstionEnd}
     >
       <div className="header">
         <span className="title">{title}</span>
         <div
           // onClick={() => isOpen((prev) => !prev)}
-          onClick={onClickOpen}
+          // onClick={onClickOpen}
           className={`icon ${open ? 'slide' : ''}`}
         >
           <Element name="Right" size="medium" color={Colors.grey_111} />

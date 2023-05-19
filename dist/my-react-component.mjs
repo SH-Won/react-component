@@ -1424,6 +1424,7 @@ const _t = (r) => {
       className: "basic-accordion",
       ref: R,
       style: { overflow: k },
+      onClick: m,
       onTransitionEnd: w,
       children: [
         /* @__PURE__ */ l("div", { className: "header", children: [
@@ -1431,7 +1432,6 @@ const _t = (r) => {
           /* @__PURE__ */ t(
             "div",
             {
-              onClick: m,
               className: `icon ${d ? "slide" : ""}`,
               children: /* @__PURE__ */ t(M, { name: "Right", size: "medium", color: S.grey_111 })
             }
