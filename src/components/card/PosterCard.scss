@@ -8,15 +8,22 @@
     padding-left : 10px;
     display:flex;
     flex-direction: column;
-    gap:4px;
+    gap:2px;
     & > .progress-bar {
       position: absolute;
       top:-20px;
       left: 10px;
     }
+    & > .title {
+      @include typeface('Paragraph_1_b');
+      font-weight: 700;
+      line-height:unset;
+    }
     & >.release-date {
-      @include typeface('Paragraph_2');
-      color : color('grey_999')
+      @include typeface('Paragraph_1_m');
+      color : color('grey_666');
+      font-weight:340;
+      line-height : unset;
     }
   }
 }
