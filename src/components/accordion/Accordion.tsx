@@ -13,6 +13,7 @@ const useCloseEvent = (closeEvent: () => void) => {
   const onClick = (e: any) => {
     const element = e.target.closest(`.${ref.current!.className}`)
     const children = e.target.classList.contains('children')
+    console.log(element, children, e.target)
     if (children) return
 
     // console.log(element, children, e.target)
