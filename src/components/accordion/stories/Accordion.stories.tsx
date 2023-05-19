@@ -8,7 +8,7 @@ const meta: Meta<typeof Accordion> = {
     return (
       <div style={{ width: '300px' }}>
         <Accordion {...props}>
-          <div style={{ height: '100%' }}>
+          <div style={{ height: '100%' }} className="children">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui atque
             alias dignissimos distinctio placeat! Aliquid maiores, totam debitis
             dicta tempore officia? Nobis porro, architecto pariatur quas maiores

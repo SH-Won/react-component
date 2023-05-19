@@ -11,15 +11,19 @@ const useCloseEvent = (closeEvent: () => void) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const onClick = (e: any) => {
-    // const element = e.target.closest(`.${ref.current!.className}`)
-    // if (!element) {
-    //   closeEvent()
-    // }
-    if (e.target.className !== 'basic-accordion') return
-    console.log(ref.current, e.target)
-    if (e.target !== ref.current) {
+    const element = e.target.closest(`.${ref.current!.className}`)
+    const children = e.target.classList.contains('children')
+    if (children) return
+
+    // console.log(element, children, e.target)
+    if (!element) {
       closeEvent()
     }
+    // if (e.target.className !== 'basic-accordion') return
+    // console.log(ref.current, e.target)
+    // if (e.target !== ref.current) {
+    //   closeEvent()
+    // }
   }
   useEffect(() => {
     window.addEventListener('click', onClick)
@@ -52,12 +56,12 @@ const Accordion = ({ title, children }: AccordionProps) => {
   return (
     <div
       className="basic-accordion"
-      ref={container}
+      // ref={container}
       style={{ overflow }}
-      onClick={onClickOpen}
+      // onClick={onClickOpen}
       onTransitionEnd={onTranstionEnd}
     >
-      <div className="header">
+      <div className="header" ref={container} onClick={onClickOpen}>
         <span className="title">{title}</span>
         <div
           // onClick={() => isOpen((prev) => !prev)}
