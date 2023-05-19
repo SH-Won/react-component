@@ -11,8 +11,13 @@ const useCloseEvent = (closeEvent: () => void) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const onClick = (e: any) => {
-    const element = e.target.closest(`.${ref.current!.className}`)
-    if (!element) {
+    // const element = e.target.closest(`.${ref.current!.className}`)
+    // if (!element) {
+    //   closeEvent()
+    // }
+    if (e.target.className !== 'basic-accordion') return
+    console.log(ref.current, e.target)
+    if (e.target !== ref.current) {
       closeEvent()
     }
   }
