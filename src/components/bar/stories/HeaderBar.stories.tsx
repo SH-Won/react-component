@@ -15,7 +15,14 @@ export const CircularProgress: Story = {
     title: '헤더',
     back: () => {},
     children: (
-      <div style={{ display: 'flex', gap: '10px' }}>
+      <div
+        style={{
+          display: 'flex',
+          gap: '10px',
+          flex: 1,
+          justifyContent: 'flex-end',
+        }}
+      >
         <Button color={Colors.main} fontColor={Colors.white}>
           로그인
         </Button>
