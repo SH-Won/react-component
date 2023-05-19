@@ -29,7 +29,7 @@ const useCloseEvent = (closeEvent: () => void) => {
 const Accordion = ({ title, children }: AccordionProps) => {
   const [open, isOpen] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string>('hidden')
-  const { ref: container } = useCloseEvent(() => isOpen(false))
+  const { ref: container } = useCloseEvent(() => onClickOpen)
   const onTranstionEnd = () => {
     if (open) {
       setOverflow('unset')
