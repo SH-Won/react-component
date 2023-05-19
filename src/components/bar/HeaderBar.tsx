@@ -5,22 +5,21 @@ import './HeaderBar.scss'
 interface Props {
   isMobile?: boolean
   title?: string
-  back: (() => void) | undefined
+  back: ((isMain: boolean) => void) | undefined
   children?: JSX.Element | JSX.Element[] | string
 }
 const HeaderBar = (props: Props) => {
   const isBackFunc = typeof props.back === 'function'
-
   const className = props.isMobile ? 'appBar mobile' : 'appBar'
   return (
     <div className={className}>
       <div className="logo">
         {isBackFunc && (
-          <div onClick={props.back} className="logo-icon">
+          <div onClick={() => props.back?.(false)} className="logo-icon">
             <Element name="ArrowLeft" size="big" color={Colors.grey_111} />
           </div>
         )}
-        <span>{props.title}</span>
+        <span onClick={() => props.back?.(true)}>{props.title}</span>
       </div>
       {props.children}
     </div>
