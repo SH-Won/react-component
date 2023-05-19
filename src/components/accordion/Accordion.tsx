@@ -1,14 +1,34 @@
 import Colors from '@/styles/colors.module.scss'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Element } from '../elements'
 import './accordion.scss'
 interface AccordionProps {
   title?: string
   children?: JSX.Element | JSX.Element[] | string
 }
+
+const useCloseEvent = (closeEvent: () => void) => {
+  const ref = useRef(null)
+
+  const onClick = (e: Event) => {
+    if (ref.current !== e.target) {
+      closeEvent()
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('click', onClick)
+    return () => {
+      window.removeEventListener('click', onClick)
+    }
+  }, [])
+  return {
+    ref,
+  }
+}
 const Accordion = ({ title, children }: AccordionProps) => {
   const [open, isOpen] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string>('hidden')
+  const { ref: container } = useCloseEvent(() => isOpen(false))
   const onTranstionEnd = () => {
     if (open) {
       setOverflow('unset')
@@ -23,6 +43,7 @@ const Accordion = ({ title, children }: AccordionProps) => {
   return (
     <div
       className="basic-accordion"
+      ref={container}
       style={{ overflow }}
       onTransitionEnd={onTranstionEnd}
     >
