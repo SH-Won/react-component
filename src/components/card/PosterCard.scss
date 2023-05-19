@@ -22,7 +22,6 @@
     & >.release-date {
       @include typeface('Paragraph_1_m');
       color : color('grey_666');
-      font-weight:340;
       line-height : unset;
     }
   }
