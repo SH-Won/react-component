@@ -1,20 +1,7 @@
+@import '../../styles/typeface.module.scss';
+@import '../../styles/colors.module.scss';
 .poster-card-container {
   position: relative;
-
-  // & > .poster-card-explain {
-  //   position : absolute;
-  //   bottom : -70px;
-  //   left : 10px;
-  //   display:flex;
-  //   flex-direction: column;
-  //   gap:10px;
-  // }
-  // & > .progress-bar {
-  //   position: absolute;
-  //   bottom: 50px;
-  //   left: 10px;
-  // }
-
   & > .poster-card-info{
     position:relative;
     padding-top : 25px;
@@ -26,6 +13,10 @@
       position: absolute;
       top:-20px;
       left: 10px;
+    }
+    & >.release-date {
+      @include typeface('Paragraph_2');
+      color : color('grey_999')
     }
   }
 }
