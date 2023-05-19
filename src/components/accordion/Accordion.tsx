@@ -8,10 +8,11 @@ interface AccordionProps {
 }
 
 const useCloseEvent = (closeEvent: () => void) => {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
 
-  const onClick = (e: Event) => {
-    if (ref.current !== e.target) {
+  const onClick = (e: any) => {
+    const element = e.target.closest(`.${ref.current!.className}`)
+    if (!element) {
       closeEvent()
     }
   }

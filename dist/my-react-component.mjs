@@ -285,7 +285,7 @@ function Pr() {
       } finally {
         X = !1, Y.current = f, er(), Error.prepareStackTrace = u;
       }
-      var M = e ? e.displayName || e.name : "", Se = M ? F(M) : "";
+      var N = e ? e.displayName || e.name : "", Se = N ? F(N) : "";
       return typeof e == "function" && G.set(e, Se), Se;
     }
     function tr(e, n, o) {
@@ -610,8 +610,8 @@ Check the top-level render call using <` + o + ">.");
           if (y !== void 0)
             if (a)
               if (Z(y)) {
-                for (var M = 0; M < y.length; M++)
-                  Re(y[M], e);
+                for (var N = 0; N < y.length; N++)
+                  Re(y[N], e);
                 Object.freeze && Object.freeze(y);
               } else
                 b("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
@@ -634,12 +634,12 @@ Check the top-level render call using <` + o + ">.");
 (function(r) {
   process.env.NODE_ENV === "production" ? r.exports = jr() : r.exports = Pr();
 })(Er);
-const t = H.jsx, l = H.jsxs, Or = "#6440dd", Tr = "#5934D8", zr = "#F5222D", Mr = "#111111", Nr = "#666666", $r = "#333333", Dr = "#999999", Ar = "#bbbbbb", Vr = "#cccccc", Wr = "#f4f4f4", Fr = "#f5f6f8", Gr = "#f2f4f7", Br = "#dbd6eb", Ir = "#eeebff", Ur = "#b6b7b9", Hr = "#e7e9ef", Yr = "#cfd4dd", qr = "#d42a21", Xr = "#1968e5", Zr = "#27c4b8", Jr = "#fff", Kr = "#f4f0ff", Qr = "#ABAEBF", et = "#03c75a", rt = "#e1a016", tt = "#da1c26", x = {
+const t = H.jsx, l = H.jsxs, Or = "#6440dd", Tr = "#5934D8", zr = "#F5222D", Nr = "#111111", Mr = "#666666", $r = "#333333", Dr = "#999999", Ar = "#bbbbbb", Vr = "#cccccc", Wr = "#f4f4f4", Fr = "#f5f6f8", Gr = "#f2f4f7", Br = "#dbd6eb", Ir = "#eeebff", Ur = "#b6b7b9", Hr = "#e7e9ef", Yr = "#cfd4dd", qr = "#d42a21", Xr = "#1968e5", Zr = "#27c4b8", Jr = "#fff", Kr = "#f4f0ff", Qr = "#ABAEBF", et = "#03c75a", rt = "#e1a016", tt = "#da1c26", x = {
   main: Or,
   main_sub: Tr,
   notice: zr,
-  grey_111: Mr,
-  grey_666: Nr,
+  grey_111: Nr,
+  grey_666: Mr,
   grey_333: $r,
   grey_999: Dr,
   grey_bbb: Ar,
@@ -843,7 +843,7 @@ const t = H.jsx, l = H.jsxs, Or = "#6440dd", Tr = "#5934D8", zr = "#F5222D", Mr 
 }, st = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: ze
-}, Symbol.toStringTag, { value: "Module" })), Me = (r) => {
+}, Symbol.toStringTag, { value: "Module" })), Ne = (r) => {
   const i = r.size === "big" ? "30" : r.size === "medium" ? "24" : "20";
   return /* @__PURE__ */ t("svg", { width: i, height: i, fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t(
     "path",
@@ -856,8 +856,8 @@ const t = H.jsx, l = H.jsxs, Or = "#6440dd", Tr = "#5934D8", zr = "#F5222D", Mr 
   ) });
 }, ct = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Me
-}, Symbol.toStringTag, { value: "Module" })), Ne = (r) => {
+  default: Ne
+}, Symbol.toStringTag, { value: "Module" })), Me = (r) => {
   const i = r.size === "big" ? "30" : r.size === "medium" ? "24" : "20";
   return /* @__PURE__ */ l(
     "svg",
@@ -901,7 +901,7 @@ const t = H.jsx, l = H.jsxs, Or = "#6440dd", Tr = "#5934D8", zr = "#F5222D", Mr 
   );
 }, lt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Ne
+  default: Me
 }, Symbol.toStringTag, { value: "Module" })), $e = (r) => {
   const i = r.size === "big" ? "30" : r.size === "medium" ? "24" : "20";
   return /* @__PURE__ */ l(
@@ -1230,7 +1230,7 @@ const t = H.jsx, l = H.jsxs, Or = "#6440dd", Tr = "#5934D8", zr = "#F5222D", Mr 
 }, vt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Fe
-}, Symbol.toStringTag, { value: "Module" })), N = (r) => {
+}, Symbol.toStringTag, { value: "Module" })), M = (r) => {
   const i = () => {
     switch (r.name) {
       case "Adult":
@@ -1242,9 +1242,9 @@ const t = H.jsx, l = H.jsxs, Or = "#6440dd", Tr = "#5934D8", zr = "#F5222D", Mr 
       case "Check":
         return /* @__PURE__ */ t(ze, { ...r });
       case "Close":
-        return /* @__PURE__ */ t(Me, { ...r });
-      case "Depth":
         return /* @__PURE__ */ t(Ne, { ...r });
+      case "Depth":
+        return /* @__PURE__ */ t(Me, { ...r });
       case "Gear":
         return /* @__PURE__ */ t($e, { ...r });
       case "Hamburger":
@@ -1267,7 +1267,7 @@ const yt = (r) => {
   const i = typeof r.back == "function", d = r.isMobile ? "appBar mobile" : "appBar";
   return /* @__PURE__ */ l("div", { className: d, children: [
     /* @__PURE__ */ l("div", { className: "logo", children: [
-      i && /* @__PURE__ */ t("div", { onClick: r.back, className: "logo-icon", children: /* @__PURE__ */ t(N, { name: "ArrowLeft", size: "big", color: x.grey_111 }) }),
+      i && /* @__PURE__ */ t("div", { onClick: r.back, className: "logo-icon", children: /* @__PURE__ */ t(M, { name: "ArrowLeft", size: "big", color: x.grey_111 }) }),
       /* @__PURE__ */ t("span", { children: r.title })
     ] }),
     r.children
@@ -1335,7 +1335,7 @@ const wt = (r) => {
   return /* @__PURE__ */ t("div", { className: "card-container", children: /* @__PURE__ */ t("div", { className: "card", children: /* @__PURE__ */ t("img", { src: r.imageUrl, style: i() }) }) });
 };
 const Ct = (r) => /* @__PURE__ */ l("div", { className: "group-card", children: [
-  r.isSub && /* @__PURE__ */ t(N, { name: "Depth", size: "medium", color: x.grey_111 }),
+  r.isSub && /* @__PURE__ */ t(M, { name: "Depth", size: "medium", color: x.grey_111 }),
   /* @__PURE__ */ l("div", { className: "card", children: [
     /* @__PURE__ */ t("img", { className: "card-image", src: r.imageUrl }),
     /* @__PURE__ */ t("div", { className: "card-explain", children: /* @__PURE__ */ t("span", { children: r.label }) })
@@ -1370,9 +1370,9 @@ const St = (r) => {
   };
   return /* @__PURE__ */ l("div", { className: "popup-header-container", style: i, children: [
     /* @__PURE__ */ l("div", { className: "popup-header", children: [
-      r.back && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: r.back, children: /* @__PURE__ */ t(N, { name: "ArrowLeft", size: "big", color: x.grey_999 }) }),
+      r.back && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: r.back, children: /* @__PURE__ */ t(M, { name: "ArrowLeft", size: "big", color: x.grey_999 }) }),
       r.title && /* @__PURE__ */ t("div", { children: /* @__PURE__ */ t("span", { className: "title", children: r.title }) }),
-      r.close && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: r.close, children: /* @__PURE__ */ t(N, { name: "Close", size: "big", color: x.grey_999 }) })
+      r.close && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: r.close, children: /* @__PURE__ */ t(M, { name: "Close", size: "big", color: x.grey_999 }) })
     ] }),
     /* @__PURE__ */ t("div", { className: "popup-header-progress", children: r.maxProgress && Array(r.maxProgress).fill(1).map((d, v) => /* @__PURE__ */ t(
       "span",
@@ -1386,7 +1386,7 @@ const St = (r) => {
 const Lt = (r) => /* @__PURE__ */ l("div", { className: "notification", children: [
   r.children,
   /* @__PURE__ */ l("div", { className: "info", style: { height: r.height }, children: [
-    /* @__PURE__ */ t(N, { name: "Caution", size: "small", color: x.grey_bbb }),
+    /* @__PURE__ */ t(M, { name: "Caution", size: "small", color: x.grey_bbb }),
     /* @__PURE__ */ t("span", { children: r.text })
   ] })
 ] });
@@ -1396,7 +1396,7 @@ const Et = (r) => {
 };
 const _t = (r) => {
   const i = Sr(null), d = (v) => {
-    i.current !== v.target && r();
+    v.target.closest(`.${i.current.className}`) || r();
   };
   return Lr(() => (window.addEventListener("click", d), () => {
     window.removeEventListener("click", d);
@@ -1424,7 +1424,7 @@ const _t = (r) => {
                 v((R) => !R), d && S("hidden");
               },
               className: `icon ${d ? "slide" : ""}`,
-              children: /* @__PURE__ */ t(N, { name: "Right", size: "medium", color: x.grey_111 })
+              children: /* @__PURE__ */ t(M, { name: "Right", size: "medium", color: x.grey_111 })
             }
           )
         ] }),
@@ -1454,7 +1454,7 @@ export {
   wt as Card,
   mt as CircularProgressBar,
   x as Colors,
-  N as Element,
+  M as Element,
   Ct as GroupCard,
   yt as HeaderBar,
   Pt as LoadingSpinner,
