@@ -12,9 +12,11 @@ const useCloseEvent = (closeEvent: () => void) => {
 
   const onClick = (e: any) => {
     const element = e.target.closest(`.${ref.current!.className}`)
-    // const children = e.target.classList.contains('children')
-    const children = e.target.closest('.children')
+    const children = e.target.classList.contains('children')
+    console.log(element, children, e.target)
     if (children) return
+
+    // console.log(element, children, e.target)
     if (!element) {
       closeEvent()
     }
@@ -37,17 +39,16 @@ const useCloseEvent = (closeEvent: () => void) => {
 const Accordion = ({ title, children }: AccordionProps) => {
   const [open, isOpen] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string>('hidden')
-  const { ref: container } = useCloseEvent(() => {
-    isOpen(false)
-    setOverflow('hidden')
-  })
+  // const { ref: container } = useCloseEvent(() => {
+  //   isOpen(false)
+  //   setOverflow('hidden')
+  // })
   const onTranstionEnd = () => {
     if (open) {
       setOverflow('unset')
     }
   }
-  function onClickOpen(e: any) {
-    if (e.target.className === 'children') return
+  function onClickOpen() {
     isOpen((prev) => !prev)
     if (open) {
       setOverflow('hidden')
@@ -56,15 +57,15 @@ const Accordion = ({ title, children }: AccordionProps) => {
   return (
     <div
       className="basic-accordion"
-      ref={container}
+      // ref={container}
       style={{ overflow }}
-      onClick={(e) => onClickOpen(e)}
+      // onClick={onClickOpen}
       onTransitionEnd={onTranstionEnd}
     >
       <div
         className="header"
         // ref={container}
-        // onClick={onClickOpen}
+        onClick={onClickOpen}
       >
         <span className="title">{title}</span>
         <div
