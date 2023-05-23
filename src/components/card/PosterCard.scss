@@ -1,31 +1,28 @@
+@import '../../styles/typeface.module.scss';
+@import '../../styles/colors.module.scss';
 .poster-card-container {
   position: relative;
-
-  // & > .poster-card-explain {
-  //   position : absolute;
-  //   bottom : -70px;
-  //   left : 10px;
-  //   display:flex;
-  //   flex-direction: column;
-  //   gap:10px;
-  // }
-  // & > .progress-bar {
-  //   position: absolute;
-  //   bottom: 50px;
-  //   left: 10px;
-  // }
-
   & > .poster-card-info{
     position:relative;
     padding-top : 25px;
     padding-left : 10px;
     display:flex;
     flex-direction: column;
-    gap:4px;
+    gap:2px;
     & > .progress-bar {
       position: absolute;
       top:-20px;
       left: 10px;
+    }
+    & > .title {
+      @include typeface('Paragraph_1_b');
+      font-weight: 700;
+      line-height:unset;
+    }
+    & >.release-date {
+      @include typeface('Paragraph_1_m');
+      color : color('grey_666');
+      line-height : unset;
     }
   }
 }
