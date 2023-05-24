@@ -22,5 +22,6 @@ export const _PosterCard: Story = {
     title: '그레이 아나토미',
     releaseDate: '3월 27, 2005',
     ratio: 1.5,
+    click: () => alert('click poster card'),
   },
 }
