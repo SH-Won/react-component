@@ -4,5 +4,8 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  /* user-select: none; */
+  user-select: none;
+  &:active{
+    transform : scale(0.97) translateY(2px);
+  }
 }

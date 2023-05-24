@@ -15,7 +15,7 @@ const PosterCard = (props: PosterCardProps) => {
   // const width = props.width ?? '150px'
   return (
     <div className="poster-card-container">
-      <RatioImage ratio={ratio} imageUrl={props.imageUrl} />
+      <RatioImage ratio={ratio} imageUrl={props.imageUrl} click={props.click} />
       {/* <div className="poster-card-explain"> */}
 
       <div className="poster-card-info">
