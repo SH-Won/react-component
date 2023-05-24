@@ -54,6 +54,7 @@ const Carousel = <T,>(props: CarouselProps<T>) => {
         setCurrentIndex((prev) => prev - 1)
       }
     }
+    setDirection(0)
   }
 
   return (
