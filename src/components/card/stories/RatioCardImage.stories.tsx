@@ -21,4 +21,3 @@ export const Ratio_Image: Story = {
     ratio: 9 / 16,
   },
 }
-//'https://res.cloudinary.com/dhjegsbqv/image/upload/v1639887022/gallery/9B3BDAC4-F061-41F9-836D-5E68ECC4E511_amhqsc.jpg',

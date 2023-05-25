@@ -1,4 +1,4 @@
-import { PageLoadingSpinner } from '@/util'
+import { PageLoadingSpinner } from '../../util'
 import { useState } from 'react'
 import './RatioImage.scss'
 interface RatioImageProps {
