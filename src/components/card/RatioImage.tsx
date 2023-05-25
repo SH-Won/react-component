@@ -2,6 +2,7 @@ import './RatioImage.scss'
 interface RatioImageProps {
   imageUrl: string
   ratio: number
+  eager?: boolean
   click?: () => void
 }
 const RatioImage = (props: RatioImageProps) => {
@@ -12,7 +13,7 @@ const RatioImage = (props: RatioImageProps) => {
       style={{ paddingTop }}
       onClick={() => props.click?.()}
     >
-      <img src={props.imageUrl} loading="lazy" />
+      <img src={props.imageUrl} loading={props.eager ? 'eager' : 'lazy'} />
     </div>
   )
 }

@@ -1358,7 +1358,7 @@ const Ct = (e) => {
         var s;
         return (s = e.click) == null ? void 0 : s.call(e);
       },
-      children: /* @__PURE__ */ t("img", { src: e.imageUrl, loading: "lazy" })
+      children: /* @__PURE__ */ t("img", { src: e.imageUrl, loading: e.eager ? "eager" : "lazy" })
     }
   );
 }, Et = (e) => {
