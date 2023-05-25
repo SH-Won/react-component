@@ -1,4 +1,4 @@
-import oe, { lazy as Er, Suspense as Tr, useState as N, useMemo as Pe, useRef as Pr, useLayoutEffect as jr, useEffect as Or } from "react";
+import oe, { lazy as Er, Suspense as Tr, useState as O, useMemo as Pe, useRef as Pr, useLayoutEffect as jr, useEffect as Or } from "react";
 var G = {}, zr = {
   get exports() {
     return G;
@@ -21,18 +21,18 @@ function Nr() {
   if (je)
     return F;
   je = 1;
-  var e = oe, n = Symbol.for("react.element"), s = Symbol.for("react.fragment"), l = Object.prototype.hasOwnProperty, _ = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, b = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function v(y, m, C) {
+  var e = oe, n = Symbol.for("react.element"), s = Symbol.for("react.fragment"), c = Object.prototype.hasOwnProperty, m = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, _ = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function b(y, v, C) {
     var h, x = {}, E = null, D = null;
-    C !== void 0 && (E = "" + C), m.key !== void 0 && (E = "" + m.key), m.ref !== void 0 && (D = m.ref);
-    for (h in m)
-      l.call(m, h) && !b.hasOwnProperty(h) && (x[h] = m[h]);
+    C !== void 0 && (E = "" + C), v.key !== void 0 && (E = "" + v.key), v.ref !== void 0 && (D = v.ref);
+    for (h in v)
+      c.call(v, h) && !_.hasOwnProperty(h) && (x[h] = v[h]);
     if (y && y.defaultProps)
-      for (h in m = y.defaultProps, m)
-        x[h] === void 0 && (x[h] = m[h]);
-    return { $$typeof: n, type: y, key: E, ref: D, props: x, _owner: _.current };
+      for (h in v = y.defaultProps, v)
+        x[h] === void 0 && (x[h] = v[h]);
+    return { $$typeof: n, type: y, key: E, ref: D, props: x, _owner: m.current };
   }
-  return F.Fragment = s, F.jsx = v, F.jsxs = v, F;
+  return F.Fragment = s, F.jsx = b, F.jsxs = b, F;
 }
 var B = {};
 /**
@@ -47,7 +47,7 @@ var B = {};
 var Oe;
 function $r() {
   return Oe || (Oe = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = oe, n = Symbol.for("react.element"), s = Symbol.for("react.portal"), l = Symbol.for("react.fragment"), _ = Symbol.for("react.strict_mode"), b = Symbol.for("react.profiler"), v = Symbol.for("react.provider"), y = Symbol.for("react.context"), m = Symbol.for("react.forward_ref"), C = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), x = Symbol.for("react.memo"), E = Symbol.for("react.lazy"), D = Symbol.for("react.offscreen"), Z = Symbol.iterator, A = "@@iterator";
+    var e = oe, n = Symbol.for("react.element"), s = Symbol.for("react.portal"), c = Symbol.for("react.fragment"), m = Symbol.for("react.strict_mode"), _ = Symbol.for("react.profiler"), b = Symbol.for("react.provider"), y = Symbol.for("react.context"), v = Symbol.for("react.forward_ref"), C = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), x = Symbol.for("react.memo"), E = Symbol.for("react.lazy"), D = Symbol.for("react.offscreen"), Z = Symbol.iterator, A = "@@iterator";
     function V(r) {
       if (r === null || typeof r != "object")
         return null;
@@ -75,7 +75,7 @@ function $r() {
     var Ze = !1, Je = !1, Ke = !1, Qe = !1, er = !1, ae;
     ae = Symbol.for("react.module.reference");
     function rr(r) {
-      return !!(typeof r == "string" || typeof r == "function" || r === l || r === b || er || r === _ || r === C || r === h || Qe || r === D || Ze || Je || Ke || typeof r == "object" && r !== null && (r.$$typeof === E || r.$$typeof === x || r.$$typeof === v || r.$$typeof === y || r.$$typeof === m || // This needs to include all possible module reference object
+      return !!(typeof r == "string" || typeof r == "function" || r === c || r === _ || er || r === m || r === C || r === h || Qe || r === D || Ze || Je || Ke || typeof r == "object" && r !== null && (r.$$typeof === E || r.$$typeof === x || r.$$typeof === b || r.$$typeof === y || r.$$typeof === v || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -99,13 +99,13 @@ function $r() {
       if (typeof r == "string")
         return r;
       switch (r) {
-        case l:
+        case c:
           return "Fragment";
         case s:
           return "Portal";
-        case b:
-          return "Profiler";
         case _:
+          return "Profiler";
+        case m:
           return "StrictMode";
         case C:
           return "Suspense";
@@ -117,10 +117,10 @@ function $r() {
           case y:
             var i = r;
             return se(i) + ".Consumer";
-          case v:
+          case b:
             var o = r;
             return se(o._context) + ".Provider";
-          case m:
+          case v:
             return tr(r, r.render, "ForwardRef");
           case x:
             var a = r.displayName || null;
@@ -136,7 +136,7 @@ function $r() {
         }
       return null;
     }
-    var z = Object.assign, W = 0, ce, le, ue, de, fe, he, ge;
+    var N = Object.assign, W = 0, ce, le, ue, de, fe, he, ge;
     function me() {
     }
     me.__reactDisabledLog = !0;
@@ -172,25 +172,25 @@ function $r() {
             writable: !0
           };
           Object.defineProperties(console, {
-            log: z({}, r, {
+            log: N({}, r, {
               value: ce
             }),
-            info: z({}, r, {
+            info: N({}, r, {
               value: le
             }),
-            warn: z({}, r, {
+            warn: N({}, r, {
               value: ue
             }),
-            error: z({}, r, {
+            error: N({}, r, {
               value: de
             }),
-            group: z({}, r, {
+            group: N({}, r, {
               value: fe
             }),
-            groupCollapsed: z({}, r, {
+            groupCollapsed: N({}, r, {
               value: he
             }),
-            groupEnd: z({}, r, {
+            groupEnd: N({}, r, {
               value: ge
             })
           });
@@ -199,7 +199,7 @@ function $r() {
       }
     }
     var J = j.ReactCurrentDispatcher, K;
-    function U(r, i, o) {
+    function H(r, i, o) {
       {
         if (K === void 0)
           try {
@@ -212,16 +212,16 @@ function $r() {
 ` + K + r;
       }
     }
-    var Q = !1, H;
+    var Q = !1, U;
     {
       var or = typeof WeakMap == "function" ? WeakMap : Map;
-      H = new or();
+      U = new or();
     }
     function ve(r, i) {
       if (!r || Q)
         return "";
       {
-        var o = H.get(r);
+        var o = U.get(r);
         if (o !== void 0)
           return o;
       }
@@ -276,7 +276,7 @@ function $r() {
                   if (k--, w--, w < 0 || u[k] !== p[w]) {
                     var S = `
 ` + u[k].replace(" at new ", " at ");
-                    return r.displayName && S.includes("<anonymous>") && (S = S.replace("<anonymous>", r.displayName)), typeof r == "function" && H.set(r, S), S;
+                    return r.displayName && S.includes("<anonymous>") && (S = S.replace("<anonymous>", r.displayName)), typeof r == "function" && U.set(r, S), S;
                   }
                 while (k >= 1 && w >= 0);
               break;
@@ -285,8 +285,8 @@ function $r() {
       } finally {
         Q = !1, J.current = g, ir(), Error.prepareStackTrace = f;
       }
-      var M = r ? r.displayName || r.name : "", Te = M ? U(M) : "";
-      return typeof r == "function" && H.set(r, Te), Te;
+      var M = r ? r.displayName || r.name : "", Te = M ? H(M) : "";
+      return typeof r == "function" && U.set(r, Te), Te;
     }
     function ar(r, i, o) {
       return ve(r, !1);
@@ -301,16 +301,16 @@ function $r() {
       if (typeof r == "function")
         return ve(r, sr(r));
       if (typeof r == "string")
-        return U(r);
+        return H(r);
       switch (r) {
         case C:
-          return U("Suspense");
+          return H("Suspense");
         case h:
-          return U("SuspenseList");
+          return H("SuspenseList");
       }
       if (typeof r == "object")
         switch (r.$$typeof) {
-          case m:
+          case v:
             return ar(r.render);
           case x:
             return Y(r.type, i, o);
@@ -562,7 +562,7 @@ Check the top-level render call using <` + o + ">.");
         var o;
         if (typeof i == "function")
           o = i.propTypes;
-        else if (typeof i == "object" && (i.$$typeof === m || // Note: Memo only checks outer props here.
+        else if (typeof i == "object" && (i.$$typeof === v || // Note: Memo only checks outer props here.
         // Inner props are checked in the reconciler.
         i.$$typeof === x))
           o = i.propTypes;
@@ -618,7 +618,7 @@ Check the top-level render call using <` + o + ">.");
             else
               Le(S, r);
         }
-        return r === l ? Rr(w) : Cr(w), w;
+        return r === c ? Rr(w) : Cr(w), w;
       }
     }
     function xr(r, i, o) {
@@ -628,13 +628,13 @@ Check the top-level render call using <` + o + ">.");
       return Ee(r, i, o, !1);
     }
     var Sr = pr, Lr = xr;
-    B.Fragment = l, B.jsx = Sr, B.jsxs = Lr;
+    B.Fragment = c, B.jsx = Sr, B.jsxs = Lr;
   }()), B;
 }
 (function(e) {
   process.env.NODE_ENV === "production" ? e.exports = Nr() : e.exports = $r();
 })(zr);
-const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar = "#F5222D", Vr = "#111111", Wr = "#666666", Ir = "#333333", Fr = "#999999", Br = "#bbbbbb", Gr = "#cccccc", Ur = "#f4f4f4", Hr = "#f5f6f8", Yr = "#f2f4f7", Xr = "#dbd6eb", qr = "#eeebff", Zr = "#b6b7b9", Jr = "#e7e9ef", Kr = "#cfd4dd", Qr = "#d42a21", et = "#1968e5", rt = "#27c4b8", tt = "#fff", nt = "#f4f0ff", it = "#ABAEBF", ot = "#03c75a", at = "#e1a016", st = "#da1c26", L = {
+const ze = G.Fragment, t = G.jsx, l = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar = "#F5222D", Vr = "#111111", Wr = "#666666", Ir = "#333333", Fr = "#999999", Br = "#bbbbbb", Gr = "#cccccc", Hr = "#f4f4f4", Ur = "#f5f6f8", Yr = "#f2f4f7", Xr = "#dbd6eb", qr = "#eeebff", Zr = "#b6b7b9", Jr = "#e7e9ef", Kr = "#cfd4dd", Qr = "#d42a21", et = "#1968e5", rt = "#27c4b8", tt = "#fff", nt = "#f4f0ff", it = "#ABAEBF", ot = "#03c75a", at = "#e1a016", st = "#da1c26", L = {
   main: Mr,
   main_sub: Dr,
   notice: Ar,
@@ -644,8 +644,8 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   grey_999: Fr,
   grey_bbb: Br,
   grey_ccc: Gr,
-  grey_f4: Ur,
-  bg_main: Hr,
+  grey_f4: Hr,
+  bg_main: Ur,
   bg_noti: Yr,
   bg_disable: Xr,
   bg_sub: qr,
@@ -663,12 +663,12 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   red: st
 }, ct = (e, n) => {
   const s = e[n];
-  return s ? typeof s == "function" ? s() : Promise.resolve(s) : new Promise((l, _) => {
-    (typeof queueMicrotask == "function" ? queueMicrotask : setTimeout)(_.bind(null, new Error("Unknown variable dynamic import: " + n)));
+  return s ? typeof s == "function" ? s() : Promise.resolve(s) : new Promise((c, m) => {
+    (typeof queueMicrotask == "function" ? queueMicrotask : setTimeout)(m.bind(null, new Error("Unknown variable dynamic import: " + n)));
   });
 }, Ne = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       fill: e.color,
@@ -696,7 +696,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: Ne
 }, Symbol.toStringTag, { value: "Module" })), $e = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -714,7 +714,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ c("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
           /* @__PURE__ */ t(
             "path",
@@ -747,7 +747,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: $e
 }, Symbol.toStringTag, { value: "Module" })), Me = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       id: "caution-sign-circle",
@@ -768,7 +768,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ c("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "line",
             {
@@ -809,7 +809,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: Me
 }, Symbol.toStringTag, { value: "Module" })), De = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       width: n,
@@ -859,7 +859,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: Ae
 }, Symbol.toStringTag, { value: "Module" })), Ve = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -877,9 +877,9 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ c("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
-          /* @__PURE__ */ c("g", { id: "Arrow / Arrow_Sub_Down_Right", children: [
+          /* @__PURE__ */ l("g", { id: "Arrow / Arrow_Sub_Down_Right", children: [
             " ",
             /* @__PURE__ */ t(
               "path",
@@ -904,7 +904,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: Ve
 }, Symbol.toStringTag, { value: "Module" })), We = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       id: "Editable-line",
@@ -927,7 +927,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ c("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "circle",
             {
@@ -965,7 +965,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: We
 }, Symbol.toStringTag, { value: "Module" })), Ie = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       width: n,
@@ -1001,7 +1001,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: Ie
 }, Symbol.toStringTag, { value: "Module" })), Fe = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       viewBox: "0 0 32 32",
@@ -1021,7 +1021,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ c("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t("g", { id: "icomoon-ignore" }),
           /* @__PURE__ */ t(
             "path",
@@ -1046,7 +1046,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: Fe
 }, Symbol.toStringTag, { value: "Module" })), Be = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -1064,7 +1064,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ c("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
           /* @__PURE__ */ t(
             "path",
@@ -1085,7 +1085,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   default: Be
 }, Symbol.toStringTag, { value: "Module" })), Ge = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -1103,9 +1103,9 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
 }, yt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Ge
-}, Symbol.toStringTag, { value: "Module" })), Ue = (e) => {
+}, Symbol.toStringTag, { value: "Module" })), He = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "svg",
     {
       viewBox: "0 0 48 48",
@@ -1123,7 +1123,7 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ c("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "rect",
             {
@@ -1229,8 +1229,8 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
   );
 }, kt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Ue
-}, Symbol.toStringTag, { value: "Module" })), O = (e) => {
+  default: He
+}, Symbol.toStringTag, { value: "Module" })), z = (e) => {
   const n = () => {
     switch (e.name) {
       case "Adult":
@@ -1256,24 +1256,24 @@ const ze = G.Fragment, t = G.jsx, c = G.jsxs, Mr = "#6440dd", Dr = "#5934D8", Ar
       case "Search":
         return /* @__PURE__ */ t(Ge, { ...e });
       case "Setting":
-        return /* @__PURE__ */ t(Ue, { ...e });
+        return /* @__PURE__ */ t(He, { ...e });
       default:
         return null;
     }
   }, s = () => e.size === "big" ? "30px" : e.size === "medium" ? "24px" : "20px";
   return Er(() => ct(/* @__PURE__ */ Object.assign({ "./icons/Adult.tsx": () => Promise.resolve().then(() => lt), "./icons/ArrowLeft.tsx": () => Promise.resolve().then(() => ut), "./icons/Caution.tsx": () => Promise.resolve().then(() => dt), "./icons/Check.tsx": () => Promise.resolve().then(() => ft), "./icons/Close.tsx": () => Promise.resolve().then(() => ht), "./icons/Depth.tsx": () => Promise.resolve().then(() => gt), "./icons/Gear.tsx": () => Promise.resolve().then(() => mt), "./icons/Hamburger.tsx": () => Promise.resolve().then(() => vt), "./icons/Plus.tsx": () => Promise.resolve().then(() => bt), "./icons/Right.tsx": () => Promise.resolve().then(() => _t), "./icons/Search.tsx": () => Promise.resolve().then(() => yt), "./icons/Setting.tsx": () => Promise.resolve().then(() => kt) }), `./icons/${e.name}.tsx`)), /* @__PURE__ */ t(Tr, { fallback: null, children: /* @__PURE__ */ t("div", { style: { height: s(), display: "inline-block" }, children: n() }) });
 };
-const xt = (e) => {
+const pt = (e) => {
   const n = typeof e.back == "function", s = e.isMobile ? "appBar mobile" : "appBar";
-  return /* @__PURE__ */ c("div", { className: s, children: [
-    /* @__PURE__ */ c("div", { className: "logo", children: [
+  return /* @__PURE__ */ l("div", { className: s, children: [
+    /* @__PURE__ */ l("div", { className: "logo", children: [
       n && /* @__PURE__ */ t("div", { onClick: () => {
-        var l;
-        return (l = e.back) == null ? void 0 : l.call(e, !1);
-      }, className: "logo-icon", children: /* @__PURE__ */ t(O, { name: "ArrowLeft", size: "big", color: L.grey_111 }) }),
+        var c;
+        return (c = e.back) == null ? void 0 : c.call(e, !1);
+      }, className: "logo-icon", children: /* @__PURE__ */ t(z, { name: "ArrowLeft", size: "big", color: L.grey_111 }) }),
       /* @__PURE__ */ t("span", { onClick: () => {
-        var l;
-        return (l = e.back) == null ? void 0 : l.call(e, !0);
+        var c;
+        return (c = e.back) == null ? void 0 : c.call(e, !0);
       }, children: e.title })
     ] }),
     e.children
@@ -1285,34 +1285,34 @@ const wt = (e) => {
     height: e.size + "px",
     borderRadius: e.size + n / 1.5 + "px",
     padding: n / 1.5 + "px"
-  }, l = {
+  }, c = {
     borderRadius: e.size + "px"
-  }, _ = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, b = e.percent <= 50 ? 18 * (e.percent / 5) : 180, v = e.percent < 50 ? L.red : e.percent < 75 ? L.orange : L.green, y = {
-    border: `${n}px solid ${v}`,
+  }, m = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, _ = e.percent <= 50 ? 18 * (e.percent / 5) : 180, b = e.percent < 50 ? L.red : e.percent < 75 ? L.orange : L.green, y = {
+    border: `${n}px solid ${b}`,
     borderTopRightRadius: e.size + "px",
     borderBottomRightRadius: e.size + "px",
-    transform: `rotate(${_}deg)`
-  }, m = {
-    border: `${n}px solid ${v}`,
+    transform: `rotate(${m}deg)`
+  }, v = {
+    border: `${n}px solid ${b}`,
     borderTopLeftRadius: e.size + "px",
     borderBottomLeftRadius: e.size + "px",
-    transform: `rotate(${b}deg)`
+    transform: `rotate(${_}deg)`
   }, C = {
     fontSize: e.size / 4 + "px",
     borderRadius: e.size - n * 2 + "px",
     width: e.size - n * 2 + "px",
     height: e.size - n * 2 + "px"
   };
-  return /* @__PURE__ */ t("div", { className: "container", style: s, children: /* @__PURE__ */ c("div", { className: "circular-progress-bar", style: l, children: [
+  return /* @__PURE__ */ t("div", { className: "container", style: s, children: /* @__PURE__ */ l("div", { className: "circular-progress-bar", style: c, children: [
     /* @__PURE__ */ t("span", { className: "left", children: /* @__PURE__ */ t("span", { className: "bar", style: y }) }),
-    /* @__PURE__ */ t("span", { className: "right", children: /* @__PURE__ */ t("span", { className: "bar", style: m }) }),
-    /* @__PURE__ */ c("div", { className: "percent", style: C, children: [
+    /* @__PURE__ */ t("span", { className: "right", children: /* @__PURE__ */ t("span", { className: "bar", style: v }) }),
+    /* @__PURE__ */ l("div", { className: "percent", style: C, children: [
       e.percent,
       "%"
     ] })
   ] }) });
 };
-const pt = (e) => /* @__PURE__ */ t(
+const St = (e) => /* @__PURE__ */ t(
   "div",
   {
     className: "common-button",
@@ -1333,94 +1333,119 @@ const pt = (e) => /* @__PURE__ */ t(
     children: e.children
   }
 );
-const St = (e) => {
+const Lt = (e) => {
   const n = () => ({
     height: e.height ?? "280px",
     objectFit: e.objectFit ?? "fill"
   });
   return /* @__PURE__ */ t("div", { className: "card-container", children: /* @__PURE__ */ t("div", { className: "card", children: /* @__PURE__ */ t("img", { src: e.imageUrl, style: n() }) }) });
 };
-const Lt = (e) => /* @__PURE__ */ c("div", { className: "group-card", children: [
-  e.isSub && /* @__PURE__ */ t(O, { name: "Depth", size: "medium", color: L.grey_111 }),
-  /* @__PURE__ */ c("div", { className: "card", children: [
+const Et = (e) => /* @__PURE__ */ l("div", { className: "group-card", children: [
+  e.isSub && /* @__PURE__ */ t(z, { name: "Depth", size: "medium", color: L.grey_111 }),
+  /* @__PURE__ */ l("div", { className: "card", children: [
     /* @__PURE__ */ t("img", { className: "card-image", src: e.imageUrl }),
     /* @__PURE__ */ t("div", { className: "card-explain", children: /* @__PURE__ */ t("span", { children: e.label }) })
   ] })
 ] });
+const Ue = (e) => {
+  const n = {
+    backgroundColor: `rgba(0,0,0,${e.opacity})`
+  };
+  return /* @__PURE__ */ t(oe.Fragment, { children: e.isOpen && /* @__PURE__ */ t("div", { className: "overlay", style: n, children: e.children }) });
+};
+const Tt = ({ opacity: e }) => /* @__PURE__ */ t(Ue, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
 const Ct = (e) => {
-  const n = e.ratio * 100 + "%";
-  return /* @__PURE__ */ t(
+  const n = Array(8).fill(1).map((s, c) => s + c);
+  return /* @__PURE__ */ l(
+    "div",
+    {
+      className: "page-loading-container",
+      style: { height: e.customHeight },
+      children: [
+        /* @__PURE__ */ t("div", { className: "page-loading-wrapper", children: n.map((s) => /* @__PURE__ */ t("div", { className: "loader" }, `loaderKey${s}`)) }),
+        /* @__PURE__ */ t("div", { className: "text", children: e.text })
+      ]
+    }
+  );
+};
+const Rt = (e) => {
+  const [n, s] = O(!0), c = e.ratio * 100 + "%";
+  return /* @__PURE__ */ l(
     "div",
     {
       className: "image-wrapper",
-      style: { paddingTop: n },
+      style: { paddingTop: c },
       onClick: () => {
-        var s;
-        return (s = e.click) == null ? void 0 : s.call(e);
+        var m;
+        return (m = e.click) == null ? void 0 : m.call(e);
       },
-      children: /* @__PURE__ */ t("img", { src: e.imageUrl, loading: e.eager ? "eager" : "lazy" })
+      children: [
+        /* @__PURE__ */ t(
+          "img",
+          {
+            src: e.imageUrl,
+            loading: e.eager ? "eager" : "lazy",
+            onLoad: () => s(!1)
+          }
+        ),
+        n && /* @__PURE__ */ t("div", { children: /* @__PURE__ */ t(Ct, { customHeight: "100%" }) })
+      ]
     }
   );
-}, Et = (e) => {
+}, Pt = (e) => {
   const n = e.ratio ? e.ratio : 1;
-  return /* @__PURE__ */ c("div", { className: "poster-card-container", children: [
-    /* @__PURE__ */ t(Ct, { ratio: n, imageUrl: e.imageUrl, click: e.click }),
-    /* @__PURE__ */ c("div", { className: "poster-card-info", children: [
+  return /* @__PURE__ */ l("div", { className: "poster-card-container", children: [
+    /* @__PURE__ */ t(Rt, { ratio: n, imageUrl: e.imageUrl, click: e.click }),
+    /* @__PURE__ */ l("div", { className: "poster-card-info", children: [
       /* @__PURE__ */ t("div", { className: "progress-bar", children: /* @__PURE__ */ t(wt, { percent: e.voteAverage, size: 34 }) }),
       /* @__PURE__ */ t("span", { className: "title", children: e.title }),
       /* @__PURE__ */ t("span", { className: "release-date", children: e.releaseDate })
     ] })
   ] });
 };
-const He = (e) => {
-  const n = {
-    backgroundColor: `rgba(0,0,0,${e.opacity})`
-  };
-  return /* @__PURE__ */ t(oe.Fragment, { children: e.isOpen && /* @__PURE__ */ t("div", { className: "overlay", style: n, children: e.children }) });
-};
-const Tt = (e) => /* @__PURE__ */ t(He, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
-const Pt = (e) => {
+const jt = (e) => /* @__PURE__ */ t(Ue, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
+const Ot = (e) => {
   const n = e.title ? {
     padding: "20px 20px 9px"
   } : {
     padding: "16px 16px 7px"
   };
-  return /* @__PURE__ */ c("div", { className: "popup-header-container", style: n, children: [
-    /* @__PURE__ */ c("div", { className: "popup-header", children: [
-      e.back && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.back, children: /* @__PURE__ */ t(O, { name: "ArrowLeft", size: "big", color: L.grey_999 }) }),
+  return /* @__PURE__ */ l("div", { className: "popup-header-container", style: n, children: [
+    /* @__PURE__ */ l("div", { className: "popup-header", children: [
+      e.back && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.back, children: /* @__PURE__ */ t(z, { name: "ArrowLeft", size: "big", color: L.grey_999 }) }),
       e.title && /* @__PURE__ */ t("div", { children: /* @__PURE__ */ t("span", { className: "title", children: e.title }) }),
-      e.close && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.close, children: /* @__PURE__ */ t(O, { name: "Close", size: "big", color: L.grey_999 }) })
+      e.close && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.close, children: /* @__PURE__ */ t(z, { name: "Close", size: "big", color: L.grey_999 }) })
     ] }),
-    /* @__PURE__ */ t("div", { className: "popup-header-progress", children: e.maxProgress && Array(e.maxProgress).fill(1).map((s, l) => /* @__PURE__ */ t(
+    /* @__PURE__ */ t("div", { className: "popup-header-progress", children: e.maxProgress && Array(e.maxProgress).fill(1).map((s, c) => /* @__PURE__ */ t(
       "span",
       {
-        className: `${l + s === e.progress ? "selected" : ""}`
+        className: `${c + s === e.progress ? "selected" : ""}`
       },
-      `progress${l}`
+      `progress${c}`
     )) })
   ] });
 };
-const jt = (e) => /* @__PURE__ */ c("div", { className: "notification", children: [
+const zt = (e) => /* @__PURE__ */ l("div", { className: "notification", children: [
   e.children,
-  /* @__PURE__ */ c("div", { className: "info", style: { height: e.height }, children: [
-    /* @__PURE__ */ t(O, { name: "Caution", size: "small", color: L.grey_bbb }),
+  /* @__PURE__ */ l("div", { className: "info", style: { height: e.height }, children: [
+    /* @__PURE__ */ t(z, { name: "Caution", size: "small", color: L.grey_bbb }),
     /* @__PURE__ */ t("span", { children: e.text })
   ] })
 ] });
-const Ot = (e) => {
+const Nt = (e) => {
   const n = `${e.ratio * 100}%`;
   return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: n }, children: /* @__PURE__ */ t("img", { className: "ratio-img", src: e.imageUrl }) });
 };
-const zt = (e) => {
-  const n = e.type ?? "text", [s, l] = N(!1), _ = Pe(() => {
-    let v = "";
-    return (s || e.searchText) && (v += " focus"), e.screen === "mobile" && (v += " mobile"), v;
-  }, [s, e.screen]), b = Pe(() => {
+const $t = (e) => {
+  const n = e.type ?? "text", [s, c] = O(!1), m = Pe(() => {
+    let b = "";
+    return (s || e.searchText) && (b += " focus"), e.screen === "mobile" && (b += " mobile"), b;
+  }, [s, e.screen]), _ = Pe(() => {
     var y;
-    let v = _;
-    return typeof e.validator == "function" && !((y = e.validator) != null && y.call(e, e.searchText)) && (v += " error"), v;
-  }, [_, e.searchText]);
-  return /* @__PURE__ */ c("div", { className: "input-wrapper" + b, children: [
+    let b = m;
+    return typeof e.validator == "function" && !((y = e.validator) != null && y.call(e, e.searchText)) && (b += " error"), b;
+  }, [m, e.searchText]);
+  return /* @__PURE__ */ l("div", { className: "input-wrapper" + _, children: [
     e.children,
     /* @__PURE__ */ t(
       "input",
@@ -1430,27 +1455,27 @@ const zt = (e) => {
         onChange: e.onChange,
         placeholder: e.placeholder,
         value: e.searchText,
-        onFocus: () => l(!0),
-        onBlur: () => l(!1)
+        onFocus: () => c(!0),
+        onBlur: () => c(!1)
       }
     )
   ] });
 };
-const Nt = ({ title: e, children: n }) => {
-  const [s, l] = N(!1), [_, b] = N("hidden"), v = () => {
-    s && b("unset");
+const Mt = ({ title: e, children: n }) => {
+  const [s, c] = O(!1), [m, _] = O("hidden"), b = () => {
+    s && _("unset");
   };
   function y() {
-    l((m) => !m), s && b("hidden");
+    c((v) => !v), s && _("hidden");
   }
-  return /* @__PURE__ */ c(
+  return /* @__PURE__ */ l(
     "div",
     {
       className: "basic-accordion",
-      style: { overflow: _ },
-      onTransitionEnd: v,
+      style: { overflow: m },
+      onTransitionEnd: b,
       children: [
-        /* @__PURE__ */ c(
+        /* @__PURE__ */ l(
           "div",
           {
             className: "header",
@@ -1461,7 +1486,7 @@ const Nt = ({ title: e, children: n }) => {
                 "div",
                 {
                   className: `icon ${s ? "slide" : ""}`,
-                  children: /* @__PURE__ */ t(O, { name: "Right", size: "medium", color: L.grey_111 })
+                  children: /* @__PURE__ */ t(z, { name: "Right", size: "medium", color: L.grey_111 })
                 }
               )
             ]
@@ -1476,97 +1501,97 @@ const Ye = ({
   itemLength: e,
   slide: n,
   currentIndex: s,
-  clickLeft: l,
-  clickRight: _,
-  clickPoint: b,
-  onTransitionEnd: v,
+  clickLeft: c,
+  clickRight: m,
+  clickPoint: _,
+  onTransitionEnd: b,
   onMouseEnter: y,
-  onMouseLeave: m,
+  onMouseLeave: v,
   children: C
-}) => /* @__PURE__ */ c(
+}) => /* @__PURE__ */ l(
   "div",
   {
     className: "carousel",
     onMouseEnter: y,
-    onMouseLeave: m,
+    onMouseLeave: v,
     children: [
       /* @__PURE__ */ t(
         "div",
         {
           className: "slide-container",
           ref: n,
-          onTransitionEnd: v,
+          onTransitionEnd: b,
           children: C
         }
       ),
-      /* @__PURE__ */ t("div", { className: "left", onClick: l, children: /* @__PURE__ */ t(O, { name: "Right", size: "medium", color: L.white }) }),
-      /* @__PURE__ */ t("div", { className: "right", onClick: _, children: /* @__PURE__ */ t(O, { name: "Right", size: "medium", color: L.white }) }),
+      /* @__PURE__ */ t("div", { className: "left", onClick: c, children: /* @__PURE__ */ t(z, { name: "Right", size: "medium", color: L.white }) }),
+      /* @__PURE__ */ t("div", { className: "right", onClick: m, children: /* @__PURE__ */ t(z, { name: "Right", size: "medium", color: L.white }) }),
       /* @__PURE__ */ t("div", { className: "progress", children: Array(e).fill(1).map((h, x) => /* @__PURE__ */ t(
         "div",
         {
           className: `progress-point ${s === x + 1 ? "selected" : ""}`,
-          onClick: () => b(x + 1)
+          onClick: () => _(x + 1)
         },
         x
       )) })
     ]
   }
 ), Xe = (e) => {
-  const n = Pr(null), [s, l] = N(1), [_, b] = N(0);
+  const n = Pr(null), [s, c] = O(1), [m, _] = O(0);
   return {
     slide: n,
     currentIndex: s,
     clickLeft: () => {
       let h = s - 1;
-      b(-1), n.current.style.transform = `translateX(-${h * 100}%)`, n.current.style.transition = "transform .3s linear";
+      _(-1), n.current.style.transform = `translateX(-${h * 100}%)`, n.current.style.transition = "transform .3s linear";
     },
     clickRight: () => {
       if (!n.current)
         return;
       let h = s + 1;
-      b(1), n.current.style.transform = `translateX(-${h * 100}%)`, n.current.style.transition = "transform .3s linear";
+      _(1), n.current.style.transform = `translateX(-${h * 100}%)`, n.current.style.transition = "transform .3s linear";
     },
     clickPoint: (h) => {
-      n.current.style.transform = `translateX(-${h * 100}%)`, n.current.style.transition = "transform .3s linear", l(h);
+      n.current.style.transform = `translateX(-${h * 100}%)`, n.current.style.transition = "transform .3s linear", c(h);
     },
     onTransitionEnd: () => {
-      _ !== 0 && (_ === 1 ? s === e ? (l(1), n.current.style.transform = "translateX(-100%)", n.current.style.transition = "none") : l((h) => h + 1) : s === 1 ? (l(e), n.current.style.transform = `translateX(-${e * 100}%)`, n.current.style.transition = "none") : l((h) => h - 1), b(0));
+      m !== 0 && (m === 1 ? s === e ? (c(1), n.current.style.transform = "translateX(-100%)", n.current.style.transition = "none") : c((h) => h + 1) : s === 1 ? (c(e), n.current.style.transform = `translateX(-${e * 100}%)`, n.current.style.transition = "none") : c((h) => h - 1), _(0));
     }
   };
-}, $t = (e) => {
+}, Dt = (e) => {
   const n = e.items.length, {
     slide: s,
-    currentIndex: l,
-    clickLeft: _,
-    clickRight: b,
-    clickPoint: v,
+    currentIndex: c,
+    clickLeft: m,
+    clickRight: _,
+    clickPoint: b,
     onTransitionEnd: y
   } = Xe(n);
   return /* @__PURE__ */ t(
     Ye,
     {
       slide: s,
-      currentIndex: l,
-      clickLeft: _,
-      clickRight: b,
-      clickPoint: v,
+      currentIndex: c,
+      clickLeft: m,
+      clickRight: _,
+      clickPoint: b,
       onTransitionEnd: y,
       itemLength: n,
-      children: /* @__PURE__ */ c(ze, { children: [
+      children: /* @__PURE__ */ l(ze, { children: [
         e.renderItems(
           e.items[e.items.length - 1],
           e.items.length
         ),
-        e.items.map((m, C) => e.renderItems(m, C)),
+        e.items.map((v, C) => e.renderItems(v, C)),
         e.renderItems(e.items[0], -1)
       ] })
     }
   );
-}, Mt = (e) => {
-  const n = e.items.length, [s, l] = N(), [_, b] = N(!1), {
-    slide: v,
+}, At = (e) => {
+  const n = e.items.length, [s, c] = O(), [m, _] = O(!1), {
+    slide: b,
     currentIndex: y,
-    clickLeft: m,
+    clickLeft: v,
     clickRight: C,
     clickPoint: h,
     onTransitionEnd: x
@@ -1574,36 +1599,36 @@ const Ye = ({
   jr(() => {
     const A = new IntersectionObserver(
       (j, R) => {
-        j[0].isIntersecting ? b(!0) : b(!1);
+        j[0].isIntersecting ? _(!0) : _(!1);
       },
       {
         threshold: 0.1
       }
-    ), V = v.current.parentElement;
+    ), V = b.current.parentElement;
     A.observe(V);
   }, []);
   const E = () => setTimeout(() => {
     C();
   }, e.time);
-  return Or(() => (_ ? l(E()) : clearTimeout(s), () => {
+  return Or(() => (m ? c(E()) : clearTimeout(s), () => {
     clearTimeout(s);
-  }), [y, _]), /* @__PURE__ */ t(
+  }), [y, m]), /* @__PURE__ */ t(
     Ye,
     {
-      slide: v,
+      slide: b,
       currentIndex: y,
-      clickLeft: m,
+      clickLeft: v,
       clickRight: C,
       clickPoint: h,
       onTransitionEnd: x,
       onMouseEnter: () => {
-        b(!1);
+        _(!1);
       },
       onMouseLeave: () => {
-        b(!0);
+        _(!0);
       },
       itemLength: n,
-      children: /* @__PURE__ */ c(ze, { children: [
+      children: /* @__PURE__ */ l(ze, { children: [
         e.renderItems(
           e.items[e.items.length - 1],
           e.items.length
@@ -1614,40 +1639,25 @@ const Ye = ({
     }
   );
 };
-const Dt = ({ opacity: e }) => /* @__PURE__ */ t(He, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
-const At = (e) => {
-  const n = Array(8).fill(1).map((s, l) => s + l);
-  return /* @__PURE__ */ c(
-    "div",
-    {
-      className: "page-loading-container",
-      style: { height: e.customHeight },
-      children: [
-        /* @__PURE__ */ t("div", { className: "page-loading-wrapper", children: n.map((s) => /* @__PURE__ */ t("div", { className: "loader" }, `loaderKey${s}`)) }),
-        /* @__PURE__ */ t("div", { className: "text", children: e.text })
-      ]
-    }
-  );
-};
 export {
-  Mt as AutoCarousel,
-  Nt as BasicAccordion,
-  $t as BasicCarousel,
-  pt as Button,
-  St as Card,
+  At as AutoCarousel,
+  Mt as BasicAccordion,
+  Dt as BasicCarousel,
+  St as Button,
+  Lt as Card,
   wt as CircularProgressBar,
   L as Colors,
-  O as Element,
-  Lt as GroupCard,
-  xt as HeaderBar,
-  zt as InputBox,
-  Dt as LoadingSpinner,
-  jt as Notification,
-  He as OverLay,
-  At as PageLoadingSpinner,
-  Tt as Popup,
-  Pt as PopupBasicHeader,
-  Et as PosterCard,
-  Ct as RatioCardImage,
-  Ot as RatioImage
+  z as Element,
+  Et as GroupCard,
+  pt as HeaderBar,
+  $t as InputBox,
+  Tt as LoadingSpinner,
+  zt as Notification,
+  Ue as OverLay,
+  Ct as PageLoadingSpinner,
+  jt as Popup,
+  Ot as PopupBasicHeader,
+  Pt as PosterCard,
+  Rt as RatioCardImage,
+  Nt as RatioImage
 };
