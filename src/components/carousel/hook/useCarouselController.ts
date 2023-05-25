@@ -11,6 +11,7 @@ const useCarouselController = (itemLength : number) => {
     slide.current!.style.transition = `transform .3s linear`
   }
   const clickRight = () => {
+    if(!slide.current) return 
     let index = currentIndex + 1
     setDirection(1)
     slide.current!.style.transform = `translateX(-${index * 100}%)`

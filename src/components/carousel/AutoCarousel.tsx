@@ -55,7 +55,6 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
     setStartTimer(false)
   }
   const onMouseLeave = () => {
-    setTimer(timerFunc())
     setStartTimer(true)
   }
 
