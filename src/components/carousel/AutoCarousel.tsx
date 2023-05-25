@@ -22,7 +22,6 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   useLayoutEffect(() => {
     const io = new IntersectionObserver(
       (entries, ob) => {
-        console.log(entries)
         if (entries[0].isIntersecting) {
           setStartTimer(true)
         } else {
@@ -53,10 +52,11 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   }, [currentIndex, startTimer])
 
   const onMouseEnter = () => {
-    clearTimeout(timer)
+    setStartTimer(false)
   }
   const onMouseLeave = () => {
     setTimer(timerFunc())
+    setStartTimer(true)
   }
 
   return (
