@@ -7,6 +7,12 @@ import React, {
 } from 'react'
 import Carousel from './Carousel'
 import useCarouselController from './hook/useCarouselController'
+
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent,
+  )
+}
 interface CarouselProps<T> {
   items: T[]
   renderItems: (item: T, index: number) => React.ReactElement
@@ -60,13 +66,12 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   }, [currentIndex, startTimer])
 
   const onMouseEnter = () => {
-    console.log('mouse enter')
+    if (isMobile()) return
     setStartTimer(false)
   }
 
   const pageX = useRef<number>()
   const onMouseLeave = () => {
-    console.log('mouse leave')
     setStartTimer(true)
   }
   const onTouchStart = (e: React.TouchEvent) => {
@@ -84,7 +89,7 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
     }
     setTimeout(() => {
       setStartTimer(true)
-    }, 3000)
+    }, 2000)
   }
 
   return (

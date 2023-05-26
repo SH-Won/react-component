@@ -1263,7 +1263,7 @@ const Ae = H.Fragment, t = H.jsx, l = H.jsxs, $r = "#6440dd", Dr = "#5934D8", Ar
   }, s = () => e.size === "big" ? "30px" : e.size === "medium" ? "24px" : "20px";
   return Tr(() => ct(/* @__PURE__ */ Object.assign({ "./icons/Adult.tsx": () => Promise.resolve().then(() => lt), "./icons/ArrowLeft.tsx": () => Promise.resolve().then(() => ut), "./icons/Caution.tsx": () => Promise.resolve().then(() => dt), "./icons/Check.tsx": () => Promise.resolve().then(() => ft), "./icons/Close.tsx": () => Promise.resolve().then(() => ht), "./icons/Depth.tsx": () => Promise.resolve().then(() => gt), "./icons/Gear.tsx": () => Promise.resolve().then(() => mt), "./icons/Hamburger.tsx": () => Promise.resolve().then(() => vt), "./icons/Plus.tsx": () => Promise.resolve().then(() => bt), "./icons/Right.tsx": () => Promise.resolve().then(() => _t), "./icons/Search.tsx": () => Promise.resolve().then(() => yt), "./icons/Setting.tsx": () => Promise.resolve().then(() => kt) }), `./icons/${e.name}.tsx`)), /* @__PURE__ */ t(Pr, { fallback: null, children: /* @__PURE__ */ t("div", { style: { height: s(), display: "inline-block" }, children: n() }) });
 };
-const pt = (e) => {
+const St = (e) => {
   const n = typeof e.back == "function", s = e.isMobile ? "appBar mobile" : "appBar";
   return /* @__PURE__ */ l("div", { className: s, children: [
     /* @__PURE__ */ l("div", { className: "logo", children: [
@@ -1312,7 +1312,7 @@ const wt = (e) => {
     ] })
   ] }) });
 };
-const St = (e) => /* @__PURE__ */ t(
+const Lt = (e) => /* @__PURE__ */ t(
   "div",
   {
     className: "common-button",
@@ -1333,14 +1333,14 @@ const St = (e) => /* @__PURE__ */ t(
     children: e.children
   }
 );
-const Lt = (e) => {
+const Et = (e) => {
   const n = () => ({
     height: e.height ?? "280px",
     objectFit: e.objectFit ?? "fill"
   });
   return /* @__PURE__ */ t("div", { className: "card-container", children: /* @__PURE__ */ t("div", { className: "card", children: /* @__PURE__ */ t("img", { src: e.imageUrl, style: n() }) }) });
 };
-const Et = (e) => /* @__PURE__ */ l("div", { className: "group-card", children: [
+const Tt = (e) => /* @__PURE__ */ l("div", { className: "group-card", children: [
   e.isSub && /* @__PURE__ */ t($, { name: "Depth", size: "medium", color: L.grey_111 }),
   /* @__PURE__ */ l("div", { className: "card", children: [
     /* @__PURE__ */ t("img", { className: "card-image", src: e.imageUrl }),
@@ -1353,7 +1353,7 @@ const Je = (e) => {
   };
   return /* @__PURE__ */ t(ce.Fragment, { children: e.isOpen && /* @__PURE__ */ t("div", { className: "overlay", style: n, children: e.children }) });
 };
-const Tt = ({ opacity: e }) => /* @__PURE__ */ t(Je, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
+const Pt = ({ opacity: e }) => /* @__PURE__ */ t(Je, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
 const Ct = (e) => {
   const n = Array(8).fill(1).map((s, c) => s + c);
   return /* @__PURE__ */ l(
@@ -1392,7 +1392,7 @@ const Rt = (e) => {
       ]
     }
   );
-}, Pt = (e) => {
+}, jt = (e) => {
   const n = e.ratio ? e.ratio : 1;
   return /* @__PURE__ */ l("div", { className: "poster-card-container", children: [
     /* @__PURE__ */ t(Rt, { ratio: n, imageUrl: e.imageUrl, click: e.click }),
@@ -1403,8 +1403,8 @@ const Rt = (e) => {
     ] })
   ] });
 };
-const jt = (e) => /* @__PURE__ */ t(Je, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
-const Ot = (e) => {
+const Ot = (e) => /* @__PURE__ */ t(Je, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
+const zt = (e) => {
   const n = e.title ? {
     padding: "20px 20px 9px"
   } : {
@@ -1425,18 +1425,18 @@ const Ot = (e) => {
     )) })
   ] });
 };
-const zt = (e) => /* @__PURE__ */ l("div", { className: "notification", children: [
+const Nt = (e) => /* @__PURE__ */ l("div", { className: "notification", children: [
   e.children,
   /* @__PURE__ */ l("div", { className: "info", style: { height: e.height }, children: [
     /* @__PURE__ */ t($, { name: "Caution", size: "small", color: L.grey_bbb }),
     /* @__PURE__ */ t("span", { children: e.text })
   ] })
 ] });
-const Nt = (e) => {
+const Mt = (e) => {
   const n = `${e.ratio * 100}%`;
   return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: n }, children: /* @__PURE__ */ t("img", { className: "ratio-img", src: e.imageUrl }) });
 };
-const Mt = (e) => {
+const $t = (e) => {
   const n = e.type ?? "text", [s, c] = M(!1), v = Me(() => {
     let _ = "";
     return (s || e.searchText) && (_ += " focus"), e.screen === "mobile" && (_ += " mobile"), _;
@@ -1461,7 +1461,7 @@ const Mt = (e) => {
     )
   ] });
 };
-const $t = ({ title: e, children: n }) => {
+const Dt = ({ title: e, children: n }) => {
   const [s, c] = M(!1), [v, b] = M("hidden"), _ = () => {
     s && b("unset");
   };
@@ -1562,7 +1562,7 @@ const Ke = ({
       v !== 0 && (v === 1 ? s === e ? (c(1), n.current.style.transform = "translateX(-100%)", n.current.style.transition = "none") : c((h) => h + 1) : s === 1 ? (c(e), n.current.style.transform = `translateX(-${e * 100}%)`, n.current.style.transition = "none") : c((h) => h - 1), b(0));
     }
   };
-}, Dt = (e) => {
+}, At = (e) => {
   const n = e.items.length, {
     slide: s,
     currentIndex: c,
@@ -1591,7 +1591,9 @@ const Ke = ({
       ] })
     }
   );
-}, At = (e) => {
+}, xt = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+  navigator.userAgent
+), Vt = (e) => {
   const n = e.items.length, [s, c] = M(), [v, b] = M(!1), _ = se(), {
     slide: y,
     currentIndex: g,
@@ -1620,7 +1622,7 @@ const Ke = ({
     clearTimeout(s);
   }), [g, v]);
   const U = () => {
-    console.log("mouse enter"), b(!1);
+    xt() || b(!1);
   }, Y = se();
   return /* @__PURE__ */ t(
     Ke,
@@ -1633,7 +1635,7 @@ const Ke = ({
       onTransitionEnd: E,
       onMouseEnter: U,
       onMouseLeave: () => {
-        console.log("mouse leave"), b(!0);
+        b(!0);
       },
       itemLength: n,
       onTouchStart: (P) => {
@@ -1643,7 +1645,7 @@ const Ke = ({
         const z = _.current / 2.5, N = Y.current - P.changedTouches[0].pageX;
         N < 0 && Math.abs(N) >= z ? C() : N > 0 && Math.abs(N) >= z && h(), setTimeout(() => {
           b(!0);
-        }, 3e3);
+        }, 2e3);
       },
       children: /* @__PURE__ */ l(Ae, { children: [
         e.renderItems(
@@ -1657,24 +1659,24 @@ const Ke = ({
   );
 };
 export {
-  At as AutoCarousel,
-  $t as BasicAccordion,
-  Dt as BasicCarousel,
-  St as Button,
-  Lt as Card,
+  Vt as AutoCarousel,
+  Dt as BasicAccordion,
+  At as BasicCarousel,
+  Lt as Button,
+  Et as Card,
   wt as CircularProgressBar,
   L as Colors,
   $ as Element,
-  Et as GroupCard,
-  pt as HeaderBar,
-  Mt as InputBox,
-  Tt as LoadingSpinner,
-  zt as Notification,
+  Tt as GroupCard,
+  St as HeaderBar,
+  $t as InputBox,
+  Pt as LoadingSpinner,
+  Nt as Notification,
   Je as OverLay,
   Ct as PageLoadingSpinner,
-  jt as Popup,
-  Ot as PopupBasicHeader,
-  Pt as PosterCard,
+  Ot as Popup,
+  zt as PopupBasicHeader,
+  jt as PosterCard,
   Rt as RatioCardImage,
-  Nt as RatioImage
+  Mt as RatioImage
 };
