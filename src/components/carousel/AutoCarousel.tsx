@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react'
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react'
 import Carousel from './Carousel'
 import useCarouselController from './hook/useCarouselController'
 interface CarouselProps<T> {
@@ -10,6 +16,7 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   const itemLength = props.items.length
   const [timer, setTimer] = useState<ReturnType<typeof setTimeout>>()
   const [startTimer, setStartTimer] = useState(false)
+  const itemWidth = useRef<number>()
   const {
     slide,
     currentIndex,
@@ -32,6 +39,7 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
         threshold: 0.1,
       },
     )
+    itemWidth.current = slide.current!.children[0].clientWidth
     const carousel = slide.current!.parentElement as Element
     io.observe(carousel)
   }, [])
@@ -52,10 +60,31 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   }, [currentIndex, startTimer])
 
   const onMouseEnter = () => {
+    console.log('mouse enter')
     setStartTimer(false)
   }
+
+  const pageX = useRef<number>()
   const onMouseLeave = () => {
+    console.log('mouse leave')
     setStartTimer(true)
+  }
+  const onTouchStart = (e: React.TouchEvent) => {
+    setStartTimer(false)
+    pageX.current = e.changedTouches[0].pageX
+  }
+  const onTouchEnd = (e: React.TouchEvent) => {
+    const range = itemWidth.current! / 2.5
+    const touchDistance = pageX.current! - e.changedTouches[0].pageX
+
+    if (touchDistance < 0 && Math.abs(touchDistance) >= range) {
+      clickLeft()
+    } else if (touchDistance > 0 && Math.abs(touchDistance) >= range) {
+      clickRight()
+    }
+    setTimeout(() => {
+      setStartTimer(true)
+    }, 3000)
   }
 
   return (
@@ -70,6 +99,8 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
         onMouseEnter,
         onMouseLeave,
         itemLength,
+        onTouchStart,
+        onTouchEnd,
       }}
     >
       <>

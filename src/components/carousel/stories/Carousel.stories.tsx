@@ -13,7 +13,7 @@ const meta: Meta<typeof BasicCarousel> = {
       'https://image.tmdb.org/t/p/w220_and_h330_face/usfDx1g1eN9eZ8kxfrbLRkKVjit.jpg',
     ]
     return (
-      <div style={{ width: '50%' }}>
+      <div style={{ width: '80%' }}>
         <BasicCarousel<(typeof items)[0]>
           items={items}
           renderItems={(item, index) => (

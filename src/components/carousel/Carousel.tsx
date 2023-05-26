@@ -1,8 +1,7 @@
 import Colors from '../../styles/colors.module.scss'
-import { Ref, useRef, useState } from 'react'
+import { Ref } from 'react'
 import { Element } from '../elements'
 import './Carousel.scss'
-import useCarouselController from './hook/useCarouselController'
 interface CarouselProps {
   itemLength: number
   slide: Ref<HTMLDivElement>
@@ -13,6 +12,8 @@ interface CarouselProps {
   onTransitionEnd: () => void
   onMouseEnter?: () => void
   onMouseLeave?: () => void
+  onTouchStart?: (e: React.TouchEvent) => void
+  onTouchEnd?: (e: React.TouchEvent) => void
   children: JSX.Element[] | JSX.Element | string
 }
 const Carousel = ({
@@ -25,6 +26,8 @@ const Carousel = ({
   onTransitionEnd,
   onMouseEnter,
   onMouseLeave,
+  onTouchStart,
+  onTouchEnd,
   children,
 }: CarouselProps) => {
   return (
@@ -37,14 +40,16 @@ const Carousel = ({
         className="slide-container"
         ref={slide}
         onTransitionEnd={onTransitionEnd}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
       >
         {children}
       </div>
       <div className="left" onClick={clickLeft}>
-        <Element name="Right" size="medium" color={Colors.white} />
+        <Element name="Right" size="small" color={Colors.white} />
       </div>
       <div className="right" onClick={clickRight}>
-        <Element name="Right" size="medium" color={Colors.white} />
+        <Element name="Right" size="small" color={Colors.white} />
       </div>
       <div className="progress">
         {Array(itemLength)
