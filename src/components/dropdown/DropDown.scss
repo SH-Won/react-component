@@ -1,0 +1,15 @@
+@import '../../styles/typeface.module.scss';
+@import '../../styles/colors.module.scss';
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include typeface('Paragraph_2');
+  cursor: pointer;
+  & > .dropdown-selected {
+    border-radius: 4px;
+    padding: 6px 12px;
+    background-color: color('grey_ccc');
+  }
+}
