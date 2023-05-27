@@ -1,0 +1,59 @@
+@import '../../styles/colors.module.scss';
+.carousel {
+  overflow: hidden;
+  position: relative;
+  & > .slide-container {
+    width:100%;
+    display:flex;
+    // overflow-x: scroll;
+    transform : translateX(-100%);
+    & > div{
+      flex:0 0 100%;
+    }
+  }
+  & > .right {
+    user-select: none;
+    padding:4px;
+    display:flex;
+    align-items: center;
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 50%;
+    position:absolute;
+    bottom:50%;
+    transform : translate(-20%,50%);
+    right:0;
+    cursor: pointer;
+  }
+  & > .left {
+    user-select: none;
+    padding:4px;
+    display:flex;
+    align-items: center;
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 50%;
+    position:absolute;
+    bottom:50%;
+    left:0;
+    transform : translate(20%,50%) rotateY(180deg);
+    cursor: pointer;
+  }
+  & > .progress{
+    display:flex;
+    gap:6px;
+    position:absolute;
+    bottom:10px;
+    left: 50%;
+    transform : translate(-50%,0);
+    & > .progress-point{
+      width:10px;
+      height:10px;
+      border-radius: 5px;
+      background-color: color('white');
+      cursor: pointer;
+      user-select: none;
+      &.selected{
+        background-color: color('main');
+      }
+    }
+  }
+}
