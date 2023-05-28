@@ -16,17 +16,6 @@ const meta: Meta<typeof Accordion> = {
             dicta tempore officia? Nobis porro, architecto pariatur quas maiores
             quod ducimus alias!
           </div>
-          {/* <div>
-            <button onClick={() => setOpen((prev) => !prev)}>Click</button>
-            {open && (
-              <div className="children">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Repellendus amet, incidunt quo vitae totam dolore. Ab explicabo
-                quas, magnam minus accusamus voluptatem incidunt soluta porro
-                dolorum, ea harum unde vero!
-              </div>
-            )}
-          </div> */}
         </Accordion>
       </div>
     )

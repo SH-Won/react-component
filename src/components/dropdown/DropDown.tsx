@@ -1,4 +1,11 @@
-import React, { Children, cloneElement, useEffect, useState } from 'react'
+import { useCloseEvent } from '../../util/hook'
+import React, {
+  Children,
+  cloneElement,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
 import './DropDown.scss'
 
@@ -8,6 +15,7 @@ interface DropDownProps {
 }
 const DropDown = ({ selected, children }: DropDownProps) => {
   const [open, setOpen] = useState(false)
+  const { ref: dropdown } = useCloseEvent(() => setOpen(false))
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpen(false)
@@ -16,8 +24,9 @@ const DropDown = ({ selected, children }: DropDownProps) => {
       clearTimeout(timer)
     }
   }, [selected])
+
   return (
-    <div className="dropdown">
+    <div className="dropdown" ref={dropdown}>
       <div
         className="dropdown-selected"
         onClick={() => setOpen((prev) => !prev)}

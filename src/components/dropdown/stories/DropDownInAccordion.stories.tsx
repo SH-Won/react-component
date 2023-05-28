@@ -2,10 +2,12 @@ import OptionList from '../../common/OptionList'
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
 import DropDown from '../DropDown'
+import Accordion from '../../accordion/Accordion'
 
 const meta: Meta<typeof DropDown> = {
   title: 'DropDown',
   component: () => {
+    const title = 'Dropdown In Accordion'
     const items = [
       {
         name: '1',
@@ -31,13 +33,18 @@ const meta: Meta<typeof DropDown> = {
     }
     return (
       <div style={{ maxWidth: '300px' }}>
-        <DropDown selected={selected}>
-          <OptionList items={items} click={onClickOption} itemSize="small" />
-        </DropDown>
-
-        <DropDown selected={selected}>
-          <OptionList items={items} click={onClickOption} itemSize="small" />
-        </DropDown>
+        <Accordion title={title}>
+          <div style={{ padding: '20px' }}>
+            <h3>Drop Down</h3>
+            <DropDown selected={selected}>
+              <OptionList
+                items={items}
+                click={onClickOption}
+                itemSize="small"
+              />
+            </DropDown>
+          </div>
+        </Accordion>
       </div>
     )
   },
@@ -45,6 +52,4 @@ const meta: Meta<typeof DropDown> = {
 export default meta
 type Story = StoryObj<typeof DropDown>
 
-export const BasicDropDown: Story = {
-  args: {},
-}
+export const DropDown_In_Accordion: Story = {}
