@@ -1,48 +1,20 @@
 import Colors from '@/styles/colors.module.scss'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { Element } from '../elements'
 import './accordion.scss'
+import { useCloseEvent } from '../../util/hook'
 interface AccordionProps {
   title?: string
   children?: JSX.Element | JSX.Element[] | string
 }
 
-const useCloseEvent = (closeEvent: () => void) => {
-  const ref = useRef<HTMLDivElement>(null)
-
-  const onClick = (e: any) => {
-    const element = e.target.closest(`.${ref.current!.className}`)
-    const children = e.target.classList.contains('children')
-    console.log(element, children, e.target)
-    if (children) return
-
-    // console.log(element, children, e.target)
-    if (!element) {
-      closeEvent()
-    }
-    // if (e.target.className !== 'basic-accordion') return
-    // console.log(ref.current, e.target)
-    // if (e.target !== ref.current) {
-    //   closeEvent()
-    // }
-  }
-  useEffect(() => {
-    window.addEventListener('click', onClick)
-    return () => {
-      window.removeEventListener('click', onClick)
-    }
-  }, [])
-  return {
-    ref,
-  }
-}
 const Accordion = ({ title, children }: AccordionProps) => {
   const [open, isOpen] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string>('hidden')
-  // const { ref: container } = useCloseEvent(() => {
-  //   isOpen(false)
-  //   setOverflow('hidden')
-  // })
+  const { ref: accordion } = useCloseEvent(() => {
+    isOpen(false)
+    setOverflow('hidden')
+  })
   const onTranstionEnd = () => {
     if (open) {
       setOverflow('unset')
@@ -57,22 +29,13 @@ const Accordion = ({ title, children }: AccordionProps) => {
   return (
     <div
       className="basic-accordion"
-      // ref={container}
+      ref={accordion}
       style={{ overflow }}
-      // onClick={onClickOpen}
       onTransitionEnd={onTranstionEnd}
     >
-      <div
-        className="header"
-        // ref={container}
-        onClick={onClickOpen}
-      >
+      <div className="header" onClick={onClickOpen}>
         <span className="title">{title}</span>
-        <div
-          // onClick={() => isOpen((prev) => !prev)}
-          // onClick={onClickOpen}
-          className={`icon ${open ? 'slide' : ''}`}
-        >
+        <div className={`icon ${open ? 'slide' : ''}`}>
           <Element name="Right" size="medium" color={Colors.grey_111} />
         </div>
       </div>
