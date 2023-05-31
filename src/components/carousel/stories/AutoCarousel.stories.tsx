@@ -1,8 +1,8 @@
 import { RatioCardImage } from '@/components/card'
 import type { Meta, StoryObj } from '@storybook/react'
-import BasicCarousel from '../BasicCarousel'
+import AutoCarousel from '../AutoCarousel'
 
-const meta: Meta<typeof BasicCarousel> = {
+const meta: Meta<typeof AutoCarousel> = {
   title: 'Carousel',
   component: (props) => {
     const items = [
@@ -13,10 +13,11 @@ const meta: Meta<typeof BasicCarousel> = {
     ]
     return (
       <div style={{ maxWidth: '350px' }}>
-        <BasicCarousel<(typeof items)[0]>
+        <AutoCarousel<(typeof items)[0]>
+          time={2000}
           items={items}
           renderItems={(item, index) => (
-            <RatioCardImage key={index + '_'} imageUrl={item} ratio={0.564} />
+            <RatioCardImage key={index + '_'} imageUrl={item} ratio={1.15} />
           )}
         />
       </div>
@@ -24,6 +25,6 @@ const meta: Meta<typeof BasicCarousel> = {
   },
 }
 export default meta
-type Story = StoryObj<typeof BasicCarousel>
+type Story = StoryObj<typeof AutoCarousel>
 
-export const Basic_Carousel: Story = {}
+export const Auto_Carousel: Story = {}

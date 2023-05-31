@@ -4,6 +4,7 @@ import { Element } from '../elements'
 import './Carousel.scss'
 interface CarouselProps {
   itemLength: number
+  container?: Ref<HTMLDivElement>
   slide: Ref<HTMLDivElement>
   currentIndex: number
   clickLeft: () => void
@@ -18,6 +19,7 @@ interface CarouselProps {
 }
 const Carousel = ({
   itemLength,
+  container,
   slide,
   currentIndex,
   clickLeft,
@@ -36,16 +38,23 @@ const Carousel = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div
-        className="slide-container"
-        ref={slide}
-        onTransitionEnd={onTransitionEnd}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-      >
-        {children}
+      <div className="container" ref={container}>
+        <div
+          className="slide-container"
+          ref={slide}
+          onTransitionEnd={onTransitionEnd}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          {children}
+        </div>
       </div>
-      <div className="left" onClick={clickLeft}>
+      <div
+        className="left"
+        onClick={clickLeft}
+        // onTouchStart={() => console.log('touch click')}
+        // onTouchEnd={() => console.log('touch end')}
+      >
         <Element name="Right" size="small" color={Colors.white} />
       </div>
       <div className="right" onClick={clickRight}>

@@ -10,6 +10,7 @@ interface CarouselProps<T> {
 const BasicCarousel = <T,>(props: CarouselProps<T>) => {
   const itemLength = props.items.length
   const {
+    container,
     slide,
     currentIndex,
     clickLeft,
@@ -21,6 +22,7 @@ const BasicCarousel = <T,>(props: CarouselProps<T>) => {
   return (
     <Carousel
       {...{
+        container,
         slide,
         currentIndex,
         clickLeft,

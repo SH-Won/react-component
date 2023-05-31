@@ -1,11 +1,5 @@
 import { useCloseEvent } from '../../util/hook'
-import React, {
-  Children,
-  cloneElement,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import { cloneElement, useEffect, useState } from 'react'
 
 import './DropDown.scss'
 

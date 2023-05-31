@@ -1,10 +1,10 @@
 import { OverLay } from '@/layout'
 import colors from '@/styles/colors.module.scss'
 import type { Meta, StoryObj } from '@storybook/react'
-import { PopupBasicHeader } from '.'
+import { PopupBasicHeader } from '..'
 
 const meta: Meta = {
-  title: 'PopupHeader',
+  title: 'Popup',
   component: (props) => {
     return (
       <OverLay isOpen={true} opacity={0.6}>

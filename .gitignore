@@ -8,7 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 /src/stories
 Card.stories.tsx
-Popup.stories.tsx
 node_modules
 dist-ssr
 *.local
