@@ -1,9 +1,8 @@
-import { Colors } from '@/index'
 import type { Meta, StoryObj } from '@storybook/react'
 import CircularProgressBar from '../CircularProgressBar'
 
 const meta: Meta<typeof CircularProgressBar> = {
-  title: 'ProgressBar',
+  title: 'Bar',
   component: CircularProgressBar,
 }
 export default meta
