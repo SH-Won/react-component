@@ -93,6 +93,7 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   }
   const onTouchStart = (e: React.TouchEvent) => {
     // clearTimeout(timer)
+    console.log('touch start')
     if (container.current) {
       container.current!.style.overflow = 'auto'
     }
@@ -101,7 +102,7 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   }
   const onTouchEnd = (e: React.TouchEvent) => {
     if (container.current) {
-      container.current!.style.overflow = 'hidden'
+      // container.current!.style.overflow = 'hidden'
     }
     const range = itemWidth.current! / 2.5
     const touchDistance = pageX.current! - e.changedTouches[0].pageX

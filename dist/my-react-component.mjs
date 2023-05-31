@@ -22,15 +22,15 @@ function Mr() {
     return q;
   Ve = 1;
   var e = he, n = Symbol.for("react.element"), o = Symbol.for("react.fragment"), s = Object.prototype.hasOwnProperty, f = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, h = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function u(b, m, x) {
+  function u(y, m, x) {
     var C, L = {}, E = null, A = null;
     x !== void 0 && (E = "" + x), m.key !== void 0 && (E = "" + m.key), m.ref !== void 0 && (A = m.ref);
     for (C in m)
       s.call(m, C) && !h.hasOwnProperty(C) && (L[C] = m[C]);
-    if (b && b.defaultProps)
-      for (C in m = b.defaultProps, m)
+    if (y && y.defaultProps)
+      for (C in m = y.defaultProps, m)
         L[C] === void 0 && (L[C] = m[C]);
-    return { $$typeof: n, type: b, key: E, ref: A, props: L, _owner: f.current };
+    return { $$typeof: n, type: y, key: E, ref: A, props: L, _owner: f.current };
   }
   return q.Fragment = o, q.jsx = u, q.jsxs = u, q;
 }
@@ -47,7 +47,7 @@ var Z = {};
 var We;
 function Dr() {
   return We || (We = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = he, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), s = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), h = Symbol.for("react.profiler"), u = Symbol.for("react.provider"), b = Symbol.for("react.context"), m = Symbol.for("react.forward_ref"), x = Symbol.for("react.suspense"), C = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), E = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), $ = Symbol.iterator, k = "@@iterator";
+    var e = he, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), s = Symbol.for("react.fragment"), f = Symbol.for("react.strict_mode"), h = Symbol.for("react.profiler"), u = Symbol.for("react.provider"), y = Symbol.for("react.context"), m = Symbol.for("react.forward_ref"), x = Symbol.for("react.suspense"), C = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), E = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), $ = Symbol.iterator, k = "@@iterator";
     function j(r) {
       if (r === null || typeof r != "object")
         return null;
@@ -66,16 +66,16 @@ function Dr() {
       {
         var c = p.ReactDebugCurrentFrame, v = c.getStackAddendum();
         v !== "" && (i += "%s", a = a.concat([v]));
-        var y = a.map(function(g) {
+        var b = a.map(function(g) {
           return String(g);
         });
-        y.unshift("Warning: " + i), Function.prototype.apply.call(console[r], console, y);
+        b.unshift("Warning: " + i), Function.prototype.apply.call(console[r], console, b);
       }
     }
     var N = !1, G = !1, O = !1, I = !1, F = !1, ie;
     ie = Symbol.for("react.module.reference");
     function ir(r) {
-      return !!(typeof r == "string" || typeof r == "function" || r === s || r === h || F || r === f || r === x || r === C || I || r === A || N || G || O || typeof r == "object" && r !== null && (r.$$typeof === E || r.$$typeof === L || r.$$typeof === u || r.$$typeof === b || r.$$typeof === m || // This needs to include all possible module reference object
+      return !!(typeof r == "string" || typeof r == "function" || r === s || r === h || F || r === f || r === x || r === C || I || r === A || N || G || O || typeof r == "object" && r !== null && (r.$$typeof === E || r.$$typeof === L || r.$$typeof === u || r.$$typeof === y || r.$$typeof === m || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -114,7 +114,7 @@ function Dr() {
       }
       if (typeof r == "object")
         switch (r.$$typeof) {
-          case b:
+          case y:
             var i = r;
             return me(i) + ".Consumer";
           case u:
@@ -126,9 +126,9 @@ function Dr() {
             var c = r.displayName || null;
             return c !== null ? c : M(r.type) || "Memo";
           case E: {
-            var v = r, y = v._payload, g = v._init;
+            var v = r, b = v._payload, g = v._init;
             try {
-              return M(g(y));
+              return M(g(b));
             } catch {
               return null;
             }
@@ -229,8 +229,8 @@ function Dr() {
       se = !0;
       var v = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
-      var y;
-      y = oe.current, oe.current = null, ar();
+      var b;
+      b = oe.current, oe.current = null, ar();
       try {
         if (i) {
           var g = function() {
@@ -283,7 +283,7 @@ function Dr() {
             }
         }
       } finally {
-        se = !1, oe.current = y, sr(), Error.prepareStackTrace = v;
+        se = !1, oe.current = b, sr(), Error.prepareStackTrace = v;
       }
       var U = r ? r.displayName || r.name : "", De = U ? Q(U) : "";
       return typeof r == "function" && ee.set(r, De), De;
@@ -315,9 +315,9 @@ function Dr() {
           case L:
             return re(r.type, i, a);
           case E: {
-            var c = r, v = c._payload, y = c._init;
+            var c = r, v = c._payload, b = c._init;
             try {
-              return re(y(v), i, a);
+              return re(b(v), i, a);
             } catch {
             }
           }
@@ -334,9 +334,9 @@ function Dr() {
     }
     function dr(r, i, a, c, v) {
       {
-        var y = Function.call.bind(te);
+        var b = Function.call.bind(te);
         for (var g in r)
-          if (y(r, g)) {
+          if (b(r, g)) {
             var d = void 0;
             try {
               if (typeof r[g] != "function") {
@@ -426,7 +426,7 @@ function Dr() {
         });
       }
     }
-    var wr = function(r, i, a, c, v, y, g) {
+    var wr = function(r, i, a, c, v, b, g) {
       var d = {
         // This tag allows us to uniquely identify this as a React Element
         $$typeof: n,
@@ -436,7 +436,7 @@ function Dr() {
         ref: a,
         props: g,
         // Record the component responsible for creating this element.
-        _owner: y
+        _owner: b
       };
       return d._store = {}, Object.defineProperty(d._store, "validated", {
         configurable: !1,
@@ -457,14 +457,14 @@ function Dr() {
     };
     function Cr(r, i, a, c, v) {
       {
-        var y, g = {}, d = null, S = null;
+        var b, g = {}, d = null, S = null;
         a !== void 0 && (Ee(a), d = "" + a), br(i) && (Ee(i.key), d = "" + i.key), vr(i) && (S = i.ref, yr(i, v));
-        for (y in i)
-          te.call(i, y) && !mr.hasOwnProperty(y) && (g[y] = i[y]);
+        for (b in i)
+          te.call(i, b) && !mr.hasOwnProperty(b) && (g[b] = i[b]);
         if (r && r.defaultProps) {
           var w = r.defaultProps;
-          for (y in w)
-            g[y] === void 0 && (g[y] = w[y]);
+          for (b in w)
+            g[b] === void 0 && (g[b] = w[b]);
         }
         if (d || S) {
           var R = typeof r == "function" ? r.displayName || r.name || "Unknown" : r;
@@ -549,7 +549,7 @@ Check the top-level render call using <` + a + ">.");
         else if (r) {
           var v = j(r);
           if (typeof v == "function" && v !== r.entries)
-            for (var y = v.call(r), g; !(g = y.next()).done; )
+            for (var b = v.call(r), g; !(g = b.next()).done; )
               fe(g.value) && $e(g.value, i);
         }
       }
@@ -591,7 +591,7 @@ Check the top-level render call using <` + a + ">.");
         r.ref !== null && (H(r), _("Invalid attribute `ref` supplied to `React.Fragment`."), H(null));
       }
     }
-    function Me(r, i, a, c, v, y) {
+    function Me(r, i, a, c, v, b) {
       {
         var g = ir(r);
         if (!g) {
@@ -602,7 +602,7 @@ Check the top-level render call using <` + a + ">.");
           var w;
           r === null ? w = "null" : ce(r) ? w = "array" : r !== void 0 && r.$$typeof === n ? (w = "<" + (M(r.type) || "Unknown") + " />", d = " Did you accidentally export a JSX literal instead of a component?") : w = typeof r, _("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", w, d);
         }
-        var R = Cr(r, i, a, v, y);
+        var R = Cr(r, i, a, v, b);
         if (R == null)
           return R;
         if (g) {
@@ -1287,7 +1287,7 @@ const Rt = (e) => {
     padding: n / 1.5 + "px"
   }, s = {
     borderRadius: e.size + "px"
-  }, f = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, h = e.percent <= 50 ? 18 * (e.percent / 5) : 180, u = e.percent < 50 ? P.red : e.percent < 75 ? P.orange : P.green, b = {
+  }, f = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, h = e.percent <= 50 ? 18 * (e.percent / 5) : 180, u = e.percent < 50 ? P.red : e.percent < 75 ? P.orange : P.green, y = {
     border: `${n}px solid ${u}`,
     borderTopRightRadius: e.size + "px",
     borderBottomRightRadius: e.size + "px",
@@ -1304,7 +1304,7 @@ const Rt = (e) => {
     height: e.size - n * 2 + "px"
   };
   return /* @__PURE__ */ t("div", { className: "container", style: o, children: /* @__PURE__ */ l("div", { className: "circular-progress-bar", style: s, children: [
-    /* @__PURE__ */ t("span", { className: "left", children: /* @__PURE__ */ t("span", { className: "bar", style: b }) }),
+    /* @__PURE__ */ t("span", { className: "left", children: /* @__PURE__ */ t("span", { className: "bar", style: y }) }),
     /* @__PURE__ */ t("span", { className: "right", children: /* @__PURE__ */ t("span", { className: "bar", style: m }) }),
     /* @__PURE__ */ l("div", { className: "percent", style: x, children: [
       e.percent,
@@ -1451,9 +1451,9 @@ const At = (e) => {
     let u = "";
     return (o || e.searchText) && (u += " focus"), e.screen === "mobile" && (u += " mobile"), u;
   }, [o, e.screen]), h = Ae(() => {
-    var b;
+    var y;
     let u = f;
-    return typeof e.validator == "function" && !((b = e.validator) != null && b.call(e, e.searchText)) && (u += " error"), u;
+    return typeof e.validator == "function" && !((y = e.validator) != null && y.call(e, e.searchText)) && (u += " error"), u;
   }, [f, e.searchText]);
   return /* @__PURE__ */ l("div", { className: "input-wrapper" + h, children: [
     e.children,
@@ -1496,7 +1496,7 @@ const Lt = (e) => {
 const Wt = ({ title: e, children: n }) => {
   const [o, s] = z(!1), [f, h] = z("hidden"), { ref: u } = rr(() => {
     s(!1), h("hidden");
-  }), b = () => {
+  }), y = () => {
     o && h("unset");
   };
   function m() {
@@ -1508,7 +1508,7 @@ const Wt = ({ title: e, children: n }) => {
       className: "basic-accordion",
       ref: u,
       style: { overflow: f },
-      onTransitionEnd: b,
+      onTransitionEnd: y,
       children: [
         /* @__PURE__ */ l("div", { className: "header", onClick: m, children: [
           /* @__PURE__ */ t("span", { className: "title", children: e }),
@@ -1527,7 +1527,7 @@ const tr = ({
   clickLeft: f,
   clickRight: h,
   clickPoint: u,
-  onTransitionEnd: b,
+  onTransitionEnd: y,
   onMouseEnter: m,
   onMouseLeave: x,
   onTouchStart: C,
@@ -1545,7 +1545,7 @@ const tr = ({
         {
           className: "slide-container",
           ref: o,
-          onTransitionEnd: b,
+          onTransitionEnd: y,
           onTouchStart: C,
           onTouchEnd: L,
           children: E
@@ -1571,7 +1571,7 @@ const tr = ({
     ]
   }
 ), nr = (e) => {
-  const n = J(null), o = J(null), [s, f] = z(1), [h, u] = z(0), [b, m] = z(0);
+  const n = J(null), o = J(null), [s, f] = z(1), [h, u] = z(0), [y, m] = z(0);
   return {
     container: n,
     slide: o,
@@ -1612,7 +1612,7 @@ const tr = ({
       var j;
       const k = (j = o.current) == null ? void 0 : j.getBoundingClientRect().width;
       if (h === 0) {
-        b === -1 && (o.current.style.transform = "translateX(0)", o.current.style.transition = "none", n.current && (n.current.scrollLeft = k * s)), m(0);
+        y === -1 && (o.current.style.transform = "translateX(0)", o.current.style.transition = "none", n.current && (n.current.scrollLeft = k * s)), m(0);
         return;
       }
       h === 1 ? s === e ? (f(1), o.current.style.transform = "translateX(0)", o.current.style.transition = "none", n.current.scrollLeft = k) : (o.current.style.transform = "translateX(0)", o.current.style.transition = "none", n.current && (n.current.scrollLeft = k * (s + 1)), f((p) => p + 1)) : s === 1 ? (f(e), o.current.style.transform = "translateX(0)", o.current.style.transition = "none", n.current.scrollLeft = k * e) : (o.current.style.transform = "translateX(0)", o.current.style.transition = "none", n.current && (n.current.scrollLeft = k * (s - 1)), f((p) => p - 1)), u(0);
@@ -1625,7 +1625,7 @@ const tr = ({
     currentIndex: f,
     clickLeft: h,
     clickRight: u,
-    clickPoint: b,
+    clickPoint: y,
     onTransitionEnd: m
   } = nr(n);
   return /* @__PURE__ */ t(
@@ -1636,7 +1636,7 @@ const tr = ({
       currentIndex: f,
       clickLeft: h,
       clickRight: u,
-      clickPoint: b,
+      clickPoint: y,
       onTransitionEnd: m,
       itemLength: n,
       children: /* @__PURE__ */ l(Ie, { children: [
@@ -1651,7 +1651,7 @@ const tr = ({
   );
 }, Ft = (e) => {
   const n = e.items.length, [o, s] = z(), [f, h] = z(!1), u = J(), {
-    container: b,
+    container: y,
     slide: m,
     currentIndex: x,
     clickLeft: C,
@@ -1672,7 +1672,7 @@ const tr = ({
     );
     u.current = m.current.children[0].clientWidth;
     const I = m.current.parentElement;
-    b.current.scrollLeft = u.current, O.observe(I);
+    y.current.scrollLeft = u.current, O.observe(I);
   }, []);
   const j = () => setInterval(() => {
     L();
@@ -1686,7 +1686,7 @@ const tr = ({
   return /* @__PURE__ */ t(
     tr,
     {
-      container: b,
+      container: y,
       slide: m,
       currentIndex: x,
       clickLeft: C,
@@ -1699,10 +1699,10 @@ const tr = ({
       },
       itemLength: n,
       onTouchStart: (O) => {
-        b.current && (b.current.style.overflow = "auto"), h(!1), _.current = O.changedTouches[0].pageX;
+        console.log("touch start"), y.current && (y.current.style.overflow = "auto"), h(!1), _.current = O.changedTouches[0].pageX;
       },
       onTouchEnd: (O) => {
-        b.current && (b.current.style.overflow = "hidden");
+        y.current;
         const I = u.current / 2.5, F = _.current - O.changedTouches[0].pageX;
         Math.abs(F) >= I ? A(F) : (O.changedTouches[0], $(F)), setTimeout(() => {
           o && clearTimeout(o), h(!0);
