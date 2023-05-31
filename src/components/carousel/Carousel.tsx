@@ -11,7 +11,7 @@ interface CarouselProps {
   clickRight: () => void
   clickPoint: (selectedNumber: number) => void
   onTransitionEnd: () => void
-  onMouseEnter?: () => void
+  onMouseEnter?: (e: React.MouseEvent) => void
   onMouseLeave?: () => void
   onTouchStart?: (e: React.TouchEvent) => void
   onTouchMove?: (e: React.TouchEvent) => void
@@ -52,17 +52,21 @@ const Carousel = ({
           {children}
         </div>
       </div>
-      <div
-        className="left"
-        onClick={clickLeft}
-        // onTouchStart={() => console.log('touch click')}
-        // onTouchEnd={() => console.log('touch end')}
-      >
-        <Element name="Right" size="small" color={Colors.white} />
-      </div>
-      <div className="right" onClick={clickRight}>
-        <Element name="Right" size="small" color={Colors.white} />
-      </div>
+      {itemLength >= 2 && (
+        <>
+          <div
+            className="left"
+            onClick={clickLeft}
+            // onTouchStart={() => console.log('touch click')}
+            // onTouchEnd={() => console.log('touch end')}
+          >
+            <Element name="Right" size="small" color={Colors.white} />
+          </div>
+          <div className="right" onClick={clickRight}>
+            <Element name="Right" size="small" color={Colors.white} />
+          </div>
+        </>
+      )}
       <div className="progress">
         {Array(itemLength)
           .fill(1)
