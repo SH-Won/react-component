@@ -7,9 +7,10 @@
   box-sizing: border-box;
   gap: 10px;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 1px solid color('grey_ccc');
-  background-color: color('white');
+  // background-color: color('grey_ccc');
+  background-color: rgb(245,245,245);
   font-size: 16px;
   & > input {
     font-size: 16px;
@@ -18,7 +19,8 @@
     width: 100%;
   }
   &.focus {
-    border-color: color('main_sub');
+    // border-color: color('main_sub');
+    border-color : color('grey_999');
     font-size: 16px;
   }
   &.error {

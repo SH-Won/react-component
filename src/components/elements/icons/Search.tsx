@@ -3,11 +3,10 @@ import { IconProps } from '../Element'
 const Search = (props: IconProps) => {
   const size =
     props.size === 'big' ? '30' : props.size === 'medium' ? '24' : '20'
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="#000000"
+      fill={props.color}
       width={size}
       height={size}
       viewBox="0 0 32 32"

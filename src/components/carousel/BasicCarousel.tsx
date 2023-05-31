@@ -1,5 +1,3 @@
-import Colors from '../../styles/colors.module.scss'
-import { Element } from '../elements'
 import Carousel from './Carousel'
 import './Carousel.scss'
 import useCarouselController from './hook/useCarouselController'
@@ -10,6 +8,7 @@ interface CarouselProps<T> {
 const BasicCarousel = <T,>(props: CarouselProps<T>) => {
   const itemLength = props.items.length
   const {
+    container,
     slide,
     currentIndex,
     clickLeft,
@@ -21,6 +20,7 @@ const BasicCarousel = <T,>(props: CarouselProps<T>) => {
   return (
     <Carousel
       {...{
+        container,
         slide,
         currentIndex,
         clickLeft,

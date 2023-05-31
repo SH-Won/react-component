@@ -5,7 +5,7 @@ import Element from '../../elements/Element'
 import Colors from '../../../styles/colors.module.scss'
 
 const meta: Meta<typeof InputBox> = {
-  title: 'Input',
+  title: 'Common',
   component: (props) => {
     return (
       <div style={{ maxWidth: '500px' }}>

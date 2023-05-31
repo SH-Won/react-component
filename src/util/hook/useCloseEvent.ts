@@ -1,4 +1,4 @@
-import { DOMElement, MutableRefObject, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 
 const useCloseEvent = (closeEvent : () => void) => {
   const ref = useRef<HTMLDivElement>(null)

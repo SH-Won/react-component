@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import NotifiCation from '../Notification'
 
 const meta: Meta<typeof NotifiCation> = {
-  title: 'Notification',
+  title: 'Common',
   component: (props) => {
     return (
       <div style={{ maxWidth: '500px' }}>
