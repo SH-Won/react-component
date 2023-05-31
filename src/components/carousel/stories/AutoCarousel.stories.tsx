@@ -1,6 +1,8 @@
+import { Button } from '../../button'
 import { RatioCardImage } from '@/components/card'
 import type { Meta, StoryObj } from '@storybook/react'
 import AutoCarousel from '../AutoCarousel'
+import Colors from '../../../styles/colors.module.scss'
 
 const meta: Meta<typeof AutoCarousel> = {
   title: 'Carousel',
@@ -17,7 +19,16 @@ const meta: Meta<typeof AutoCarousel> = {
           time={2000}
           items={items}
           renderItems={(item, index) => (
-            <RatioCardImage key={index + '_'} imageUrl={item} ratio={1.15} />
+            <div key={index}>
+              <RatioCardImage key={index + '_'} imageUrl={item} ratio={1.15} />
+              {/* <Button
+                width="auto"
+                color={Colors.white}
+                border={Colors.grey_bbb}
+              >
+                확인
+              </Button> */}
+            </div>
           )}
         />
       </div>

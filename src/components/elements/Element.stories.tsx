@@ -2,7 +2,7 @@ import type { Meta, StoryObj, StoryFn } from '@storybook/react'
 import Element from '../elements/Element'
 import { bigElements, mediumElements, smallElements } from '@/const/IconElement'
 const meta: Meta<typeof Element> = {
-  title: 'icon',
+  title: 'Icon',
   component: Element,
 }
 export default meta

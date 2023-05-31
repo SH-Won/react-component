@@ -21,19 +21,9 @@ const useCarouselController = (itemLength : number) => {
   }
   const clickPoint = (selectedIndex: number) => {
     if(selectedIndex === currentIndex) return 
-    
-    if(selectedIndex < currentIndex){
-      slide.current!.style.transform = `translateX(+${(selectedIndex) * 100}%)`
-      slide.current!.style.transition = `transform .3s linear`
-      setDirection(-1)
-      setCurrentIndex(selectedIndex)
-    }
-    else{
-      slide.current!.style.transform = `translateX(-${(selectedIndex) * 100}%)`
-      slide.current!.style.transition = `transform .3s linear`
-      setDirection(1)
-      setCurrentIndex(selectedIndex)
-    }
+    slide.current!.style.transform = `translateX(-${(selectedIndex) * 100}%)`
+    slide.current!.style.transition = `transform .3s linear`
+    setCurrentIndex(selectedIndex)
     
   }
   const touchMove = (distance : number) => {
