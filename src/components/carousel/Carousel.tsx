@@ -1,5 +1,5 @@
 import Colors from '../../styles/colors.module.scss'
-import { Ref } from 'react'
+import React, { Ref } from 'react'
 import { Element } from '../elements'
 import './Carousel.scss'
 interface CarouselProps {
@@ -14,6 +14,7 @@ interface CarouselProps {
   onMouseEnter?: () => void
   onMouseLeave?: () => void
   onTouchStart?: (e: React.TouchEvent) => void
+  onTouchMove?: (e: React.TouchEvent) => void
   onTouchEnd?: (e: React.TouchEvent) => void
   children: JSX.Element[] | JSX.Element | string
 }
@@ -29,6 +30,7 @@ const Carousel = ({
   onMouseEnter,
   onMouseLeave,
   onTouchStart,
+  onTouchMove,
   onTouchEnd,
   children,
 }: CarouselProps) => {
@@ -44,6 +46,7 @@ const Carousel = ({
           ref={slide}
           onTransitionEnd={onTransitionEnd}
           onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
           {children}

@@ -1,5 +1,3 @@
-import Colors from '../../styles/colors.module.scss'
-import { Element } from '../elements'
 import Carousel from './Carousel'
 import './Carousel.scss'
 import useCarouselController from './hook/useCarouselController'

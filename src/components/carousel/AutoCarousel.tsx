@@ -42,35 +42,16 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
         threshold: 0.1,
       },
     )
-    itemWidth.current = slide.current!.children[0].clientWidth
+    itemWidth.current = slide.current!.getBoundingClientRect().width
     const carousel = slide.current!.parentElement as Element
-    container.current!.scrollLeft = itemWidth.current as number
     io.observe(carousel)
   }, [])
-  // const timerFunc = () => {
-  //   return setTimeout(() => {
-  //     clickRight()
-  //   }, props.time)
-  // }
   const timerFunc = () => {
     return setInterval(() => {
       clickRight()
     }, props.time)
   }
   useEffect(() => {
-    // let currentTimer: any
-    // if (startTimer) {
-    //   clearTimeout(timer)
-    //   currentTimer = setTimeout(() => {
-    //     clickRight()
-    //   }, props.time)
-    //   setTimer(currentTimer)
-    // } else {
-    //   clearTimeout(timer)
-    // }
-    // return () => {
-    //   clearTimeout(timer)
-    // }
     clearInterval(timer)
     if (startTimer) {
       setTimer(timerFunc())
@@ -78,12 +59,6 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
   }, [currentIndex, startTimer])
 
   const onMouseEnter = () => {
-    // if (isMobile()) {
-    //   clearTimeout(timer)
-    //   return
-    // }
-    // clearInterval(timer)
-
     setStartTimer(false)
   }
 
@@ -92,26 +67,31 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
     setStartTimer(true)
   }
   const onTouchStart = (e: React.TouchEvent) => {
-    // clearTimeout(timer)
-    console.log('touch start')
-    if (container.current) {
-      container.current!.style.overflow = 'auto'
-    }
     setStartTimer(false)
     pageX.current = e.changedTouches[0].pageX
   }
-  const onTouchEnd = (e: React.TouchEvent) => {
-    if (container.current) {
-      // container.current!.style.overflow = 'hidden'
+  const onTouchMove = (e: React.TouchEvent) => {
+    const moveX = e.changedTouches[0].pageX
+    const diff = pageX.current! - moveX
+    if (Math.abs(diff) > slide.current!.getBoundingClientRect().width / 1.5) {
+      return
     }
+    let x
+    if (diff > 0) {
+      x = `-${currentIndex * 100}% - ${Math.abs(diff)}px`
+    } else {
+      x = `-${currentIndex * 100}% + ${Math.abs(diff)}px`
+    }
+    slide.current!.style.transform = `translateX(calc(${x}))`
+  }
+  const onTouchEnd = (e: React.TouchEvent) => {
     const range = itemWidth.current! / 2.5
     const touchDistance = pageX.current! - e.changedTouches[0].pageX
 
     if (Math.abs(touchDistance) >= range) {
       touchMove(touchDistance)
     } else {
-      const radiusX = e.changedTouches[0]
-      touchRecover(touchDistance)
+      touchRecover()
     }
     setTimeout(() => {
       if (timer) {
@@ -135,6 +115,7 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
         onMouseLeave,
         itemLength,
         onTouchStart,
+        onTouchMove,
         onTouchEnd,
       }}
     >
