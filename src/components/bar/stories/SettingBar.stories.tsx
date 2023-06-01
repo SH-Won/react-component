@@ -43,7 +43,7 @@ type Story = StoryObj<typeof SettingBar>
 
 export const Setting: Story = {
   args: {
-    width: 300,
+    // width: 300,
     magnification: 1,
     count: 10,
   },
