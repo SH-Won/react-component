@@ -3,7 +3,7 @@ import './styles/SettingBar.scss'
 
 interface Item {
   key: string
-  value: string | number
+  value: number
   order: number
 }
 interface SettingBarProps {
