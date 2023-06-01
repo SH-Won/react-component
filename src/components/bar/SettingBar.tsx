@@ -1,4 +1,4 @@
-import { useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import './styles/SettingBar.scss'
 
 interface Item {
@@ -29,10 +29,13 @@ const SettingBar = ({
         key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(),
       }))
   }, [count])
+  const isValid = initialCount !== undefined && initialCount < items.length
   const itemLength = items.length
   const [wrapperSize, setWrapperSize] = useState<number>()
   const [size, setSize] = useState<number>(0)
-  const [position, setPosition] = useState<Item>(items[initialCount ?? 0])
+  const [position, setPosition] = useState<Item>(
+    items[isValid ? initialCount : 0],
+  )
   const onClickProgress = (item: Item) => {
     setPosition(item)
     onSelect?.(item)
@@ -71,6 +74,9 @@ const SettingBar = ({
     }
     setWrapperSize(wrapperSize)
   }, [width])
+  useEffect(() => {
+    setPosition(items[isValid ? initialCount : 0])
+  }, [initialCount])
   return (
     <div style={{ width, height: size * 2 }} className="setting-bar-wrapper">
       <div className="setting-bar" ref={bar}>

@@ -46,5 +46,6 @@ export const Setting: Story = {
     width: 236,
     magnification: 1,
     count: 10,
+    initialCount: 0,
   },
 }
