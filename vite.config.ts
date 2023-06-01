@@ -12,7 +12,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
     preserveSymlinks: false,
-    extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx'],
+    extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx','scss'],
   },
   build : {
     lib : {

@@ -5,6 +5,9 @@ const useCloseEvent = (closeEvent : () => void) => {
 
   const onClick = (e : any) => {
     const isInner = ref.current?.contains(e.target)
+    console.log(ref.current, e.target)
+    console.dir(e.target)
+    console.log(isInner, e.target)
     if(!isInner){
       closeEvent()
     }

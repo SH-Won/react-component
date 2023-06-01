@@ -1,25 +1,35 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import './styles/SettingBar.scss'
 
 interface Item {
   key?: string
-  value: string
+  value: string | number
   order?: number
 }
 interface SettingBarProps {
-  items: Item[]
   width?: number // px % ??
   onSelect?: (item: Item) => void
+  magnification?: number
+  count?: number
 }
-const SettingBar = ({ items, width, onSelect }: SettingBarProps) => {
-  const convertedItems = items?.map((item, order) => ({
-    ...item,
-    order,
-    key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(),
-  }))
+const SettingBar = ({
+  width,
+  onSelect,
+  count,
+  magnification,
+}: SettingBarProps) => {
+  const items = useMemo(() => {
+    return Array(count! + 1)
+      .fill(1)
+      .map((_, order) => ({
+        order,
+        value: order * magnification!,
+        key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(),
+      }))
+  }, [count])
   const itemLength = items.length
   const [size, setSize] = useState<number>(0)
-  const [position, setPosition] = useState<Item>(convertedItems[0])
+  const [position, setPosition] = useState<Item>(items[0])
   const onClickProgress = (item: Item) => {
     setPosition(item)
     onSelect?.(item)
@@ -39,16 +49,18 @@ const SettingBar = ({ items, width, onSelect }: SettingBarProps) => {
   useLayoutEffect(() => {
     const barWidth = bar.current!.getBoundingClientRect().width
     if (!width) {
-      setSize(barWidth / itemLength)
+      const size = barWidth / itemLength
+      setSize(size >= 30 ? 30 : size)
     } else {
-      setSize(width / itemLength)
+      const size = width / itemLength
+      setSize(size >= 30 ? 30 : size)
     }
   }, [width])
-
+  // console.log(convertedItems.map((el) => el.key))
   return (
-    <div style={{ width, height: size }}>
+    <div style={{ width, height: size * 2 }} className="setting-bar-wrapper">
       <div className="setting-bar" ref={bar}>
-        {convertedItems.map((item, index) => (
+        {items.map((item, index) => (
           <div
             className={`progress ${
               item.order === position.order ? 'selected' : ''
@@ -72,12 +84,12 @@ const SettingBar = ({ items, width, onSelect }: SettingBarProps) => {
         ></div>
       </div>
       <div className="setting-explain">
-        {convertedItems.map((item, index) => (
+        {items.map((item, index) => (
           <span
             key={item.key}
             className={index === position.order ? 'selected' : ''}
           >
-            {item.order + 1}
+            {item.value}
           </span>
         ))}
       </div>
