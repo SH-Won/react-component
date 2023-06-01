@@ -21,7 +21,7 @@ function Mr() {
   if (Ve)
     return X;
   Ve = 1;
-  var e = de, n = Symbol.for("react.element"), a = Symbol.for("react.fragment"), s = Object.prototype.hasOwnProperty, l = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, f = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var e = de, n = Symbol.for("react.element"), a = Symbol.for("react.fragment"), s = Object.prototype.hasOwnProperty, u = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, f = { key: !0, ref: !0, __self: !0, __source: !0 };
   function h(y, d, k) {
     var w, R = {}, L = null, g = null;
     k !== void 0 && (L = "" + k), d.key !== void 0 && (L = "" + d.key), d.ref !== void 0 && (g = d.ref);
@@ -30,7 +30,7 @@ function Mr() {
     if (y && y.defaultProps)
       for (w in d = y.defaultProps, d)
         R[w] === void 0 && (R[w] = d[w]);
-    return { $$typeof: n, type: y, key: L, ref: g, props: R, _owner: l.current };
+    return { $$typeof: n, type: y, key: L, ref: g, props: R, _owner: u.current };
   }
   return X.Fragment = a, X.jsx = h, X.jsxs = h, X;
 }
@@ -47,7 +47,7 @@ var q = {};
 var Fe;
 function Dr() {
   return Fe || (Fe = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = de, n = Symbol.for("react.element"), a = Symbol.for("react.portal"), s = Symbol.for("react.fragment"), l = Symbol.for("react.strict_mode"), f = Symbol.for("react.profiler"), h = Symbol.for("react.provider"), y = Symbol.for("react.context"), d = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), w = Symbol.for("react.suspense_list"), R = Symbol.for("react.memo"), L = Symbol.for("react.lazy"), g = Symbol.for("react.offscreen"), S = Symbol.iterator, N = "@@iterator";
+    var e = de, n = Symbol.for("react.element"), a = Symbol.for("react.portal"), s = Symbol.for("react.fragment"), u = Symbol.for("react.strict_mode"), f = Symbol.for("react.profiler"), h = Symbol.for("react.provider"), y = Symbol.for("react.context"), d = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), w = Symbol.for("react.suspense_list"), R = Symbol.for("react.memo"), L = Symbol.for("react.lazy"), g = Symbol.for("react.offscreen"), S = Symbol.iterator, N = "@@iterator";
     function V(r) {
       if (r === null || typeof r != "object")
         return null;
@@ -75,7 +75,7 @@ function Dr() {
     var me = !1, ve = !1, be = !1, T = !1, $ = !1, P;
     P = Symbol.for("react.module.reference");
     function F(r) {
-      return !!(typeof r == "string" || typeof r == "function" || r === s || r === f || $ || r === l || r === k || r === w || T || r === g || me || ve || be || typeof r == "object" && r !== null && (r.$$typeof === L || r.$$typeof === R || r.$$typeof === h || r.$$typeof === y || r.$$typeof === d || // This needs to include all possible module reference object
+      return !!(typeof r == "string" || typeof r == "function" || r === s || r === f || $ || r === u || r === k || r === w || T || r === g || me || ve || be || typeof r == "object" && r !== null && (r.$$typeof === L || r.$$typeof === R || r.$$typeof === h || r.$$typeof === y || r.$$typeof === d || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -105,7 +105,7 @@ function Dr() {
           return "Portal";
         case f:
           return "Profiler";
-        case l:
+        case u:
           return "StrictMode";
         case k:
           return "Suspense";
@@ -136,7 +136,7 @@ function Dr() {
         }
       return null;
     }
-    var I = Object.assign, U = 0, ye, ke, we, Ce, pe, Re, xe;
+    var W = Object.assign, U = 0, ye, ke, we, Ce, pe, Re, xe;
     function Se() {
     }
     Se.__reactDisabledLog = !0;
@@ -172,25 +172,25 @@ function Dr() {
             writable: !0
           };
           Object.defineProperties(console, {
-            log: I({}, r, {
+            log: W({}, r, {
               value: ye
             }),
-            info: I({}, r, {
+            info: W({}, r, {
               value: ke
             }),
-            warn: I({}, r, {
+            warn: W({}, r, {
               value: we
             }),
-            error: I({}, r, {
+            error: W({}, r, {
               value: Ce
             }),
-            group: I({}, r, {
+            group: W({}, r, {
               value: pe
             }),
-            groupCollapsed: I({}, r, {
+            groupCollapsed: W({}, r, {
               value: Re
             }),
-            groupEnd: I({}, r, {
+            groupEnd: W({}, r, {
               value: xe
             })
           });
@@ -285,8 +285,8 @@ function Dr() {
       } finally {
         ie = !1, te.current = _, cr(), Error.prepareStackTrace = b;
       }
-      var G = r ? r.displayName || r.name : "", Ie = G ? J(G) : "";
-      return typeof r == "function" && K.set(r, Ie), Ie;
+      var G = r ? r.displayName || r.name : "", We = G ? J(G) : "";
+      return typeof r == "function" && K.set(r, We), We;
     }
     function ur(r, i, o) {
       return Ee(r, !1);
@@ -591,7 +591,7 @@ Check the top-level render call using <` + o + ">.");
         r.ref !== null && (B(r), x("Invalid attribute `ref` supplied to `React.Fragment`."), B(null));
       }
     }
-    function We(r, i, o, c, b, _) {
+    function Ie(r, i, o, c, b, _) {
       {
         var v = F(r);
         if (!v) {
@@ -622,10 +622,10 @@ Check the top-level render call using <` + o + ">.");
       }
     }
     function Lr(r, i, o) {
-      return We(r, i, o, !0);
+      return Ie(r, i, o, !0);
     }
     function Tr(r, i, o) {
-      return We(r, i, o, !1);
+      return Ie(r, i, o, !1);
     }
     var Pr = Tr, jr = Lr;
     q.Fragment = s, q.jsx = Pr, q.jsxs = jr;
@@ -634,10 +634,10 @@ Check the top-level render call using <` + o + ">.");
 (function(e) {
   process.env.NODE_ENV === "production" ? e.exports = Mr() : e.exports = Dr();
 })($r);
-const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir = "#F5222D", Vr = "#111111", Fr = "#666666", Br = "#333333", Gr = "#999999", Hr = "#bbbbbb", Ur = "#cccccc", Yr = "#f4f4f4", Xr = "#f5f6f8", qr = "#f2f4f7", Zr = "#dbd6eb", Jr = "#eeebff", Kr = "#b6b7b9", Qr = "#e7e9ef", et = "#cfd4dd", rt = "#d42a21", tt = "#1968e5", nt = "#27c4b8", it = "#fff", ot = "#f4f0ff", at = "#ABAEBF", st = "#03c75a", ct = "#e1a016", lt = "#da1c26", z = {
+const he = Z.Fragment, t = Z.jsx, l = Z.jsxs, Ar = "#6440dd", Ir = "#5934D8", Wr = "#F5222D", Vr = "#111111", Fr = "#666666", Br = "#333333", Gr = "#999999", Hr = "#bbbbbb", Ur = "#cccccc", Yr = "#f4f4f4", Xr = "#f5f6f8", qr = "#f2f4f7", Zr = "#dbd6eb", Jr = "#eeebff", Kr = "#b6b7b9", Qr = "#e7e9ef", et = "#cfd4dd", rt = "#d42a21", tt = "#1968e5", nt = "#27c4b8", it = "#fff", ot = "#f4f0ff", at = "#ABAEBF", st = "#03c75a", ct = "#e1a016", lt = "#da1c26", z = {
   main: Ar,
-  main_sub: Wr,
-  notice: Ir,
+  main_sub: Ir,
+  notice: Wr,
   grey_111: Vr,
   grey_666: Fr,
   grey_333: Br,
@@ -663,12 +663,12 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   red: lt
 }, ut = (e, n) => {
   const a = e[n];
-  return a ? typeof a == "function" ? a() : Promise.resolve(a) : new Promise((s, l) => {
-    (typeof queueMicrotask == "function" ? queueMicrotask : setTimeout)(l.bind(null, new Error("Unknown variable dynamic import: " + n)));
+  return a ? typeof a == "function" ? a() : Promise.resolve(a) : new Promise((s, u) => {
+    (typeof queueMicrotask == "function" ? queueMicrotask : setTimeout)(u.bind(null, new Error("Unknown variable dynamic import: " + n)));
   });
 }, Ge = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       fill: e.color,
@@ -696,7 +696,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: Ge
 }, Symbol.toStringTag, { value: "Module" })), He = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -714,7 +714,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
           /* @__PURE__ */ t(
             "path",
@@ -747,7 +747,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: He
 }, Symbol.toStringTag, { value: "Module" })), Ue = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       id: "caution-sign-circle",
@@ -768,7 +768,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "line",
             {
@@ -809,7 +809,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: Ue
 }, Symbol.toStringTag, { value: "Module" })), Ye = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       width: n,
@@ -859,7 +859,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: Xe
 }, Symbol.toStringTag, { value: "Module" })), qe = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -877,9 +877,9 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
-          /* @__PURE__ */ u("g", { id: "Arrow / Arrow_Sub_Down_Right", children: [
+          /* @__PURE__ */ l("g", { id: "Arrow / Arrow_Sub_Down_Right", children: [
             " ",
             /* @__PURE__ */ t(
               "path",
@@ -904,7 +904,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: qe
 }, Symbol.toStringTag, { value: "Module" })), Ze = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       id: "Editable-line",
@@ -927,7 +927,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "circle",
             {
@@ -965,7 +965,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: Ze
 }, Symbol.toStringTag, { value: "Module" })), Je = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       width: n,
@@ -1001,7 +1001,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: Je
 }, Symbol.toStringTag, { value: "Module" })), Ke = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       viewBox: "0 0 32 32",
@@ -1021,7 +1021,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t("g", { id: "icomoon-ignore" }),
           /* @__PURE__ */ t(
             "path",
@@ -1046,7 +1046,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: Ke
 }, Symbol.toStringTag, { value: "Module" })), Qe = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -1064,7 +1064,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
           /* @__PURE__ */ t(
             "path",
@@ -1085,7 +1085,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: Qe
 }, Symbol.toStringTag, { value: "Module" })), er = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -1105,7 +1105,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
   default: er
 }, Symbol.toStringTag, { value: "Module" })), rr = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "svg",
     {
       viewBox: "0 0 48 48",
@@ -1123,7 +1123,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ l("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "rect",
             {
@@ -1230,7 +1230,7 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
 }, Ct = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: rr
-}, Symbol.toStringTag, { value: "Module" })), W = (e) => {
+}, Symbol.toStringTag, { value: "Module" })), I = (e) => {
   const n = () => {
     switch (e.name) {
       case "Adult":
@@ -1265,12 +1265,12 @@ const he = Z.Fragment, t = Z.jsx, u = Z.jsxs, Ar = "#6440dd", Wr = "#5934D8", Ir
 };
 const Lt = (e) => {
   const n = typeof e.back == "function", a = e.isMobile ? "appBar mobile" : "appBar";
-  return /* @__PURE__ */ u("div", { className: a, children: [
-    /* @__PURE__ */ u("div", { className: "logo", children: [
+  return /* @__PURE__ */ l("div", { className: a, children: [
+    /* @__PURE__ */ l("div", { className: "logo", children: [
       n && /* @__PURE__ */ t("div", { onClick: () => {
         var s;
         return (s = e.back) == null ? void 0 : s.call(e, !1);
-      }, className: "logo-icon", children: /* @__PURE__ */ t(W, { name: "ArrowLeft", size: "big", color: z.grey_111 }) }),
+      }, className: "logo-icon", children: /* @__PURE__ */ t(I, { name: "ArrowLeft", size: "big", color: z.grey_111 }) }),
       /* @__PURE__ */ t("span", { onClick: () => {
         var s;
         return (s = e.back) == null ? void 0 : s.call(e, !0);
@@ -1287,11 +1287,11 @@ const pt = (e) => {
     padding: n / 1.5 + "px"
   }, s = {
     borderRadius: e.size + "px"
-  }, l = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, f = e.percent <= 50 ? 18 * (e.percent / 5) : 180, h = e.percent < 50 ? z.red : e.percent < 75 ? z.orange : z.green, y = {
+  }, u = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, f = e.percent <= 50 ? 18 * (e.percent / 5) : 180, h = e.percent < 50 ? z.red : e.percent < 75 ? z.orange : z.green, y = {
     border: `${n}px solid ${h}`,
     borderTopRightRadius: e.size + "px",
     borderBottomRightRadius: e.size + "px",
-    transform: `rotate(${l}deg)`
+    transform: `rotate(${u}deg)`
   }, d = {
     border: `${n}px solid ${h}`,
     borderTopLeftRadius: e.size + "px",
@@ -1303,10 +1303,10 @@ const pt = (e) => {
     width: e.size - n * 2 + "px",
     height: e.size - n * 2 + "px"
   };
-  return /* @__PURE__ */ t("div", { className: "container", style: a, children: /* @__PURE__ */ u("div", { className: "circular-progress-bar", style: s, children: [
+  return /* @__PURE__ */ t("div", { className: "container", style: a, children: /* @__PURE__ */ l("div", { className: "circular-progress-bar", style: s, children: [
     /* @__PURE__ */ t("span", { className: "left", children: /* @__PURE__ */ t("span", { className: "bar", style: y }) }),
     /* @__PURE__ */ t("span", { className: "right", children: /* @__PURE__ */ t("span", { className: "bar", style: d }) }),
-    /* @__PURE__ */ u("div", { className: "percent", style: k, children: [
+    /* @__PURE__ */ l("div", { className: "percent", style: k, children: [
       e.percent,
       "%"
     ] })
@@ -1318,15 +1318,15 @@ const Tt = ({
   count: a,
   magnification: s
 }) => {
-  const l = ue(() => Array(a + 1).fill(1).map((g, S) => ({
+  const u = ue(() => Array(a + 1).fill(1).map((g, S) => ({
     order: S,
     value: S * s,
     key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
-  })), [a]), f = l.length, [h, y] = O(0), [d, k] = O(l[0]), w = (g) => {
+  })), [a]), f = u.length, [h, y] = O(0), [d, k] = O(u[0]), w = (g) => {
     k(g), n == null || n(g);
   }, R = H(null), L = () => {
     var V;
-    let N = (((V = R.current) == null ? void 0 : V.getBoundingClientRect().width) - l.length * h) / (l.length - 1) * d.order + h * d.order;
+    let N = (((V = R.current) == null ? void 0 : V.getBoundingClientRect().width) - u.length * h) / (u.length - 1) * d.order + h * d.order;
     return d.order !== 0 && (N += h / 2), {
       width: `${N}px`
     };
@@ -1340,9 +1340,9 @@ const Tt = ({
       const S = g / f;
       y(S >= 30 ? 30 : S);
     }
-  }, [e]), /* @__PURE__ */ u("div", { style: { width: e, height: h * 2 }, className: "setting-bar-wrapper", children: [
-    /* @__PURE__ */ u("div", { className: "setting-bar", ref: R, children: [
-      l.map((g, S) => /* @__PURE__ */ t(
+  }, [e]), /* @__PURE__ */ l("div", { style: { width: e, height: h * 2 }, className: "setting-bar-wrapper", children: [
+    /* @__PURE__ */ l("div", { className: "setting-bar", ref: R, children: [
+      u.map((g, S) => /* @__PURE__ */ t(
         "div",
         {
           className: `progress ${g.order === d.order ? "selected" : ""}`,
@@ -1365,7 +1365,7 @@ const Tt = ({
         }
       )
     ] }),
-    /* @__PURE__ */ t("div", { className: "setting-explain", children: l.map((g, S) => /* @__PURE__ */ t(
+    /* @__PURE__ */ t("div", { className: "setting-explain", children: u.map((g, S) => /* @__PURE__ */ t(
       "span",
       {
         className: S === d.order ? "selected" : "",
@@ -1403,9 +1403,9 @@ const jt = (e) => {
   });
   return /* @__PURE__ */ t("div", { className: "card-container", children: /* @__PURE__ */ t("div", { className: "card", children: /* @__PURE__ */ t("img", { src: e.imageUrl, style: n() }) }) });
 };
-const Ot = (e) => /* @__PURE__ */ u("div", { className: "group-card", children: [
-  e.isSub && /* @__PURE__ */ t(W, { name: "Depth", size: "medium", color: z.grey_111 }),
-  /* @__PURE__ */ u("div", { className: "card", children: [
+const Ot = (e) => /* @__PURE__ */ l("div", { className: "group-card", children: [
+  e.isSub && /* @__PURE__ */ t(I, { name: "Depth", size: "medium", color: z.grey_111 }),
+  /* @__PURE__ */ l("div", { className: "card", children: [
     /* @__PURE__ */ t("img", { className: "card-image", src: e.imageUrl }),
     /* @__PURE__ */ t("div", { className: "card-explain", children: /* @__PURE__ */ t("span", { children: e.label }) })
   ] })
@@ -1419,7 +1419,7 @@ const tr = (e) => {
 const zt = ({ opacity: e }) => /* @__PURE__ */ t(tr, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
 const Rt = (e) => {
   const n = Array(8).fill(1).map((a, s) => a + s);
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "div",
     {
       className: "page-loading-container",
@@ -1433,8 +1433,7 @@ const Rt = (e) => {
 }, nr = (e) => {
   const n = H(null), a = (s) => {
     var f;
-    const l = (f = n.current) == null ? void 0 : f.contains(s.target);
-    console.log(n.current, s.target), console.dir(s.target), console.log(l, s.target), l || e();
+    ((f = n.current) == null ? void 0 : f.contains(s.target)) || e();
   };
   return fe(() => (window.addEventListener("click", a), () => {
     window.removeEventListener("click", a);
@@ -1444,14 +1443,14 @@ const Rt = (e) => {
 };
 const xt = (e) => {
   const [n, a] = O(!0), s = e.ratio * 100 + "%";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "div",
     {
       className: "image-wrapper",
       style: { paddingTop: s },
       onClick: () => {
-        var l;
-        return (l = e.click) == null ? void 0 : l.call(e);
+        var u;
+        return (u = e.click) == null ? void 0 : u.call(e);
       },
       children: [
         /* @__PURE__ */ t(
@@ -1468,9 +1467,9 @@ const xt = (e) => {
   );
 }, Nt = (e) => {
   const n = e.ratio ? e.ratio : 1;
-  return /* @__PURE__ */ u("div", { className: "poster-card-container", children: [
+  return /* @__PURE__ */ l("div", { className: "poster-card-container", children: [
     /* @__PURE__ */ t(xt, { ratio: n, imageUrl: e.imageUrl, click: e.click }),
-    /* @__PURE__ */ u("div", { className: "poster-card-info", children: [
+    /* @__PURE__ */ l("div", { className: "poster-card-info", children: [
       /* @__PURE__ */ t("div", { className: "progress-bar", children: /* @__PURE__ */ t(pt, { percent: e.voteAverage, size: 34 }) }),
       /* @__PURE__ */ t("span", { className: "title", children: e.title }),
       /* @__PURE__ */ t("span", { className: "release-date", children: e.releaseDate })
@@ -1484,11 +1483,11 @@ const Mt = (e) => {
   } : {
     padding: "16px 16px 7px"
   };
-  return /* @__PURE__ */ u("div", { className: "popup-header-container", style: n, children: [
-    /* @__PURE__ */ u("div", { className: "popup-header", children: [
-      e.back && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.back, children: /* @__PURE__ */ t(W, { name: "ArrowLeft", size: "big", color: z.grey_999 }) }),
+  return /* @__PURE__ */ l("div", { className: "popup-header-container", style: n, children: [
+    /* @__PURE__ */ l("div", { className: "popup-header", children: [
+      e.back && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.back, children: /* @__PURE__ */ t(I, { name: "ArrowLeft", size: "big", color: z.grey_999 }) }),
       e.title && /* @__PURE__ */ t("div", { children: /* @__PURE__ */ t("span", { className: "title", children: e.title }) }),
-      e.close && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.close, children: /* @__PURE__ */ t(W, { name: "Close", size: "big", color: z.grey_999 }) })
+      e.close && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.close, children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: z.grey_999 }) })
     ] }),
     /* @__PURE__ */ t("div", { className: "popup-header-progress", children: e.maxProgress && Array(e.maxProgress).fill(1).map((a, s) => /* @__PURE__ */ t(
       "span",
@@ -1499,10 +1498,10 @@ const Mt = (e) => {
     )) })
   ] });
 };
-const Dt = (e) => /* @__PURE__ */ u("div", { className: "notification", children: [
+const Dt = (e) => /* @__PURE__ */ l("div", { className: "notification", children: [
   e.children,
-  /* @__PURE__ */ u("div", { className: "info", style: { height: e.height }, children: [
-    /* @__PURE__ */ t(W, { name: "Caution", size: "small", color: z.grey_bbb }),
+  /* @__PURE__ */ l("div", { className: "info", style: { height: e.height }, children: [
+    /* @__PURE__ */ t(I, { name: "Caution", size: "small", color: z.grey_bbb }),
     /* @__PURE__ */ t("span", { children: e.text })
   ] })
 ] });
@@ -1510,16 +1509,16 @@ const At = (e) => {
   const n = `${e.ratio * 100}%`;
   return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: n }, children: /* @__PURE__ */ t("img", { className: "ratio-img", src: e.imageUrl }) });
 };
-const Wt = (e) => {
-  const n = e.type ?? "text", [a, s] = O(!1), l = ue(() => {
+const It = (e) => {
+  const n = e.type ?? "text", [a, s] = O(!1), u = ue(() => {
     let h = "";
     return (a || e.searchText) && (h += " focus"), e.screen === "mobile" && (h += " mobile"), h;
   }, [a, e.screen]), f = ue(() => {
     var y;
-    let h = l;
+    let h = u;
     return typeof e.validator == "function" && !((y = e.validator) != null && y.call(e, e.searchText)) && (h += " error"), h;
-  }, [l, e.searchText]);
-  return /* @__PURE__ */ u("div", { className: "input-wrapper" + f, children: [
+  }, [u, e.searchText]);
+  return /* @__PURE__ */ l("div", { className: "input-wrapper" + f, children: [
     e.children,
     /* @__PURE__ */ t(
       "input",
@@ -1538,14 +1537,14 @@ const Wt = (e) => {
 const St = (e) => {
   const n = e.size ?? "medium", a = e.selected ? "selected" : "";
   return /* @__PURE__ */ t("div", { className: `selected-item ${n} ${a}`, onClick: e.click, children: e.text });
-}, It = ({
+}, Wt = ({
   items: e,
   selected: n,
   click: a,
   open: s,
-  itemSize: l
+  itemSize: u
 }) => {
-  const f = l ?? "medium";
+  const f = u ?? "medium";
   return /* @__PURE__ */ t("div", { className: `option-list ${s ? "slide" : ""}`, children: /* @__PURE__ */ t("div", { className: "option-items", children: e.map((h) => /* @__PURE__ */ t(
     St,
     {
@@ -1558,7 +1557,7 @@ const St = (e) => {
   )) }) });
 };
 const Vt = ({ title: e, children: n }) => {
-  const [a, s] = O(!1), [l, f] = O("hidden"), { ref: h } = nr(() => {
+  const [a, s] = O(!1), [u, f] = O("hidden"), { ref: h } = nr(() => {
     s(!1), f("hidden");
   }), y = () => {
     a && f("unset");
@@ -1566,17 +1565,17 @@ const Vt = ({ title: e, children: n }) => {
   function d() {
     s((k) => !k), a && f("hidden");
   }
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ l(
     "div",
     {
       className: "basic-accordion",
       ref: h,
-      style: { overflow: l },
+      style: { overflow: u },
       onTransitionEnd: y,
       children: [
-        /* @__PURE__ */ u("div", { className: "header", onClick: d, children: [
+        /* @__PURE__ */ l("div", { className: "header", onClick: d, children: [
           /* @__PURE__ */ t("span", { className: "title", children: e }),
-          /* @__PURE__ */ t("div", { className: `icon ${a ? "slide" : ""}`, children: /* @__PURE__ */ t(W, { name: "Right", size: "medium", color: z.grey_111 }) })
+          /* @__PURE__ */ t("div", { className: `icon ${a ? "slide" : ""}`, children: /* @__PURE__ */ t(I, { name: "Right", size: "medium", color: z.grey_111 }) })
         ] }),
         /* @__PURE__ */ t("div", { className: `children ${a ? "slide" : ""}`, children: n })
       ]
@@ -1588,7 +1587,7 @@ const ir = ({
   container: n,
   slide: a,
   currentIndex: s,
-  clickLeft: l,
+  clickLeft: u,
   clickRight: f,
   clickPoint: h,
   onTransitionEnd: y,
@@ -1598,7 +1597,7 @@ const ir = ({
   onTouchMove: R,
   onTouchEnd: L,
   children: g
-}) => /* @__PURE__ */ u(
+}) => /* @__PURE__ */ l(
   "div",
   {
     className: "carousel",
@@ -1617,16 +1616,16 @@ const ir = ({
           children: g
         }
       ) }),
-      e >= 2 && /* @__PURE__ */ u(he, { children: [
+      e >= 2 && /* @__PURE__ */ l(he, { children: [
         /* @__PURE__ */ t(
           "div",
           {
             className: "left",
-            onClick: l,
-            children: /* @__PURE__ */ t(W, { name: "Right", size: "small", color: z.white })
+            onClick: u,
+            children: /* @__PURE__ */ t(I, { name: "Right", size: "small", color: z.white })
           }
         ),
-        /* @__PURE__ */ t("div", { className: "right", onClick: f, children: /* @__PURE__ */ t(W, { name: "Right", size: "small", color: z.white }) })
+        /* @__PURE__ */ t("div", { className: "right", onClick: f, children: /* @__PURE__ */ t(I, { name: "Right", size: "small", color: z.white }) })
       ] }),
       /* @__PURE__ */ t("div", { className: "progress", children: Array(e).fill(1).map((S, N) => /* @__PURE__ */ t(
         "div",
@@ -1639,7 +1638,7 @@ const ir = ({
     ]
   }
 ), or = (e) => {
-  const n = H(null), a = H(null), [s, l] = O(1), [f, h] = O(0);
+  const n = H(null), a = H(null), [s, u] = O(1), [f, h] = O(0);
   O(0);
   const y = () => {
     let g = s - 1;
@@ -1657,7 +1656,7 @@ const ir = ({
     clickLeft: y,
     clickRight: d,
     clickPoint: (g) => {
-      g !== s && (a.current.style.transform = `translateX(-${g * 100}%)`, a.current.style.transition = "transform .3s linear", l(g));
+      g !== s && (a.current.style.transform = `translateX(-${g * 100}%)`, a.current.style.transition = "transform .3s linear", u(g));
     },
     touchMove: (g) => {
       g > 0 ? d() : y();
@@ -1666,14 +1665,14 @@ const ir = ({
       a.current.style.transform = `translateX(-${s * 100}%)`, a.current.style.transition = "transform .15s linear";
     },
     onTransitionEnd: () => {
-      f !== 0 && (f === 1 ? s === e ? (l(1), a.current.style.transform = "translateX(-100%)", a.current.style.transition = "none") : l((g) => g + 1) : s === 1 ? (l(e), l(e), a.current.style.transform = `translateX(-${e * 100}%)`, a.current.style.transition = "none") : l((g) => g - 1), h(0));
+      f !== 0 && (f === 1 ? s === e ? (u(1), a.current.style.transform = "translateX(-100%)", a.current.style.transition = "none") : u((g) => g + 1) : s === 1 ? (u(e), u(e), a.current.style.transform = `translateX(-${e * 100}%)`, a.current.style.transition = "none") : u((g) => g - 1), h(0));
     }
   };
 }, Ft = (e) => {
   const n = e.items.length, {
     container: a,
     slide: s,
-    currentIndex: l,
+    currentIndex: u,
     clickLeft: f,
     clickRight: h,
     clickPoint: y,
@@ -1684,13 +1683,13 @@ const ir = ({
     {
       container: a,
       slide: s,
-      currentIndex: l,
+      currentIndex: u,
       clickLeft: f,
       clickRight: h,
       clickPoint: y,
       onTransitionEnd: d,
       itemLength: n,
-      children: /* @__PURE__ */ u(he, { children: [
+      children: /* @__PURE__ */ l(he, { children: [
         e.renderItems(
           e.items[e.items.length - 1],
           e.items.length
@@ -1701,7 +1700,7 @@ const ir = ({
     }
   );
 }, Bt = (e) => {
-  const n = e.items.length, [a, s] = O(), [l, f] = O(!1), h = H(), {
+  const n = e.items.length, [a, s] = O(), [u, f] = O(!1), h = H(), {
     container: y,
     slide: d,
     currentIndex: k,
@@ -1729,8 +1728,8 @@ const ir = ({
     R();
   }, e.time);
   fe(() => {
-    clearInterval(a), l && n >= 2 && s(V());
-  }, [k, l]);
+    clearInterval(a), u && n >= 2 && s(V());
+  }, [k, u]);
   const A = (T) => {
     T.preventDefault(), console.log("mouse enter"), f(!1);
   }, x = H();
@@ -1766,7 +1765,7 @@ const ir = ({
           a && clearTimeout(a), f(!0);
         }, 2e3);
       },
-      children: /* @__PURE__ */ u(he, { children: [
+      children: /* @__PURE__ */ l(he, { children: [
         e.renderItems(
           e.items[e.items.length - 1],
           e.items.length
@@ -1778,7 +1777,7 @@ const ir = ({
   );
 };
 const Gt = ({ selected: e, children: n }) => {
-  const [a, s] = O(!1), { ref: l } = nr(() => s(!1));
+  const [a, s] = O(!1), { ref: u } = nr(() => s(!1));
   return fe(() => {
     const f = setTimeout(() => {
       s(!1);
@@ -1786,7 +1785,7 @@ const Gt = ({ selected: e, children: n }) => {
     return () => {
       clearTimeout(f);
     };
-  }, [e]), /* @__PURE__ */ u("div", { className: "dropdown", ref: l, children: [
+  }, [e]), /* @__PURE__ */ l("div", { className: "dropdown", ref: u, children: [
     /* @__PURE__ */ t(
       "div",
       {
@@ -1807,13 +1806,13 @@ export {
   jt as Card,
   pt as CircularProgressBar,
   z as Colors,
-  W as Element,
+  I as Element,
   Ot as GroupCard,
   Lt as HeaderBar,
-  Wt as InputBox,
+  It as InputBox,
   zt as LoadingSpinner,
   Dt as Notification,
-  It as OptionList,
+  Wt as OptionList,
   tr as OverLay,
   Rt as PageLoadingSpinner,
   $t as Popup,
