@@ -1323,7 +1323,7 @@ const Tt = ({
     order: R,
     value: R * d,
     key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
-  })), [s]), f = u.length, [b, g] = z(0), [_, w] = z(u[e + 1]), E = (p) => {
+  })), [s]), f = u.length, [b, g] = z(0), [_, w] = z(u[e ?? 0]), E = (p) => {
     w(p), a == null || a(p);
   }, L = H(null), k = () => {
     var $;

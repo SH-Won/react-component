@@ -31,7 +31,7 @@ const SettingBar = ({
   }, [count])
   const itemLength = items.length
   const [size, setSize] = useState<number>(0)
-  const [position, setPosition] = useState<Item>(items[initialCount! + 1 ?? 0])
+  const [position, setPosition] = useState<Item>(items[initialCount ?? 0])
   const onClickProgress = (item: Item) => {
     setPosition(item)
     onSelect?.(item)
