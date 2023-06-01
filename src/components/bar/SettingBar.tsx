@@ -44,16 +44,16 @@ const SettingBar = ({
     const barWidth = bar.current?.getBoundingClientRect().width as number
     const gap = (barWidth - items.length * size) / (items.length - 1)
     let calc = gap * position.order! + size * position.order!
-    const percent = 100 / (itemLength - 1)
+    // const percent = 100 / (itemLength - 1)
     if (position.order !== 0) {
       calc += size / 2
     }
-    const plus = (barWidth * percent * position.order) / 100 - calc
-    let finalCalc = `${percent * position.order}%`
-    finalCalc += plus >= 0 ? ` - ${plus}px` : ` + ${Math.abs(plus)}px`
+    // const plus = (barWidth * percent * position.order) / 100 - calc
+    // let finalCalc = `${percent * position.order}%`
+    // finalCalc += plus >= 0 ? ` - ${plus}px` : ` + ${Math.abs(plus)}px`
     return {
-      // width: `${calc}px`,
-      width: `calc(${finalCalc})`,
+      width: `${calc}px`,
+      // width: `calc(${finalCalc})`,
     }
   }
   useLayoutEffect(() => {
@@ -64,14 +64,13 @@ const SettingBar = ({
 
     if (!width) {
       const size = barWidth / itemLength
-      setSize(size >= 30 ? 30 : size)
+      setSize(size >= 24 ? 24 : size)
     } else {
       const size = width / itemLength
-      setSize(size >= 30 ? 30 : size)
+      setSize(size >= 24 ? 24 : size)
     }
     setWrapperSize(wrapperSize)
   }, [width])
-  // console.log(convertedItems.map((el) => el.key))
   return (
     <div style={{ width, height: size * 2 }} className="setting-bar-wrapper">
       <div className="setting-bar" ref={bar}>
