@@ -2,17 +2,19 @@ import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import './styles/SettingBar.scss'
 
 interface Item {
-  key?: string
+  key: string
   value: string | number
-  order?: number
+  order: number
 }
 interface SettingBarProps {
+  initialCount?: number
   width?: number // px % ??
   onSelect?: (item: Item) => void
   magnification?: number
   count?: number
 }
 const SettingBar = ({
+  initialCount,
   width,
   onSelect,
   count,
@@ -29,7 +31,7 @@ const SettingBar = ({
   }, [count])
   const itemLength = items.length
   const [size, setSize] = useState<number>(0)
-  const [position, setPosition] = useState<Item>(items[0])
+  const [position, setPosition] = useState<Item>(items[initialCount! + 1 ?? 0])
   const onClickProgress = (item: Item) => {
     setPosition(item)
     onSelect?.(item)
