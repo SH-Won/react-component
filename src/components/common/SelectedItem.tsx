@@ -1,7 +1,7 @@
 import './styles/SelectedItem.scss'
 interface SelectedItemProps {
   type?: 'normal' | 'border' | 'background'
-  size?: 'small' | 'medium' | 'big'
+  size?: 'small' | 'medium' | 'big' | 'custom'
   selected: boolean
   text?: string
   children?: JSX.Element | JSX.Element[] | string
