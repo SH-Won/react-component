@@ -60,17 +60,14 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
 
   const onMouseEnter = (e: React.MouseEvent) => {
     e.preventDefault()
-    console.log('mouse enter')
     setStartTimer(false)
   }
 
   const pageX = useRef<number>()
   const onMouseLeave = () => {
-    console.log('mouse leave')
     setStartTimer(true)
   }
   const onTouchStart = (e: React.TouchEvent) => {
-    console.log('touch start')
     setStartTimer(false)
     pageX.current = e.changedTouches[0].pageX
   }
@@ -89,7 +86,6 @@ const AutoCarousel = <T,>(props: CarouselProps<T>) => {
     slide.current!.style.transform = `translateX(calc(${x}))`
   }
   const onTouchEnd = (e: React.TouchEvent) => {
-    console.log('touch end')
     const range = itemWidth.current! / 2.5
     const touchDistance = pageX.current! - e.changedTouches[0].pageX
 

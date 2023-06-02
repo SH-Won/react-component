@@ -11,6 +11,6 @@ type Story = StoryObj<typeof CircularProgressBar>
 export const CircularProgress: Story = {
   args: {
     size: 100,
-    percent: 0,
+    percent: 75,
   },
 }

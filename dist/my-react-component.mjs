@@ -1739,7 +1739,7 @@ const ir = ({
     clearInterval(a), d && n >= 2 && s(X());
   }, [p, d]);
   const C = (T) => {
-    T.preventDefault(), console.log("mouse enter"), l(!1);
+    T.preventDefault(), l(!1);
   }, b = Y();
   return /* @__PURE__ */ t(
     ir,
@@ -1753,11 +1753,11 @@ const ir = ({
       onTransitionEnd: z,
       onMouseEnter: C,
       onMouseLeave: () => {
-        console.log("mouse leave"), l(!0);
+        l(!0);
       },
       itemLength: n,
       onTouchStart: (T) => {
-        console.log("touch start"), l(!1), b.current = T.changedTouches[0].pageX;
+        l(!1), b.current = T.changedTouches[0].pageX;
       },
       onTouchMove: (T) => {
         const $ = T.changedTouches[0].pageX, j = b.current - $;
@@ -1767,7 +1767,6 @@ const ir = ({
         j > 0 ? G = `-${p * 100}% - ${Math.abs(j)}px` : G = `-${p * 100}% + ${Math.abs(j)}px`, m.current.style.transform = `translateX(calc(${G}))`;
       },
       onTouchEnd: (T) => {
-        console.log("touch end");
         const $ = f.current / 2.5, j = b.current - T.changedTouches[0].pageX;
         Math.abs(j) >= $ ? w(j) : V(), setTimeout(() => {
           a && clearTimeout(a), l(!0);
