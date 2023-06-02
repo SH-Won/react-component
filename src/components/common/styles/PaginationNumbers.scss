@@ -1,0 +1,27 @@
+@import '../../../styles/typeface.module.scss';
+@import '../../../styles/colors.module.scss';
+.pagination-numbers {
+  padding: 24px 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+  & > li {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    text-align: center;
+    user-select: none;
+    @include typeface('Paragraph_2b');
+    line-height: unset;
+    &.selected {
+      border-radius: 8px;
+      font-weight: 400;
+      border: 1px solid color('main');
+    }
+  }
+}
