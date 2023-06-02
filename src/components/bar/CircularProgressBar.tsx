@@ -1,5 +1,5 @@
 import Colors from '../../styles/colors.module.scss'
-import './CircularProgressBar.scss'
+import './styles/CircularProgressBar.scss'
 interface CircularProgressBarProps {
   size: number
   percent: number

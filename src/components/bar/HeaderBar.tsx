@@ -1,6 +1,6 @@
 import Colors from '../../styles/colors.module.scss'
 import { Element } from '../elements'
-import './HeaderBar.scss'
+import './styles/HeaderBar.scss'
 
 interface Props {
   isMobile?: boolean

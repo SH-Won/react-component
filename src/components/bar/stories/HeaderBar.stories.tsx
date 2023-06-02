@@ -4,13 +4,13 @@ import HeaderBar from '../HeaderBar'
 import Button from '../../button/Button'
 
 const meta: Meta<typeof HeaderBar> = {
-  title: 'HeaderBar',
+  title: 'Bar',
   component: HeaderBar,
 }
 export default meta
 type Story = StoryObj<typeof HeaderBar>
 
-export const CircularProgress: Story = {
+export const Header: Story = {
   args: {
     title: '헤더',
     back: () => {},
