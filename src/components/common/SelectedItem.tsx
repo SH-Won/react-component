@@ -1,17 +1,25 @@
 import './styles/SelectedItem.scss'
 interface SelectedItemProps {
+  type?: 'normal' | 'border' | 'background'
   size?: 'small' | 'medium' | 'big'
   selected: boolean
-  text: string
+  text?: string
+  children?: JSX.Element | JSX.Element[] | string
   click?: () => void
 }
 
 const SelectedItem = (props: SelectedItemProps) => {
+  const type = props.type ?? 'normal'
   const size = props.size ?? 'medium'
   const selected = props.selected ? 'selected' : ''
   return (
-    <div className={`selected-item ${size} ${selected}`} onClick={props.click}>
-      {props.text}
+    <div
+      className={`selected-item ${type} ${size} ${selected}`}
+      onClick={() => props.click?.()}
+      onTouchStart={() => props.click?.()}
+      onTouchEnd={(e) => e.preventDefault()}
+    >
+      {props.text ?? props.children}
     </div>
   )
 }
