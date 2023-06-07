@@ -22,9 +22,13 @@ const Navigation = (props: NavigationProps) => {
     }
   }
   const closeFunc = () => {
-    setOpen(false)
-    const body = document.querySelector('body')
-    body!.style.overflow = 'unset'
+    setOpen((prev) => {
+      if (prev) {
+        const body = document.querySelector('body')
+        body!.style.overflow = 'auto'
+      }
+      return false
+    })
   }
 
   return (

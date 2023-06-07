@@ -21,16 +21,16 @@ function Ir() {
   if (Fe)
     return J;
   Fe = 1;
-  var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.fragment"), c = Object.prototype.hasOwnProperty, s = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, d = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function g(l, f, v) {
+  var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.fragment"), c = Object.prototype.hasOwnProperty, l = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, d = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function g(s, f, v) {
     var k, L = {}, R = null, _ = null;
     v !== void 0 && (R = "" + v), f.key !== void 0 && (R = "" + f.key), f.ref !== void 0 && (_ = f.ref);
     for (k in f)
       c.call(f, k) && !d.hasOwnProperty(k) && (L[k] = f[k]);
-    if (l && l.defaultProps)
-      for (k in f = l.defaultProps, f)
+    if (s && s.defaultProps)
+      for (k in f = s.defaultProps, f)
         L[k] === void 0 && (L[k] = f[k]);
-    return { $$typeof: n, type: l, key: R, ref: _, props: L, _owner: s.current };
+    return { $$typeof: n, type: s, key: R, ref: _, props: L, _owner: l.current };
   }
   return J.Fragment = o, J.jsx = g, J.jsxs = g, J;
 }
@@ -47,7 +47,7 @@ var K = {};
 var Ge;
 function $r() {
   return Ge || (Ge = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), c = Symbol.for("react.fragment"), s = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), l = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), k = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), _ = Symbol.for("react.offscreen"), N = Symbol.iterator, p = "@@iterator";
+    var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), c = Symbol.for("react.fragment"), l = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), s = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), k = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), _ = Symbol.for("react.offscreen"), N = Symbol.iterator, p = "@@iterator";
     function X(r) {
       if (r === null || typeof r != "object")
         return null;
@@ -75,7 +75,7 @@ function $r() {
     var W = !1, B = !1, ye = !1, z = !1, $ = !1, O;
     O = Symbol.for("react.module.reference");
     function H(r) {
-      return !!(typeof r == "string" || typeof r == "function" || r === c || r === d || $ || r === s || r === v || r === k || z || r === _ || W || B || ye || typeof r == "object" && r !== null && (r.$$typeof === R || r.$$typeof === L || r.$$typeof === g || r.$$typeof === l || r.$$typeof === f || // This needs to include all possible module reference object
+      return !!(typeof r == "string" || typeof r == "function" || r === c || r === d || $ || r === l || r === v || r === k || z || r === _ || W || B || ye || typeof r == "object" && r !== null && (r.$$typeof === R || r.$$typeof === L || r.$$typeof === g || r.$$typeof === s || r.$$typeof === f || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -105,7 +105,7 @@ function $r() {
           return "Portal";
         case d:
           return "Profiler";
-        case s:
+        case l:
           return "StrictMode";
         case v:
           return "Suspense";
@@ -114,7 +114,7 @@ function $r() {
       }
       if (typeof r == "object")
         switch (r.$$typeof) {
-          case l:
+          case s:
             var i = r;
             return ke(i) + ".Consumer";
           case g:
@@ -663,8 +663,8 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   red: lt
 }, dt = (e, n) => {
   const o = e[n];
-  return o ? typeof o == "function" ? o() : Promise.resolve(o) : new Promise((c, s) => {
-    (typeof queueMicrotask == "function" ? queueMicrotask : setTimeout)(s.bind(null, new Error("Unknown variable dynamic import: " + n)));
+  return o ? typeof o == "function" ? o() : Promise.resolve(o) : new Promise((c, l) => {
+    (typeof queueMicrotask == "function" ? queueMicrotask : setTimeout)(l.bind(null, new Error("Unknown variable dynamic import: " + n)));
   });
 }, He = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
@@ -1269,12 +1269,12 @@ const Rt = (e) => {
     e.isMobile && n && /* @__PURE__ */ t("div", { className: "hamburger", onClick: e.openDrawer, children: /* @__PURE__ */ t(I, { name: "Hamburger", size: "big", color: M.grey_111 }) }),
     /* @__PURE__ */ u("div", { className: "logo", children: [
       o && !e.isMobile && /* @__PURE__ */ t("div", { onClick: () => {
-        var s;
-        return (s = e.back) == null ? void 0 : s.call(e, !1);
+        var l;
+        return (l = e.back) == null ? void 0 : l.call(e, !1);
       }, className: "logo-icon", children: /* @__PURE__ */ t(I, { name: "ArrowLeft", size: "big", color: M.grey_111 }) }),
       /* @__PURE__ */ t("span", { onClick: () => {
-        var s;
-        return (s = e.back) == null ? void 0 : s.call(e, !0);
+        var l;
+        return (l = e.back) == null ? void 0 : l.call(e, !0);
       }, children: e.title })
     ] }),
     !e.isMobile && e.children
@@ -1288,11 +1288,11 @@ const xt = (e) => {
     padding: n / 1.5 + "px"
   }, c = {
     borderRadius: e.size + "px"
-  }, s = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, d = e.percent <= 50 ? 18 * (e.percent / 5) : 180, g = e.percent < 50 ? M.red : e.percent < 75 ? M.orange : M.green, l = {
+  }, l = e.percent >= 50 ? 18 * (e.percent - 50) / 5 : 0, d = e.percent <= 50 ? 18 * (e.percent / 5) : 180, g = e.percent < 50 ? M.red : e.percent < 75 ? M.orange : M.green, s = {
     border: `${n}px solid ${g}`,
     borderTopRightRadius: e.size + "px",
     borderBottomRightRadius: e.size + "px",
-    transform: `rotate(${s}deg)`
+    transform: `rotate(${l}deg)`
   }, f = {
     border: `${n}px solid ${g}`,
     borderTopLeftRadius: e.size + "px",
@@ -1305,7 +1305,7 @@ const xt = (e) => {
     height: e.size - n * 2 + "px"
   };
   return /* @__PURE__ */ t("div", { className: "container", style: o, children: /* @__PURE__ */ u("div", { className: "circular-progress-bar", style: c, children: [
-    /* @__PURE__ */ t("span", { className: "left", children: /* @__PURE__ */ t("span", { className: "bar", style: l }) }),
+    /* @__PURE__ */ t("span", { className: "left", children: /* @__PURE__ */ t("span", { className: "bar", style: s }) }),
     /* @__PURE__ */ t("span", { className: "right", children: /* @__PURE__ */ t("span", { className: "bar", style: f }) }),
     /* @__PURE__ */ u("div", { className: "percent", style: v, children: [
       e.percent,
@@ -1318,13 +1318,13 @@ const pt = ({
   width: n,
   onSelect: o,
   count: c,
-  magnification: s
+  magnification: l
 }) => {
   const d = me(() => Array(c + 1).fill(1).map((x, w) => ({
     order: w,
-    value: w * s,
+    value: w * l,
     key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
-  })), [c]), g = e !== void 0 && e < d.length, l = d.length, [f, v] = E(), [k, L] = E(0), [R, _] = E(
+  })), [c]), g = e !== void 0 && e < d.length, s = d.length, [f, v] = E(), [k, L] = E(0), [R, _] = E(
     d[g ? e : 0]
   ), N = (x) => {
     _(x), o == null || o(x);
@@ -1340,10 +1340,10 @@ const pt = ({
     var W;
     const x = p.current.getBoundingClientRect().width, w = (W = p.current.parentElement) == null ? void 0 : W.getBoundingClientRect(), V = 2 * w.width - (w.right + w.left);
     if (n) {
-      const B = n / l;
+      const B = n / s;
       L(B >= 24 ? 24 : B);
     } else {
-      const B = x / l;
+      const B = x / s;
       L(B >= 24 ? 24 : B);
     }
     v(V);
@@ -1369,7 +1369,7 @@ const pt = ({
       /* @__PURE__ */ t(
         "div",
         {
-          className: `user-progress ${R.order === l - 1 ? "end" : ""}`,
+          className: `user-progress ${R.order === s - 1 ? "end" : ""}`,
           style: X()
         }
       )
@@ -1389,20 +1389,20 @@ const Pt = ({
   onSelect: n,
   screen: o
 }) => {
-  const c = G(null), [s, d] = E(0), [g, l] = E({ width: 0, transform: "" }), f = (v) => {
+  const c = G(null), [l, d] = E(0), [g, s] = E({ width: 0, transform: "" }), f = (v) => {
     var _, N, p;
-    if (s === v.order)
+    if (l === v.order)
       return;
     const k = (_ = c.current) == null ? void 0 : _.getBoundingClientRect().left, L = (N = c.current) == null ? void 0 : N.children[v.order].clientWidth, R = ((p = c.current) == null ? void 0 : p.children[v.order].getBoundingClientRect().left) - k;
-    d(v.order), n == null || n(v), l({
+    d(v.order), n == null || n(v), s({
       width: L,
       transform: `translate(${R - 1}px)`
     });
   };
   return be(() => {
     var R, _, N;
-    const v = (R = c.current) == null ? void 0 : R.children[s].clientWidth, k = (_ = c.current) == null ? void 0 : _.getBoundingClientRect().left, L = ((N = c.current) == null ? void 0 : N.children[s].getBoundingClientRect().left) - k;
-    l({
+    const v = (R = c.current) == null ? void 0 : R.children[l].clientWidth, k = (_ = c.current) == null ? void 0 : _.getBoundingClientRect().left, L = ((N = c.current) == null ? void 0 : N.children[l].getBoundingClientRect().left) - k;
+    s({
       width: v,
       transform: `translate(${L - 1}px)`
     });
@@ -1410,7 +1410,7 @@ const Pt = ({
     e.map((v) => /* @__PURE__ */ t(
       "div",
       {
-        className: `toggle-item ${s === v.order ? "selected" : ""}`,
+        className: `toggle-item ${l === v.order ? "selected" : ""}`,
         onClick: () => f(v),
         children: /* @__PURE__ */ t("span", { children: v.name })
       },
@@ -1493,8 +1493,8 @@ const Tt = (e) => {
       className: "image-wrapper",
       style: { paddingTop: c },
       onClick: () => {
-        var s;
-        return (s = e.click) == null ? void 0 : s.call(e);
+        var l;
+        return (l = e.click) == null ? void 0 : l.call(e);
       },
       children: [
         /* @__PURE__ */ t(
@@ -1554,14 +1554,14 @@ const At = (e) => {
   return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: n }, children: /* @__PURE__ */ t("img", { className: "ratio-img", src: e.imageUrl }) });
 };
 const Wt = (e) => {
-  const n = e.type ?? "text", [o, c] = E(!1), s = me(() => {
+  const n = e.type ?? "text", [o, c] = E(!1), l = me(() => {
     let g = "";
     return (o || e.searchText) && (g += " focus"), e.screen === "mobile" && (g += " mobile"), g;
   }, [o, e.screen]), d = me(() => {
-    var l;
-    let g = s;
-    return typeof e.validator == "function" && !((l = e.validator) != null && l.call(e, e.searchText)) && (g += " error"), g;
-  }, [s, e.searchText]);
+    var s;
+    let g = l;
+    return typeof e.validator == "function" && !((s = e.validator) != null && s.call(e, e.searchText)) && (g += " error"), g;
+  }, [l, e.searchText]);
   return /* @__PURE__ */ u("div", { className: "input-wrapper" + d, children: [
     e.children,
     /* @__PURE__ */ t(
@@ -1585,14 +1585,14 @@ const St = (e) => {
     {
       className: `selected-item ${n} ${o} ${c}`,
       onClick: () => {
-        var s;
-        return (s = e.click) == null ? void 0 : s.call(e);
+        var l;
+        return (l = e.click) == null ? void 0 : l.call(e);
       },
       onTouchStart: () => {
-        var s;
-        return (s = e.click) == null ? void 0 : s.call(e);
+        var l;
+        return (l = e.click) == null ? void 0 : l.call(e);
       },
-      onTouchEnd: (s) => s.preventDefault(),
+      onTouchEnd: (l) => l.preventDefault(),
       children: e.text ?? e.children
     }
   );
@@ -1601,9 +1601,9 @@ const St = (e) => {
   selected: n,
   click: o,
   open: c,
-  itemSize: s
+  itemSize: l
 }) => {
-  const d = s ?? "medium";
+  const d = l ?? "medium";
   return /* @__PURE__ */ t("div", { className: `option-list ${c ? "slide" : ""}`, children: /* @__PURE__ */ t("div", { className: "option-items", children: e.map((g) => /* @__PURE__ */ t(
     St,
     {
@@ -1617,54 +1617,54 @@ const St = (e) => {
 };
 const Vt = (e) => {
   if (e.totalPages <= 3 + 6 + 2)
-    return /* @__PURE__ */ t("ul", { className: "pagination-numbers", children: Array(e.totalPages).fill(1).map((l, f) => l + f).map((l, f) => /* @__PURE__ */ t(
+    return /* @__PURE__ */ t("ul", { className: "pagination-numbers", children: Array(e.totalPages).fill(1).map((s, f) => s + f).map((s, f) => /* @__PURE__ */ t(
       "li",
       {
-        onClick: () => e.click(l),
-        className: l === e.currentPage ? "selected" : "",
-        children: l
+        onClick: () => e.click(s),
+        className: s === e.currentPage ? "selected" : "",
+        children: s
       },
-      `page${l}`
+      `page${s}`
     )) });
-  const s = Array(3).fill(1).map((l, f) => l + f), d = Array(6).fill(
+  const l = Array(3).fill(1).map((s, f) => s + f), d = Array(6).fill(
     e.currentPage - 3 <= 3 + 1 ? 3 + 1 : e.currentPage + 2 + Math.floor(6 / 2) >= e.totalPages ? e.totalPages - 6 - 3 + 1 : e.currentPage - Math.floor(6 / 2)
-  ).map((l, f) => l + f), g = Array(2).fill(e.totalPages).map((l, f) => l - f);
+  ).map((s, f) => s + f), g = Array(2).fill(e.totalPages).map((s, f) => s - f);
   return /* @__PURE__ */ u("ul", { className: "pagination-numbers", children: [
-    s.map((l, f) => /* @__PURE__ */ t(
+    l.map((s, f) => /* @__PURE__ */ t(
       "li",
       {
-        onClick: () => e.click(l),
-        className: l === e.currentPage ? "selected" : "",
-        children: l
+        onClick: () => e.click(s),
+        className: s === e.currentPage ? "selected" : "",
+        children: s
       },
-      `page${l}`
+      `page${s}`
     )),
     e.currentPage - Math.floor(6 / 2) > 3 + 1 && /* @__PURE__ */ t("li", { children: "..." }),
-    d.map((l, f) => /* @__PURE__ */ t(
+    d.map((s, f) => /* @__PURE__ */ t(
       "li",
       {
-        onClick: () => e.click(l),
-        className: l === e.currentPage ? "selected" : "",
-        children: l
+        onClick: () => e.click(s),
+        className: s === e.currentPage ? "selected" : "",
+        children: s
       },
-      `page${l}`
+      `page${s}`
     )),
     e.totalPages - 2 - Math.floor(6 / 2) > e.currentPage && /* @__PURE__ */ t("li", { children: "..." }),
-    g.reverse().map((l, f) => /* @__PURE__ */ t(
+    g.reverse().map((s, f) => /* @__PURE__ */ t(
       "li",
       {
-        onClick: () => e.click(l),
-        className: l === e.currentPage ? "selected" : "",
-        children: l
+        onClick: () => e.click(s),
+        className: s === e.currentPage ? "selected" : "",
+        children: s
       },
-      `page${l}`
+      `page${s}`
     ))
   ] });
 };
 const Ft = ({ title: e, children: n }) => {
-  const [o, c] = E(!1), [s, d] = E("hidden"), { ref: g } = _e(() => {
+  const [o, c] = E(!1), [l, d] = E("hidden"), { ref: g } = _e(() => {
     c(!1), d("hidden");
-  }), l = () => {
+  }), s = () => {
     o && d("unset");
   };
   function f() {
@@ -1675,8 +1675,8 @@ const Ft = ({ title: e, children: n }) => {
     {
       className: "basic-accordion",
       ref: g,
-      style: { overflow: s },
-      onTransitionEnd: l,
+      style: { overflow: l },
+      onTransitionEnd: s,
       children: [
         /* @__PURE__ */ u("div", { className: "header", onClick: f, children: [
           /* @__PURE__ */ t("span", { className: "title", children: e }),
@@ -1692,10 +1692,10 @@ const ir = ({
   container: n,
   slide: o,
   currentIndex: c,
-  clickLeft: s,
+  clickLeft: l,
   clickRight: d,
   clickPoint: g,
-  onTransitionEnd: l,
+  onTransitionEnd: s,
   onMouseEnter: f,
   onMouseLeave: v,
   onTouchStart: k,
@@ -1714,7 +1714,7 @@ const ir = ({
         {
           className: "slide-container",
           ref: o,
-          onTransitionEnd: l,
+          onTransitionEnd: s,
           onTouchStart: k,
           onTouchMove: L,
           onTouchEnd: R,
@@ -1726,7 +1726,7 @@ const ir = ({
           "div",
           {
             className: "left",
-            onClick: s,
+            onClick: l,
             children: /* @__PURE__ */ t(I, { name: "Right", size: "small", color: M.white })
           }
         ),
@@ -1743,9 +1743,9 @@ const ir = ({
     ]
   }
 ), or = (e) => {
-  const n = G(null), o = G(null), [c, s] = E(1), [d, g] = E(0);
+  const n = G(null), o = G(null), [c, l] = E(1), [d, g] = E(0);
   E(0);
-  const l = () => {
+  const s = () => {
     let _ = c - 1;
     g(-1), o.current.style.transform = `translateX(-${_ * 100}%)`, o.current.style.transition = "transform .3s linear";
   }, f = () => {
@@ -1758,29 +1758,29 @@ const ir = ({
     container: n,
     slide: o,
     currentIndex: c,
-    clickLeft: l,
+    clickLeft: s,
     clickRight: f,
     clickPoint: (_) => {
-      _ !== c && (o.current.style.transform = `translateX(-${_ * 100}%)`, o.current.style.transition = "transform .3s linear", s(_));
+      _ !== c && (o.current.style.transform = `translateX(-${_ * 100}%)`, o.current.style.transition = "transform .3s linear", l(_));
     },
     touchMove: (_) => {
-      _ > 0 ? f() : l();
+      _ > 0 ? f() : s();
     },
     touchRecover: () => {
       o.current.style.transform = `translateX(-${c * 100}%)`, o.current.style.transition = "transform .15s linear";
     },
     onTransitionEnd: () => {
-      d !== 0 && (d === 1 ? c === e ? (s(1), o.current.style.transform = "translateX(-100%)", o.current.style.transition = "none") : s((_) => _ + 1) : c === 1 ? (s(e), s(e), o.current.style.transform = `translateX(-${e * 100}%)`, o.current.style.transition = "none") : s((_) => _ - 1), g(0));
+      d !== 0 && (d === 1 ? c === e ? (l(1), o.current.style.transform = "translateX(-100%)", o.current.style.transition = "none") : l((_) => _ + 1) : c === 1 ? (l(e), l(e), o.current.style.transform = `translateX(-${e * 100}%)`, o.current.style.transition = "none") : l((_) => _ - 1), g(0));
     }
   };
 }, Gt = (e) => {
   const n = e.items.length, {
     container: o,
     slide: c,
-    currentIndex: s,
+    currentIndex: l,
     clickLeft: d,
     clickRight: g,
-    clickPoint: l,
+    clickPoint: s,
     onTransitionEnd: f
   } = or(n);
   return /* @__PURE__ */ t(
@@ -1788,10 +1788,10 @@ const ir = ({
     {
       container: o,
       slide: c,
-      currentIndex: s,
+      currentIndex: l,
       clickLeft: d,
       clickRight: g,
-      clickPoint: l,
+      clickPoint: s,
       onTransitionEnd: f,
       itemLength: n,
       children: /* @__PURE__ */ u(ae, { children: [
@@ -1805,8 +1805,8 @@ const ir = ({
     }
   );
 }, Ht = (e) => {
-  const n = e.items.length, [o, c] = E(), [s, d] = E(!1), g = G(), {
-    container: l,
+  const n = e.items.length, [o, c] = E(), [l, d] = E(!1), g = G(), {
+    container: s,
     slide: f,
     currentIndex: v,
     clickLeft: k,
@@ -1833,15 +1833,15 @@ const ir = ({
     L();
   }, e.time);
   oe(() => {
-    clearInterval(o), s && n >= 2 && c(X());
-  }, [v, s]);
+    clearInterval(o), l && n >= 2 && c(X());
+  }, [v, l]);
   const x = (z) => {
     z.preventDefault(), d(!1);
   }, w = G();
   return /* @__PURE__ */ t(
     ir,
     {
-      container: l,
+      container: s,
       slide: f,
       currentIndex: v,
       clickLeft: k,
@@ -1881,7 +1881,7 @@ const ir = ({
   );
 };
 const Ut = ({ selected: e, children: n }) => {
-  const [o, c] = E(!1), { ref: s } = _e(() => c(!1));
+  const [o, c] = E(!1), { ref: l } = _e(() => c(!1));
   return oe(() => {
     const d = setTimeout(() => {
       c(!1);
@@ -1889,7 +1889,7 @@ const Ut = ({ selected: e, children: n }) => {
     return () => {
       clearTimeout(d);
     };
-  }, [e]), /* @__PURE__ */ u("div", { className: "dropdown", ref: s, children: [
+  }, [e]), /* @__PURE__ */ u("div", { className: "dropdown", ref: l, children: [
     /* @__PURE__ */ t(
       "div",
       {
@@ -1902,18 +1902,22 @@ const Ut = ({ selected: e, children: n }) => {
   ] });
 };
 const Yt = (e) => {
-  const { ref: n } = _e(() => d()), [o, c] = E(!1), s = () => {
-    c((l) => !l);
+  const { ref: n } = _e(() => d()), [o, c] = E(!1), l = () => {
+    c((s) => !s);
     const g = document.querySelector("body");
     o || (g.style.overflow = "hidden");
   }, d = () => {
-    c(!1);
-    const g = document.querySelector("body");
-    g.style.overflow = "unset";
+    c((g) => {
+      if (g) {
+        const s = document.querySelector("body");
+        s.style.overflow = "auto";
+      }
+      return !1;
+    });
   };
   return /* @__PURE__ */ u(ae, { children: [
     /* @__PURE__ */ u("div", { className: "navigation", ref: n, children: [
-      /* @__PURE__ */ t(Rt, { ...e, openDrawer: s, children: e.children }),
+      /* @__PURE__ */ t(Rt, { ...e, openDrawer: l, children: e.children }),
       /* @__PURE__ */ u("div", { className: `navigation-drawer ${o ? "show" : ""}`, children: [
         /* @__PURE__ */ t("div", { className: "navigation-drawer-close", onClick: d, children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: M.grey_111 }) }),
         /* @__PURE__ */ t("div", { className: "navigation-drawer-items", children: e.children })
