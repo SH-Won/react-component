@@ -12,11 +12,21 @@ interface NavigationProps {
   children?: JSX.Element | JSX.Element[] | string
 }
 const Navigation = (props: NavigationProps) => {
-  const { ref: navigation } = useCloseEvent(() => setOpen(false))
+  const { ref: navigation } = useCloseEvent(() => closeFunc())
   const [open, setOpen] = useState<boolean>(false)
   const openDrawer = () => {
     setOpen((prev) => !prev)
+    const body = document.querySelector('body')
+    if (!open) {
+      body!.style.overflow = 'hidden'
+    }
   }
+  const closeFunc = () => {
+    setOpen(false)
+    const body = document.querySelector('body')
+    body!.style.overflow = 'unset'
+  }
+
   return (
     <>
       <div className="navigation" ref={navigation}>

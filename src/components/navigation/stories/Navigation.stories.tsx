@@ -7,11 +7,21 @@ const meta: Meta<typeof Navigation> = {
   title: 'Navigation',
   component: (props) => {
     return (
-      <Navigation {...props}>
-        <span style={{ cursor: 'pointer', padding: '16px' }}>Main</span>
-        <span style={{ cursor: 'pointer', padding: '16px' }}>Sub</span>
-        <span style={{ cursor: 'pointer', padding: '16px' }}>Recommend</span>
-      </Navigation>
+      <>
+        <Navigation {...props}>
+          <span style={{ cursor: 'pointer', padding: '16px' }}>Main</span>
+          <span style={{ cursor: 'pointer', padding: '16px' }}>Sub</span>
+          <span style={{ cursor: 'pointer', padding: '16px' }}>Recommend</span>
+        </Navigation>
+
+        <Button
+          color={Colors.main}
+          fontColor={Colors.white}
+          click={() => console.log('clicked')}
+        >
+          click
+        </Button>
+      </>
     )
   },
 }
