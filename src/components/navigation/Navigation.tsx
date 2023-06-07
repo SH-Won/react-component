@@ -6,8 +6,10 @@ import Colors from '../../styles/colors.module.scss'
 import './styles/Navigation.scss'
 
 interface NavigationProps {
-  screen: 'desktop' | 'tablet' | 'mobile'
-  children: JSX.Element | JSX.Element[] | string
+  isMobile: boolean
+  title?: string
+  back: ((isMain: boolean) => void) | undefined
+  children?: JSX.Element | JSX.Element[] | string
 }
 const Navigation = (props: NavigationProps) => {
   const { ref: navigation } = useCloseEvent(() => setOpen(false))
@@ -18,12 +20,7 @@ const Navigation = (props: NavigationProps) => {
   return (
     <>
       <div className="navigation" ref={navigation}>
-        <HeaderBar
-          back={() => {}}
-          title="Navigation"
-          isMobile={props.screen === 'mobile'}
-          openDrawer={() => openDrawer()}
-        >
+        <HeaderBar {...props} openDrawer={openDrawer}>
           {props.children}
         </HeaderBar>
         <div className={`navigation-drawer ${open ? 'show' : ''}`}>

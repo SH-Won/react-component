@@ -1902,22 +1902,12 @@ const Ut = ({ selected: e, children: n }) => {
   ] });
 };
 const Yt = (e) => {
-  const { ref: n } = _e(() => c(!1)), [a, c] = E(!1), s = () => {
-    c((d) => !d);
-  };
+  const { ref: n } = _e(() => c(!1)), [a, c] = E(!1);
   return /* @__PURE__ */ u(oe, { children: [
     /* @__PURE__ */ u("div", { className: "navigation", ref: n, children: [
-      /* @__PURE__ */ t(
-        Rt,
-        {
-          back: () => {
-          },
-          title: "Navigation",
-          isMobile: e.screen === "mobile",
-          openDrawer: () => s(),
-          children: e.children
-        }
-      ),
+      /* @__PURE__ */ t(Rt, { ...e, openDrawer: () => {
+        c((d) => !d);
+      }, children: e.children }),
       /* @__PURE__ */ u("div", { className: `navigation-drawer ${a ? "show" : ""}`, children: [
         /* @__PURE__ */ t(
           "div",

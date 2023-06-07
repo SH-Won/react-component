@@ -20,6 +20,6 @@ type Story = StoryObj<typeof Navigation>
 
 export const _Navigation: Story = {
   args: {
-    screen: 'mobile',
+    isMobile: true,
   },
 }
