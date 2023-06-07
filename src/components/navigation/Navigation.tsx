@@ -1,4 +1,4 @@
-import { useCloseEvent } from '@/util'
+import { useCloseEvent } from '../../util/hook'
 import { useState } from 'react'
 import { HeaderBar } from '../bar'
 import { Element } from '../elements'
