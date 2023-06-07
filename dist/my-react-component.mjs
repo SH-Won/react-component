@@ -1915,14 +1915,7 @@ const Yt = (e) => {
     /* @__PURE__ */ u("div", { className: "navigation", ref: n, children: [
       /* @__PURE__ */ t(Rt, { ...e, openDrawer: s, children: e.children }),
       /* @__PURE__ */ u("div", { className: `navigation-drawer ${o ? "show" : ""}`, children: [
-        /* @__PURE__ */ t(
-          "div",
-          {
-            className: "navigation-drawer-close",
-            onClick: () => c(!1),
-            children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: M.grey_111 })
-          }
-        ),
+        /* @__PURE__ */ t("div", { className: "navigation-drawer-close", onClick: d, children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: M.grey_111 }) }),
         /* @__PURE__ */ t("div", { className: "navigation-drawer-items", children: e.children })
       ] })
     ] }),

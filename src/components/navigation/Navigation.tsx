@@ -34,10 +34,7 @@ const Navigation = (props: NavigationProps) => {
           {props.children}
         </HeaderBar>
         <div className={`navigation-drawer ${open ? 'show' : ''}`}>
-          <div
-            className="navigation-drawer-close"
-            onClick={() => setOpen(false)}
-          >
+          <div className="navigation-drawer-close" onClick={closeFunc}>
             <Element name="Close" size="big" color={Colors.grey_111} />
           </div>
           <div className="navigation-drawer-items">{props.children}</div>
