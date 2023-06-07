@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import RatioImage from '../RatioImage'
 
 const meta: Meta<typeof RatioImage> = {
-  title: 'Image',
+  title: 'Card',
   component: (props) => {
     return (
       <div style={{ maxWidth: '300px' }}>

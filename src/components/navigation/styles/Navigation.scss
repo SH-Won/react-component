@@ -1,0 +1,51 @@
+@import '../../../styles/colors.module.scss';
+.navigation {
+  & > .navigation-drawer {
+    z-index:100;
+    background-color: white;
+    position : absolute;
+    top:0;
+    height: 100vh;
+    overflow: hidden;
+    left:0;
+    transition : transform .2s cubic-bezier(.4,0,.2,1);
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+    padding:16px 8px;
+    transform : translateX(-100%);
+    & >.navigation-drawer-close {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-end;
+      cursor: pointer;
+      user-select: none;
+    }
+    & > .navigation-drawer-items{
+      z-index:100;
+      max-width:100%;
+      display:flex;
+      flex-direction: column;
+      // gap:8px;
+      padding:16px 16px;
+      user-select: none;
+    }
+    &.show {
+      transform : translateX(0%)
+    }
+  }
+}
+.navigation-overlay {
+  position : absolute;
+  height:100vh;
+  width:100vw;
+  top:0;
+  left:0;
+  opacity: 0.3;
+  background-color: color('grey_333');
+  // &.show {
+  //   opacity: 0.46;
+  //   transition : opacity .2s .1s cubic-bezier(.4,0,.2,1);
+  // }
+}

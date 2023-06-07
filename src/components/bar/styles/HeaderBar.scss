@@ -10,6 +10,13 @@
   &.mobile {
     padding: 14px 20px;
   }
+  & >.hamburger{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
   & >.logo {
     & >.logo-icon{
       display:flex;
