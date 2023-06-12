@@ -47,12 +47,7 @@ const Navigation = (props: NavigationProps) => {
           </div>
           <div className="navigation-drawer-items">{props.children}</div>
         </div>
-        {open && (
-          <div
-            onClick={() => setOpen(false)}
-            className="navigation-overlay"
-          ></div>
-        )}
+        {open && <div onClick={closeFunc} className="navigation-overlay"></div>}
       </div>
       {/* {open && <div className="navigation-overlay"></div>} */}
     </>

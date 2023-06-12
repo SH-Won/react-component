@@ -1926,13 +1926,7 @@ const Yt = (e) => {
           /* @__PURE__ */ t("div", { className: "navigation-drawer-close", onClick: d, children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: M.grey_111 }) }),
           /* @__PURE__ */ t("div", { className: "navigation-drawer-items", children: e.children })
         ] }),
-        o && /* @__PURE__ */ t(
-          "div",
-          {
-            onClick: () => c(!1),
-            className: "navigation-overlay"
-          }
-        )
+        o && /* @__PURE__ */ t("div", { onClick: d, className: "navigation-overlay" })
       ]
     }
   ) });
