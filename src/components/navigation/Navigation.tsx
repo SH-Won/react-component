@@ -10,6 +10,7 @@ interface NavigationProps {
   title?: string
   back: ((isMain: boolean) => void) | undefined
   children?: JSX.Element | JSX.Element[] | string
+  fixed?: boolean
 }
 const Navigation = (props: NavigationProps) => {
   const { ref: navigation } = useCloseEvent(() => closeFunc())
@@ -33,7 +34,10 @@ const Navigation = (props: NavigationProps) => {
 
   return (
     <>
-      <div className="navigation" ref={navigation}>
+      <div
+        className={`navigation ${props.fixed ? 'fixed' : ''}`}
+        ref={navigation}
+      >
         <HeaderBar {...props} openDrawer={openDrawer}>
           {props.children}
         </HeaderBar>
@@ -43,8 +47,14 @@ const Navigation = (props: NavigationProps) => {
           </div>
           <div className="navigation-drawer-items">{props.children}</div>
         </div>
+        {open && (
+          <div
+            onClick={() => setOpen(false)}
+            className="navigation-overlay"
+          ></div>
+        )}
       </div>
-      {open && <div className="navigation-overlay"></div>}
+      {/* {open && <div className="navigation-overlay"></div>} */}
     </>
   )
 }

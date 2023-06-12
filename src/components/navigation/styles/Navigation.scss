@@ -1,5 +1,10 @@
 @import '../../../styles/colors.module.scss';
 .navigation {
+  z-index:10000;
+  &.fixed {
+    position:fixed;
+    width:100%;
+  }
   & > .navigation-drawer {
     z-index:100;
     background-color: white;

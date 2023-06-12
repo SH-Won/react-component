@@ -7,7 +7,7 @@ const meta: Meta<typeof Navigation> = {
   title: 'Navigation',
   component: (props) => {
     return (
-      <>
+      <div>
         <Navigation {...props}>
           <span style={{ cursor: 'pointer', padding: '16px' }}>Main</span>
           <span style={{ cursor: 'pointer', padding: '16px' }}>Sub</span>
@@ -21,7 +21,8 @@ const meta: Meta<typeof Navigation> = {
         >
           click
         </Button>
-      </>
+        <div style={{ height: '300vh' }}></div>
+      </div>
     )
   },
 }
@@ -31,5 +32,6 @@ type Story = StoryObj<typeof Navigation>
 export const _Navigation: Story = {
   args: {
     isMobile: true,
+    fixed: false,
   },
 }

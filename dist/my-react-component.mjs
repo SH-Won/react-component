@@ -22,14 +22,14 @@ function Ir() {
     return J;
   Fe = 1;
   var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.fragment"), c = Object.prototype.hasOwnProperty, l = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, d = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function g(s, f, v) {
+  function g(s, u, v) {
     var k, L = {}, R = null, _ = null;
-    v !== void 0 && (R = "" + v), f.key !== void 0 && (R = "" + f.key), f.ref !== void 0 && (_ = f.ref);
-    for (k in f)
-      c.call(f, k) && !d.hasOwnProperty(k) && (L[k] = f[k]);
+    v !== void 0 && (R = "" + v), u.key !== void 0 && (R = "" + u.key), u.ref !== void 0 && (_ = u.ref);
+    for (k in u)
+      c.call(u, k) && !d.hasOwnProperty(k) && (L[k] = u[k]);
     if (s && s.defaultProps)
-      for (k in f = s.defaultProps, f)
-        L[k] === void 0 && (L[k] = f[k]);
+      for (k in u = s.defaultProps, u)
+        L[k] === void 0 && (L[k] = u[k]);
     return { $$typeof: n, type: s, key: R, ref: _, props: L, _owner: l.current };
   }
   return J.Fragment = o, J.jsx = g, J.jsxs = g, J;
@@ -47,7 +47,7 @@ var K = {};
 var Ge;
 function $r() {
   return Ge || (Ge = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), c = Symbol.for("react.fragment"), l = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), s = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), k = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), _ = Symbol.for("react.offscreen"), N = Symbol.iterator, p = "@@iterator";
+    var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), c = Symbol.for("react.fragment"), l = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), s = Symbol.for("react.context"), u = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), k = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), _ = Symbol.for("react.offscreen"), N = Symbol.iterator, p = "@@iterator";
     function X(r) {
       if (r === null || typeof r != "object")
         return null;
@@ -75,7 +75,7 @@ function $r() {
     var W = !1, B = !1, ye = !1, z = !1, $ = !1, O;
     O = Symbol.for("react.module.reference");
     function H(r) {
-      return !!(typeof r == "string" || typeof r == "function" || r === c || r === d || $ || r === l || r === v || r === k || z || r === _ || W || B || ye || typeof r == "object" && r !== null && (r.$$typeof === R || r.$$typeof === L || r.$$typeof === g || r.$$typeof === s || r.$$typeof === f || // This needs to include all possible module reference object
+      return !!(typeof r == "string" || typeof r == "function" || r === c || r === d || $ || r === l || r === v || r === k || z || r === _ || W || B || ye || typeof r == "object" && r !== null && (r.$$typeof === R || r.$$typeof === L || r.$$typeof === g || r.$$typeof === s || r.$$typeof === u || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -120,7 +120,7 @@ function $r() {
           case g:
             var a = r;
             return ke(a._context) + ".Provider";
-          case f:
+          case u:
             return ar(r, r.render, "ForwardRef");
           case L:
             var h = r.displayName || null;
@@ -310,7 +310,7 @@ function $r() {
       }
       if (typeof r == "object")
         switch (r.$$typeof) {
-          case f:
+          case u:
             return dr(r.render);
           case L:
             return te(r.type, i, a);
@@ -562,7 +562,7 @@ Check the top-level render call using <` + a + ">.");
         var a;
         if (typeof i == "function")
           a = i.propTypes;
-        else if (typeof i == "object" && (i.$$typeof === f || // Note: Memo only checks outer props here.
+        else if (typeof i == "object" && (i.$$typeof === u || // Note: Memo only checks outer props here.
         // Inner props are checked in the reconciler.
         i.$$typeof === L))
           a = i.propTypes;
@@ -634,7 +634,7 @@ Check the top-level render call using <` + a + ">.");
 (function(e) {
   process.env.NODE_ENV === "production" ? e.exports = Ir() : e.exports = $r();
 })(jr);
-const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr = "#F5222D", Br = "#111111", Vr = "#666666", Fr = "#333333", Gr = "#999999", Hr = "#bbbbbb", Ur = "#cccccc", Yr = "#f4f4f4", Xr = "#f5f6f8", qr = "#f2f4f7", Zr = "#dbd6eb", Jr = "#eeebff", Kr = "#b6b7b9", Qr = "#e7e9ef", et = "#cfd4dd", rt = "#d42a21", tt = "#1968e5", nt = "#27c4b8", it = "#fff", ot = "#f4f0ff", at = "#ABAEBF", ct = "#03c75a", st = "#e1a016", lt = "#da1c26", M = {
+const ae = Q.Fragment, t = Q.jsx, f = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr = "#F5222D", Br = "#111111", Vr = "#666666", Fr = "#333333", Gr = "#999999", Hr = "#bbbbbb", Ur = "#cccccc", Yr = "#f4f4f4", Xr = "#f5f6f8", qr = "#f2f4f7", Zr = "#dbd6eb", Jr = "#eeebff", Kr = "#b6b7b9", Qr = "#e7e9ef", et = "#cfd4dd", rt = "#d42a21", tt = "#1968e5", nt = "#27c4b8", it = "#fff", ot = "#f4f0ff", at = "#ABAEBF", ct = "#03c75a", st = "#e1a016", lt = "#da1c26", M = {
   main: Dr,
   main_sub: Ar,
   notice: Wr,
@@ -668,7 +668,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   });
 }, He = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       fill: e.color,
@@ -696,7 +696,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: He
 }, Symbol.toStringTag, { value: "Module" })), Ue = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -714,7 +714,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ f("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
           /* @__PURE__ */ t(
             "path",
@@ -747,7 +747,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: Ue
 }, Symbol.toStringTag, { value: "Module" })), Ye = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       id: "caution-sign-circle",
@@ -768,7 +768,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ f("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "line",
             {
@@ -809,7 +809,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: Ye
 }, Symbol.toStringTag, { value: "Module" })), Xe = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       width: n,
@@ -859,7 +859,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: qe
 }, Symbol.toStringTag, { value: "Module" })), Ze = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -877,9 +877,9 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ f("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
-          /* @__PURE__ */ u("g", { id: "Arrow / Arrow_Sub_Down_Right", children: [
+          /* @__PURE__ */ f("g", { id: "Arrow / Arrow_Sub_Down_Right", children: [
             " ",
             /* @__PURE__ */ t(
               "path",
@@ -904,7 +904,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: Ze
 }, Symbol.toStringTag, { value: "Module" })), Je = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       id: "Editable-line",
@@ -927,7 +927,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ f("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "circle",
             {
@@ -965,7 +965,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: Je
 }, Symbol.toStringTag, { value: "Module" })), Ke = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       width: n,
@@ -1001,7 +1001,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: Ke
 }, Symbol.toStringTag, { value: "Module" })), Qe = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       viewBox: "0 0 32 32",
@@ -1021,7 +1021,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ f("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t("g", { id: "icomoon-ignore" }),
           /* @__PURE__ */ t(
             "path",
@@ -1046,7 +1046,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: Qe
 }, Symbol.toStringTag, { value: "Module" })), er = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -1064,7 +1064,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ f("g", { id: "SVGRepo_iconCarrier", children: [
           " ",
           /* @__PURE__ */ t(
             "path",
@@ -1085,7 +1085,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: er
 }, Symbol.toStringTag, { value: "Module" })), rr = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
@@ -1105,7 +1105,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
   default: rr
 }, Symbol.toStringTag, { value: "Module" })), tr = (e) => {
   const n = e.size === "big" ? "30" : e.size === "medium" ? "24" : "20";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "svg",
     {
       viewBox: "0 0 48 48",
@@ -1123,7 +1123,7 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ u("g", { id: "SVGRepo_iconCarrier", children: [
+        /* @__PURE__ */ f("g", { id: "SVGRepo_iconCarrier", children: [
           /* @__PURE__ */ t(
             "rect",
             {
@@ -1265,9 +1265,9 @@ const ae = Q.Fragment, t = Q.jsx, u = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
 };
 const Rt = (e) => {
   const n = typeof e.openDrawer == "function", o = typeof e.back == "function", c = e.isMobile ? "appBar mobile" : "appBar";
-  return /* @__PURE__ */ u("div", { className: c, children: [
+  return /* @__PURE__ */ f("div", { className: c, children: [
     e.isMobile && n && /* @__PURE__ */ t("div", { className: "hamburger", onClick: e.openDrawer, children: /* @__PURE__ */ t(I, { name: "Hamburger", size: "big", color: M.grey_111 }) }),
-    /* @__PURE__ */ u("div", { className: "logo", children: [
+    /* @__PURE__ */ f("div", { className: "logo", children: [
       o && !e.isMobile && /* @__PURE__ */ t("div", { onClick: () => {
         var l;
         return (l = e.back) == null ? void 0 : l.call(e, !1);
@@ -1293,7 +1293,7 @@ const xt = (e) => {
     borderTopRightRadius: e.size + "px",
     borderBottomRightRadius: e.size + "px",
     transform: `rotate(${l}deg)`
-  }, f = {
+  }, u = {
     border: `${n}px solid ${g}`,
     borderTopLeftRadius: e.size + "px",
     borderBottomLeftRadius: e.size + "px",
@@ -1304,10 +1304,10 @@ const xt = (e) => {
     width: e.size - n * 2 + "px",
     height: e.size - n * 2 + "px"
   };
-  return /* @__PURE__ */ t("div", { className: "container", style: o, children: /* @__PURE__ */ u("div", { className: "circular-progress-bar", style: c, children: [
+  return /* @__PURE__ */ t("div", { className: "container", style: o, children: /* @__PURE__ */ f("div", { className: "circular-progress-bar", style: c, children: [
     /* @__PURE__ */ t("span", { className: "left", children: /* @__PURE__ */ t("span", { className: "bar", style: s }) }),
-    /* @__PURE__ */ t("span", { className: "right", children: /* @__PURE__ */ t("span", { className: "bar", style: f }) }),
-    /* @__PURE__ */ u("div", { className: "percent", style: v, children: [
+    /* @__PURE__ */ t("span", { className: "right", children: /* @__PURE__ */ t("span", { className: "bar", style: u }) }),
+    /* @__PURE__ */ f("div", { className: "percent", style: v, children: [
       e.percent,
       "%"
     ] })
@@ -1324,7 +1324,7 @@ const pt = ({
     order: w,
     value: w * l,
     key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
-  })), [c]), g = e !== void 0 && e < d.length, s = d.length, [f, v] = E(), [k, L] = E(0), [R, _] = E(
+  })), [c]), g = e !== void 0 && e < d.length, s = d.length, [u, v] = E(), [k, L] = E(0), [R, _] = E(
     d[g ? e : 0]
   ), N = (x) => {
     _(x), o == null || o(x);
@@ -1349,8 +1349,8 @@ const pt = ({
     v(V);
   }, [n]), oe(() => {
     _(d[g ? e : 0]);
-  }, [e]), /* @__PURE__ */ u("div", { style: { width: n, height: k * 2 }, className: "setting-bar-wrapper", children: [
-    /* @__PURE__ */ u("div", { className: "setting-bar", ref: p, children: [
+  }, [e]), /* @__PURE__ */ f("div", { style: { width: n, height: k * 2 }, className: "setting-bar-wrapper", children: [
+    /* @__PURE__ */ f("div", { className: "setting-bar", ref: p, children: [
       d.map((x, w) => /* @__PURE__ */ t(
         "div",
         {
@@ -1389,7 +1389,7 @@ const Pt = ({
   onSelect: n,
   screen: o
 }) => {
-  const c = G(null), [l, d] = E(0), [g, s] = E({ width: 0, transform: "" }), f = (v) => {
+  const c = G(null), [l, d] = E(0), [g, s] = E({ width: 0, transform: "" }), u = (v) => {
     var _, N, p;
     if (l === v.order)
       return;
@@ -1406,12 +1406,12 @@ const Pt = ({
       width: v,
       transform: `translate(${L - 1}px)`
     });
-  }, [o]), /* @__PURE__ */ u("div", { className: "toggle-bar", ref: c, children: [
+  }, [o]), /* @__PURE__ */ f("div", { className: "toggle-bar", ref: c, children: [
     e.map((v) => /* @__PURE__ */ t(
       "div",
       {
         className: `toggle-item ${l === v.order ? "selected" : ""}`,
-        onClick: () => f(v),
+        onClick: () => u(v),
         children: /* @__PURE__ */ t("span", { children: v.name })
       },
       v.id
@@ -1447,9 +1447,9 @@ const Nt = (e) => {
   });
   return /* @__PURE__ */ t("div", { className: "card-container", children: /* @__PURE__ */ t("div", { className: "card", children: /* @__PURE__ */ t("img", { src: e.imageUrl, style: n() }) }) });
 };
-const zt = (e) => /* @__PURE__ */ u("div", { className: "group-card", children: [
+const zt = (e) => /* @__PURE__ */ f("div", { className: "group-card", children: [
   e.isSub && /* @__PURE__ */ t(I, { name: "Depth", size: "medium", color: M.grey_111 }),
-  /* @__PURE__ */ u("div", { className: "card", children: [
+  /* @__PURE__ */ f("div", { className: "card", children: [
     /* @__PURE__ */ t("img", { className: "card-image", src: e.imageUrl }),
     /* @__PURE__ */ t("div", { className: "card-explain", children: /* @__PURE__ */ t("span", { children: e.label }) })
   ] })
@@ -1463,7 +1463,7 @@ const nr = (e) => {
 const Ot = ({ opacity: e }) => /* @__PURE__ */ t(nr, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
 const Lt = (e) => {
   const n = Array(8).fill(1).map((o, c) => o + c);
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "div",
     {
       className: "page-loading-container",
@@ -1487,7 +1487,7 @@ const Lt = (e) => {
 };
 const Tt = (e) => {
   const [n, o] = E(!0), c = e.ratio * 100 + "%";
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "div",
     {
       className: "image-wrapper",
@@ -1511,9 +1511,9 @@ const Tt = (e) => {
   );
 }, jt = (e) => {
   const n = e.ratio ? e.ratio : 1;
-  return /* @__PURE__ */ u("div", { className: "poster-card-container", children: [
+  return /* @__PURE__ */ f("div", { className: "poster-card-container", children: [
     /* @__PURE__ */ t(Tt, { ratio: n, imageUrl: e.imageUrl, click: e.click }),
-    /* @__PURE__ */ u("div", { className: "poster-card-info", children: [
+    /* @__PURE__ */ f("div", { className: "poster-card-info", children: [
       /* @__PURE__ */ t("div", { className: "progress-bar", children: /* @__PURE__ */ t(xt, { percent: e.voteAverage, size: 34 }) }),
       /* @__PURE__ */ t("span", { className: "title", children: e.title }),
       /* @__PURE__ */ t("span", { className: "release-date", children: e.releaseDate })
@@ -1527,8 +1527,8 @@ const $t = (e) => {
   } : {
     padding: "16px 16px 7px"
   };
-  return /* @__PURE__ */ u("div", { className: "popup-header-container", style: n, children: [
-    /* @__PURE__ */ u("div", { className: "popup-header", children: [
+  return /* @__PURE__ */ f("div", { className: "popup-header-container", style: n, children: [
+    /* @__PURE__ */ f("div", { className: "popup-header", children: [
       e.back && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.back, children: /* @__PURE__ */ t(I, { name: "ArrowLeft", size: "big", color: M.grey_999 }) }),
       e.title && /* @__PURE__ */ t("div", { children: /* @__PURE__ */ t("span", { className: "title", children: e.title }) }),
       e.close && /* @__PURE__ */ t("div", { className: "popup-icon", onClick: e.close, children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: M.grey_999 }) })
@@ -1542,9 +1542,9 @@ const $t = (e) => {
     )) })
   ] });
 };
-const Dt = (e) => /* @__PURE__ */ u("div", { className: "notification", children: [
+const Dt = (e) => /* @__PURE__ */ f("div", { className: "notification", children: [
   e.children,
-  /* @__PURE__ */ u("div", { className: "info", style: { height: e.height }, children: [
+  /* @__PURE__ */ f("div", { className: "info", style: { height: e.height }, children: [
     /* @__PURE__ */ t(I, { name: "Caution", size: "small", color: M.grey_bbb }),
     /* @__PURE__ */ t("span", { children: e.text })
   ] })
@@ -1562,7 +1562,7 @@ const Wt = (e) => {
     let g = l;
     return typeof e.validator == "function" && !((s = e.validator) != null && s.call(e, e.searchText)) && (g += " error"), g;
   }, [l, e.searchText]);
-  return /* @__PURE__ */ u("div", { className: "input-wrapper" + d, children: [
+  return /* @__PURE__ */ f("div", { className: "input-wrapper" + d, children: [
     e.children,
     /* @__PURE__ */ t(
       "input",
@@ -1617,7 +1617,7 @@ const St = (e) => {
 };
 const Vt = (e) => {
   if (e.totalPages <= 3 + 6 + 2)
-    return /* @__PURE__ */ t("ul", { className: "pagination-numbers", children: Array(e.totalPages).fill(1).map((s, f) => s + f).map((s, f) => /* @__PURE__ */ t(
+    return /* @__PURE__ */ t("ul", { className: "pagination-numbers", children: Array(e.totalPages).fill(1).map((s, u) => s + u).map((s, u) => /* @__PURE__ */ t(
       "li",
       {
         onClick: () => e.click(s),
@@ -1626,11 +1626,11 @@ const Vt = (e) => {
       },
       `page${s}`
     )) });
-  const l = Array(3).fill(1).map((s, f) => s + f), d = Array(6).fill(
+  const l = Array(3).fill(1).map((s, u) => s + u), d = Array(6).fill(
     e.currentPage - 3 <= 3 + 1 ? 3 + 1 : e.currentPage + 2 + Math.floor(6 / 2) >= e.totalPages ? e.totalPages - 6 - 3 + 1 : e.currentPage - Math.floor(6 / 2)
-  ).map((s, f) => s + f), g = Array(2).fill(e.totalPages).map((s, f) => s - f);
-  return /* @__PURE__ */ u("ul", { className: "pagination-numbers", children: [
-    l.map((s, f) => /* @__PURE__ */ t(
+  ).map((s, u) => s + u), g = Array(2).fill(e.totalPages).map((s, u) => s - u);
+  return /* @__PURE__ */ f("ul", { className: "pagination-numbers", children: [
+    l.map((s, u) => /* @__PURE__ */ t(
       "li",
       {
         onClick: () => e.click(s),
@@ -1640,7 +1640,7 @@ const Vt = (e) => {
       `page${s}`
     )),
     e.currentPage - Math.floor(6 / 2) > 3 + 1 && /* @__PURE__ */ t("li", { children: "..." }),
-    d.map((s, f) => /* @__PURE__ */ t(
+    d.map((s, u) => /* @__PURE__ */ t(
       "li",
       {
         onClick: () => e.click(s),
@@ -1650,7 +1650,7 @@ const Vt = (e) => {
       `page${s}`
     )),
     e.totalPages - 2 - Math.floor(6 / 2) > e.currentPage && /* @__PURE__ */ t("li", { children: "..." }),
-    g.reverse().map((s, f) => /* @__PURE__ */ t(
+    g.reverse().map((s, u) => /* @__PURE__ */ t(
       "li",
       {
         onClick: () => e.click(s),
@@ -1667,10 +1667,10 @@ const Ft = ({ title: e, children: n }) => {
   }), s = () => {
     o && d("unset");
   };
-  function f() {
+  function u() {
     c((v) => !v), o && d("hidden");
   }
-  return /* @__PURE__ */ u(
+  return /* @__PURE__ */ f(
     "div",
     {
       className: "basic-accordion",
@@ -1678,7 +1678,7 @@ const Ft = ({ title: e, children: n }) => {
       style: { overflow: l },
       onTransitionEnd: s,
       children: [
-        /* @__PURE__ */ u("div", { className: "header", onClick: f, children: [
+        /* @__PURE__ */ f("div", { className: "header", onClick: u, children: [
           /* @__PURE__ */ t("span", { className: "title", children: e }),
           /* @__PURE__ */ t("div", { className: `icon ${o ? "slide" : ""}`, children: /* @__PURE__ */ t(I, { name: "Right", size: "medium", color: M.grey_111 }) })
         ] }),
@@ -1696,17 +1696,17 @@ const ir = ({
   clickRight: d,
   clickPoint: g,
   onTransitionEnd: s,
-  onMouseEnter: f,
+  onMouseEnter: u,
   onMouseLeave: v,
   onTouchStart: k,
   onTouchMove: L,
   onTouchEnd: R,
   children: _
-}) => /* @__PURE__ */ u(
+}) => /* @__PURE__ */ f(
   "div",
   {
     className: "carousel",
-    onMouseEnter: f,
+    onMouseEnter: u,
     onMouseLeave: v,
     children: [
       /* @__PURE__ */ t("div", { className: "container", ref: n, children: /* @__PURE__ */ t(
@@ -1721,7 +1721,7 @@ const ir = ({
           children: _
         }
       ) }),
-      e >= 2 && /* @__PURE__ */ u(ae, { children: [
+      e >= 2 && /* @__PURE__ */ f(ae, { children: [
         /* @__PURE__ */ t(
           "div",
           {
@@ -1748,7 +1748,7 @@ const ir = ({
   const s = () => {
     let _ = c - 1;
     g(-1), o.current.style.transform = `translateX(-${_ * 100}%)`, o.current.style.transition = "transform .3s linear";
-  }, f = () => {
+  }, u = () => {
     if (!o.current)
       return;
     let _ = c + 1;
@@ -1759,12 +1759,12 @@ const ir = ({
     slide: o,
     currentIndex: c,
     clickLeft: s,
-    clickRight: f,
+    clickRight: u,
     clickPoint: (_) => {
       _ !== c && (o.current.style.transform = `translateX(-${_ * 100}%)`, o.current.style.transition = "transform .3s linear", l(_));
     },
     touchMove: (_) => {
-      _ > 0 ? f() : s();
+      _ > 0 ? u() : s();
     },
     touchRecover: () => {
       o.current.style.transform = `translateX(-${c * 100}%)`, o.current.style.transition = "transform .15s linear";
@@ -1781,7 +1781,7 @@ const ir = ({
     clickLeft: d,
     clickRight: g,
     clickPoint: s,
-    onTransitionEnd: f
+    onTransitionEnd: u
   } = or(n);
   return /* @__PURE__ */ t(
     ir,
@@ -1792,9 +1792,9 @@ const ir = ({
       clickLeft: d,
       clickRight: g,
       clickPoint: s,
-      onTransitionEnd: f,
+      onTransitionEnd: u,
       itemLength: n,
-      children: /* @__PURE__ */ u(ae, { children: [
+      children: /* @__PURE__ */ f(ae, { children: [
         e.renderItems(
           e.items[e.items.length - 1],
           e.items.length
@@ -1807,7 +1807,7 @@ const ir = ({
 }, Ht = (e) => {
   const n = e.items.length, [o, c] = E(), [l, d] = E(!1), g = G(), {
     container: s,
-    slide: f,
+    slide: u,
     currentIndex: v,
     clickLeft: k,
     clickRight: L,
@@ -1825,8 +1825,8 @@ const ir = ({
         threshold: 0.1
       }
     );
-    g.current = f.current.getBoundingClientRect().width;
-    const $ = f.current.parentElement;
+    g.current = u.current.getBoundingClientRect().width;
+    const $ = u.current.parentElement;
     z.observe($);
   }, []);
   const X = () => setInterval(() => {
@@ -1842,7 +1842,7 @@ const ir = ({
     ir,
     {
       container: s,
-      slide: f,
+      slide: u,
       currentIndex: v,
       clickLeft: k,
       clickRight: L,
@@ -1858,10 +1858,10 @@ const ir = ({
       },
       onTouchMove: (z) => {
         const $ = z.changedTouches[0].pageX, O = w.current - $;
-        if (Math.abs(O) > f.current.getBoundingClientRect().width / 1.5)
+        if (Math.abs(O) > u.current.getBoundingClientRect().width / 1.5)
           return;
         let H;
-        O > 0 ? H = `-${v * 100}% - ${Math.abs(O)}px` : H = `-${v * 100}% + ${Math.abs(O)}px`, f.current.style.transform = `translateX(calc(${H}))`;
+        O > 0 ? H = `-${v * 100}% - ${Math.abs(O)}px` : H = `-${v * 100}% + ${Math.abs(O)}px`, u.current.style.transform = `translateX(calc(${H}))`;
       },
       onTouchEnd: (z) => {
         const $ = g.current / 2.5, O = w.current - z.changedTouches[0].pageX;
@@ -1869,7 +1869,7 @@ const ir = ({
           o && clearTimeout(o), d(!0);
         }, 2e3);
       },
-      children: /* @__PURE__ */ u(ae, { children: [
+      children: /* @__PURE__ */ f(ae, { children: [
         e.renderItems(
           e.items[e.items.length - 1],
           e.items.length
@@ -1889,7 +1889,7 @@ const Ut = ({ selected: e, children: n }) => {
     return () => {
       clearTimeout(d);
     };
-  }, [e]), /* @__PURE__ */ u("div", { className: "dropdown", ref: l, children: [
+  }, [e]), /* @__PURE__ */ f("div", { className: "dropdown", ref: l, children: [
     /* @__PURE__ */ t(
       "div",
       {
@@ -1915,16 +1915,27 @@ const Yt = (e) => {
       return !1;
     });
   };
-  return /* @__PURE__ */ u(ae, { children: [
-    /* @__PURE__ */ u("div", { className: "navigation", ref: n, children: [
-      /* @__PURE__ */ t(Rt, { ...e, openDrawer: l, children: e.children }),
-      /* @__PURE__ */ u("div", { className: `navigation-drawer ${o ? "show" : ""}`, children: [
-        /* @__PURE__ */ t("div", { className: "navigation-drawer-close", onClick: d, children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: M.grey_111 }) }),
-        /* @__PURE__ */ t("div", { className: "navigation-drawer-items", children: e.children })
-      ] })
-    ] }),
-    o && /* @__PURE__ */ t("div", { className: "navigation-overlay" })
-  ] });
+  return /* @__PURE__ */ t(ae, { children: /* @__PURE__ */ f(
+    "div",
+    {
+      className: `navigation ${e.fixed ? "fixed" : ""}`,
+      ref: n,
+      children: [
+        /* @__PURE__ */ t(Rt, { ...e, openDrawer: l, children: e.children }),
+        /* @__PURE__ */ f("div", { className: `navigation-drawer ${o ? "show" : ""}`, children: [
+          /* @__PURE__ */ t("div", { className: "navigation-drawer-close", onClick: d, children: /* @__PURE__ */ t(I, { name: "Close", size: "big", color: M.grey_111 }) }),
+          /* @__PURE__ */ t("div", { className: "navigation-drawer-items", children: e.children })
+        ] }),
+        o && /* @__PURE__ */ t(
+          "div",
+          {
+            onClick: () => c(!1),
+            className: "navigation-overlay"
+          }
+        )
+      ]
+    }
+  ) });
 };
 export {
   Ht as AutoCarousel,
