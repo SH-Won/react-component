@@ -1,4 +1,4 @@
-import ve, { lazy as Mr, Suspense as Or, useMemo as me, useState as E, useRef as G, useLayoutEffect as be, useEffect as ae, cloneElement as zr } from "react";
+import be, { lazy as Mr, Suspense as Or, useMemo as ve, useState as E, useRef as G, useLayoutEffect as _e, useEffect as ae, cloneElement as zr } from "react";
 var Q = {}, $r = {
   get exports() {
     return Q;
@@ -21,7 +21,7 @@ function jr() {
   if (Ge)
     return J;
   Ge = 1;
-  var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.fragment"), s = Object.prototype.hasOwnProperty, c = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, d = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var e = be, n = Symbol.for("react.element"), o = Symbol.for("react.fragment"), s = Object.prototype.hasOwnProperty, c = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, d = { key: !0, ref: !0, __self: !0, __source: !0 };
   function g(l, f, v) {
     var k, L = {}, R = null, _ = null;
     v !== void 0 && (R = "" + v), f.key !== void 0 && (R = "" + f.key), f.ref !== void 0 && (_ = f.ref);
@@ -47,7 +47,7 @@ var K = {};
 var He;
 function Ir() {
   return He || (He = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = ve, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), s = Symbol.for("react.fragment"), c = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), l = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), k = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), _ = Symbol.for("react.offscreen"), M = Symbol.iterator, p = "@@iterator";
+    var e = be, n = Symbol.for("react.element"), o = Symbol.for("react.portal"), s = Symbol.for("react.fragment"), c = Symbol.for("react.strict_mode"), d = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), l = Symbol.for("react.context"), f = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), k = Symbol.for("react.suspense_list"), L = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), _ = Symbol.for("react.offscreen"), M = Symbol.iterator, p = "@@iterator";
     function X(r) {
       if (r === null || typeof r != "object")
         return null;
@@ -198,27 +198,27 @@ function Ir() {
         q < 0 && w("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
       }
     }
-    var ce = x.ReactCurrentDispatcher, se;
+    var se = x.ReactCurrentDispatcher, le;
     function re(r, i, a) {
       {
-        if (se === void 0)
+        if (le === void 0)
           try {
             throw Error();
           } catch (y) {
             var h = y.stack.trim().match(/\n( *(at )?)/);
-            se = h && h[1] || "";
+            le = h && h[1] || "";
           }
         return `
-` + se + r;
+` + le + r;
       }
     }
-    var le = !1, te;
+    var de = !1, te;
     {
       var lr = typeof WeakMap == "function" ? WeakMap : Map;
       te = new lr();
     }
     function pe(r, i) {
-      if (!r || le)
+      if (!r || de)
         return "";
       {
         var a = te.get(r);
@@ -226,11 +226,11 @@ function Ir() {
           return a;
       }
       var h;
-      le = !0;
+      de = !0;
       var y = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
       var C;
-      C = ce.current, ce.current = null, cr();
+      C = se.current, se.current = null, cr();
       try {
         if (i) {
           var b = function() {
@@ -283,7 +283,7 @@ function Ir() {
             }
         }
       } finally {
-        le = !1, ce.current = C, sr(), Error.prepareStackTrace = y;
+        de = !1, se.current = C, sr(), Error.prepareStackTrace = y;
       }
       var Y = r ? r.displayName || r.name : "", Fe = Y ? re(Y) : "";
       return typeof r == "function" && te.set(r, Fe), Fe;
@@ -352,7 +352,7 @@ function Ir() {
       }
     }
     var hr = Array.isArray;
-    function de(r) {
+    function ue(r) {
       return hr(r);
     }
     function gr(r) {
@@ -380,8 +380,8 @@ function Ir() {
       ref: !0,
       __self: !0,
       __source: !0
-    }, $e, je, ue;
-    ue = {};
+    }, $e, je, fe;
+    fe = {};
     function br(r) {
       if (ie.call(r, "ref")) {
         var i = Object.getOwnPropertyDescriptor(r, "ref").get;
@@ -401,7 +401,7 @@ function Ir() {
     function yr(r, i) {
       if (typeof r.ref == "string" && Z.current && i && Z.current.stateNode !== i) {
         var a = D(Z.current.type);
-        ue[a] || (w('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', D(Z.current.type), r.ref), ue[a] = !0);
+        fe[a] || (w('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', D(Z.current.type), r.ref), fe[a] = !0);
       }
     }
     function kr(r, i) {
@@ -473,7 +473,7 @@ function Ir() {
         return Cr(r, m, N, y, h, Z.current, b);
       }
     }
-    var fe = x.ReactCurrentOwner, Ie = x.ReactDebugCurrentFrame;
+    var he = x.ReactCurrentOwner, Ie = x.ReactDebugCurrentFrame;
     function U(r) {
       if (r) {
         var i = r._owner, a = ne(r.type, r._source, i ? i.type : null);
@@ -481,15 +481,15 @@ function Ir() {
       } else
         Ie.setExtraStackFrame(null);
     }
-    var he;
-    he = !1;
-    function ge(r) {
+    var ge;
+    ge = !1;
+    function me(r) {
       return typeof r == "object" && r !== null && r.$$typeof === n;
     }
     function De() {
       {
-        if (fe.current) {
-          var r = D(fe.current.type);
+        if (he.current) {
+          var r = D(he.current.type);
           if (r)
             return `
 
@@ -532,25 +532,25 @@ Check the top-level render call using <` + a + ">.");
           return;
         Ae[a] = !0;
         var h = "";
-        r && r._owner && r._owner !== fe.current && (h = " It was passed a child from " + D(r._owner.type) + "."), U(r), w('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', a, h), U(null);
+        r && r._owner && r._owner !== he.current && (h = " It was passed a child from " + D(r._owner.type) + "."), U(r), w('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', a, h), U(null);
       }
     }
     function Be(r, i) {
       {
         if (typeof r != "object")
           return;
-        if (de(r))
+        if (ue(r))
           for (var a = 0; a < r.length; a++) {
             var h = r[a];
-            ge(h) && We(h, i);
+            me(h) && We(h, i);
           }
-        else if (ge(r))
+        else if (me(r))
           r._store && (r._store.validated = !0);
         else if (r) {
           var y = X(r);
           if (typeof y == "function" && y !== r.entries)
             for (var C = y.call(r), b; !(b = C.next()).done; )
-              ge(b.value) && We(b.value, i);
+              me(b.value) && We(b.value, i);
         }
       }
     }
@@ -571,8 +571,8 @@ Check the top-level render call using <` + a + ">.");
         if (a) {
           var h = D(i);
           fr(a, r.props, "prop", h, r);
-        } else if (i.PropTypes !== void 0 && !he) {
-          he = !0;
+        } else if (i.PropTypes !== void 0 && !ge) {
+          ge = !0;
           var y = D(i);
           w("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", y || "Unknown");
         }
@@ -600,7 +600,7 @@ Check the top-level render call using <` + a + ">.");
           var N = xr(y);
           N ? m += N : m += De();
           var T;
-          r === null ? T = "null" : de(r) ? T = "array" : r !== void 0 && r.$$typeof === n ? (T = "<" + (D(r.type) || "Unknown") + " />", m = " Did you accidentally export a JSX literal instead of a component?") : T = typeof r, w("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", T, m);
+          r === null ? T = "null" : ue(r) ? T = "array" : r !== void 0 && r.$$typeof === n ? (T = "<" + (D(r.type) || "Unknown") + " />", m = " Did you accidentally export a JSX literal instead of a component?") : T = typeof r, w("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", T, m);
         }
         var S = Rr(r, i, a, y, C);
         if (S == null)
@@ -609,7 +609,7 @@ Check the top-level render call using <` + a + ">.");
           var $ = i.children;
           if ($ !== void 0)
             if (h)
-              if (de($)) {
+              if (ue($)) {
                 for (var Y = 0; Y < $.length; Y++)
                   Be($[Y], r);
                 Object.freeze && Object.freeze($);
@@ -1323,7 +1323,7 @@ const Mt = ({
   count: s,
   magnification: c
 }) => {
-  const d = me(() => Array(s + 1).fill(1).map((x, w) => ({
+  const d = ve(() => Array(s + 1).fill(1).map((x, w) => ({
     order: w,
     value: w * c,
     key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
@@ -1339,7 +1339,7 @@ const Mt = ({
       // width: `calc(${finalCalc})`,
     };
   };
-  return be(() => {
+  return _e(() => {
     var W;
     const x = p.current.getBoundingClientRect().width, w = (W = p.current.parentElement) == null ? void 0 : W.getBoundingClientRect(), V = 2 * w.width - (w.right + w.left);
     if (n) {
@@ -1402,7 +1402,7 @@ const Ot = ({
       transform: `translate(${R - 1}px)`
     });
   };
-  return be(() => {
+  return _e(() => {
     var R, _, M;
     const v = (R = s.current) == null ? void 0 : R.children[c].clientWidth, k = (_ = s.current) == null ? void 0 : _.getBoundingClientRect().left, L = ((M = s.current) == null ? void 0 : M.children[c].getBoundingClientRect().left) - k;
     l({
@@ -1457,13 +1457,13 @@ const jt = (e) => /* @__PURE__ */ u("div", { className: "group-card", children: 
     /* @__PURE__ */ t("div", { className: "card-explain", children: /* @__PURE__ */ t("span", { children: e.label }) })
   ] })
 ] });
-const _e = (e) => {
+const ye = (e) => {
   const n = {
     backgroundColor: `rgba(0,0,0,${e.opacity})`
   };
-  return /* @__PURE__ */ t(ve.Fragment, { children: e.isOpen && /* @__PURE__ */ t("div", { className: "overlay", style: n, children: e.children }) });
+  return /* @__PURE__ */ t(be.Fragment, { children: e.isOpen && /* @__PURE__ */ t("div", { className: "overlay", style: n, children: e.children }) });
 };
-const It = ({ opacity: e }) => /* @__PURE__ */ t(_e, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
+const It = ({ opacity: e }) => /* @__PURE__ */ t(ye, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
 const Et = (e) => {
   const n = Array(8).fill(1).map((o, s) => o + s);
   return /* @__PURE__ */ u(
@@ -1477,7 +1477,7 @@ const Et = (e) => {
       ]
     }
   );
-}, ye = (e) => {
+}, ce = (e) => {
   const n = G(null), o = (s) => {
     var d;
     ((d = n.current) == null ? void 0 : d.contains(s.target)) || e();
@@ -1523,7 +1523,7 @@ const Pt = (e) => {
     ] })
   ] });
 };
-const At = (e) => /* @__PURE__ */ t(_e, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
+const At = (e) => /* @__PURE__ */ t(ye, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
 const Wt = (e) => {
   const n = e.maxProgress !== 0 && e.maxProgress, o = e.title ? {
     padding: n ? "20px 20px 9px" : "20px"
@@ -1546,7 +1546,7 @@ const Wt = (e) => {
   ] });
 };
 const Bt = (e) => {
-  const n = {
+  const { ref: n } = ce(close), o = {
     backgroundColor: e.backgroundColor ?? P.bg_black,
     color: e.fontColor ?? P.white
   };
@@ -1555,11 +1555,12 @@ const Bt = (e) => {
       "div",
       {
         className: `popup-drawer ${e.type} ${e.isOpen ? "show" : ""}`,
-        style: n,
+        style: o,
+        ref: n,
         children: e.children
       }
     ),
-    /* @__PURE__ */ t("div", { onClick: close, children: /* @__PURE__ */ t(_e, { opacity: 0.5, isOpen: e.isOpen }) })
+    /* @__PURE__ */ t(ye, { opacity: 0.5, isOpen: e.isOpen })
   ] });
 };
 const Vt = (e) => /* @__PURE__ */ u("div", { className: "notification", children: [
@@ -1574,10 +1575,10 @@ const Ft = (e) => {
   return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: n }, children: /* @__PURE__ */ t("img", { className: "ratio-img", src: e.imageUrl }) });
 };
 const Gt = (e) => {
-  const n = e.type ?? "text", [o, s] = E(!1), c = me(() => {
+  const n = e.type ?? "text", [o, s] = E(!1), c = ve(() => {
     let g = "";
     return (o || e.searchText) && (g += " focus"), e.screen === "mobile" && (g += " mobile"), g;
-  }, [o, e.screen]), d = me(() => {
+  }, [o, e.screen]), d = ve(() => {
     var l;
     let g = c;
     return typeof e.validator == "function" && !((l = e.validator) != null && l.call(e, e.searchText)) && (g += " error"), g;
@@ -1682,7 +1683,7 @@ const Ut = (e) => {
   ] });
 };
 const Yt = ({ title: e, children: n }) => {
-  const [o, s] = E(!1), [c, d] = E("hidden"), { ref: g } = ye(() => {
+  const [o, s] = E(!1), [c, d] = E("hidden"), { ref: g } = ce(() => {
     s(!1), d("hidden");
   }), l = () => {
     o && d("unset");
@@ -1836,7 +1837,7 @@ const ir = ({
     touchRecover: M,
     onTransitionEnd: p
   } = or(n);
-  be(() => {
+  _e(() => {
     const O = new IntersectionObserver(
       (z, H) => {
         z[0].isIntersecting ? d(!0) : d(!1);
@@ -1901,7 +1902,7 @@ const ir = ({
   );
 };
 const Zt = ({ selected: e, children: n }) => {
-  const [o, s] = E(!1), { ref: c } = ye(() => s(!1));
+  const [o, s] = E(!1), { ref: c } = ce(() => s(!1));
   return ae(() => {
     const d = setTimeout(() => {
       s(!1);
@@ -1922,7 +1923,7 @@ const Zt = ({ selected: e, children: n }) => {
   ] });
 };
 const Jt = (e) => {
-  const { ref: n } = ye(() => d()), [o, s] = E(!1), c = () => {
+  const { ref: n } = ce(() => d()), [o, s] = E(!1), c = () => {
     s((l) => !l);
     const g = document.querySelector("body");
     o || (g.style.overflow = "hidden");
@@ -1968,7 +1969,7 @@ export {
   Jt as Navigation,
   Vt as Notification,
   Ht as OptionList,
-  _e as OverLay,
+  ye as OverLay,
   Et as PageLoadingSpinner,
   Ut as PaginationNumbers,
   At as Popup,
@@ -1980,5 +1981,5 @@ export {
   pt as SelectedItem,
   Mt as SettingBar,
   Ot as ToggleBar,
-  ye as useCloseEvent
+  ce as useCloseEvent
 };
