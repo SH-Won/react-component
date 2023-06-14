@@ -12,7 +12,6 @@ interface PopupDrawerProps {
 }
 
 const PopupDrawer = (props: PopupDrawerProps) => {
-  const { ref: drawer } = useCloseEvent(props.close!)
   const style = {
     backgroundColor: props.backgroundColor ?? Colors.bg_black,
     color: props.fontColor ?? Colors.white,
@@ -20,13 +19,14 @@ const PopupDrawer = (props: PopupDrawerProps) => {
   return (
     <>
       <div
-        ref={drawer}
         className={`popup-drawer ${props.type} ${props.isOpen ? 'show' : ''}`}
         style={style}
       >
         {props.children}
       </div>
-      <OverLay opacity={0.5} isOpen={props.isOpen} />
+      <div onClick={close}>
+        <OverLay opacity={0.5} isOpen={props.isOpen} />
+      </div>
     </>
   )
 }
