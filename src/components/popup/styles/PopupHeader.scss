@@ -1,5 +1,5 @@
-@import '../../styles/colors.module.scss';
-@import '../../styles/typeface.module.scss';
+@import '../../../styles/colors.module.scss';
+@import '../../../styles/typeface.module.scss';
 .popup-header-container {
   .popup-header {
     display: grid;
@@ -12,10 +12,10 @@
     }
     .title {
       @include typeface('Heading_2_m');
-      color: color('grey_111');
       text-align: center;
+      user-select: none;
     }
-    .icon {
+    .popup-icon {
       user-select: none;
       cursor: pointer;
     }

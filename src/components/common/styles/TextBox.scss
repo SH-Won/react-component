@@ -1,0 +1,18 @@
+.text-item {
+  background: #696869;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: capitalize;
+  font-size: 11px;
+  @include typeface-ridi('Paragraph_3_b');
+  color: color('white');
+  font-weight: 500;
+  &.in-drawer {
+    background: #13283e;
+    padding: 6px 13px;
+    border-radius: 4px;
+    @include typeface-ridi('Paragraph_2b');
+    color: #e1e1e1;
+    font-weight: 700;
+  }
+}

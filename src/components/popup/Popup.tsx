@@ -1,5 +1,5 @@
 import OverLay from '../../layout/OverLay'
-import './Popup.scss'
+import './styles/Popup.scss'
 interface Props {
   isOpen: boolean
   isMobile: boolean
