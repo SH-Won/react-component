@@ -1,0 +1,21 @@
+@import '../../../styles/typeface.module.scss';
+.tag {
+  background: #696869;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: capitalize;
+  // font-weight: 500;
+  &.small {
+    padding: 4px 10px;
+    @include typeface-ridi('Paragraph_3_b');
+  }
+  &.medium {
+    padding: 6px 13px;
+    @include typeface-ridi('Paragraph_2b');
+  }
+  &.big {
+    padding: 8px 17px;
+    @include typeface-ridi('Paragraph_1_b')
+
+  }
+}
