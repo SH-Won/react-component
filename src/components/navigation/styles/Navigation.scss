@@ -7,7 +7,8 @@
   }
   & > .navigation-drawer {
     z-index:100;
-    background-color: white;
+    // background-color: white;
+    background-color: inherit;
     position : absolute;
     top:0;
     height: 100vh;

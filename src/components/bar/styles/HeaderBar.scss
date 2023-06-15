@@ -2,7 +2,8 @@
 @import '../../../styles/typeface.module.scss';
 .appBar {
   display: flex;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: inherit;
   padding: 14px 40px;
   border-bottom: 1px solid color('line_02');
   align-items: center;

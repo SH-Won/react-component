@@ -14,6 +14,7 @@ export const Header: Story = {
   args: {
     title: '헤더',
     back: () => {},
+    iconColor: 'white',
     children: (
       <div
         style={{

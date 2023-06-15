@@ -33,5 +33,7 @@ export const _Navigation: Story = {
   args: {
     isMobile: true,
     fixed: false,
+    iconColor: Colors.white,
+    backgroundColor: Colors.bg_black,
   },
 }

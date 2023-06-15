@@ -8,6 +8,8 @@ import './styles/Navigation.scss'
 interface NavigationProps {
   isMobile: boolean
   title?: string
+  iconColor?: string
+  backgroundColor?: string
   back: ((isMain: boolean) => void) | undefined
   children?: JSX.Element | JSX.Element[] | string
   fixed?: boolean
@@ -31,19 +33,28 @@ const Navigation = (props: NavigationProps) => {
       return false
     })
   }
+  const style = {
+    color: props.iconColor ?? Colors.grey_111,
+    backgroundColor: props.backgroundColor ?? Colors.white,
+  }
 
   return (
     <>
       <div
         className={`navigation ${props.fixed ? 'fixed' : ''}`}
         ref={navigation}
+        style={style}
       >
         <HeaderBar {...props} openDrawer={openDrawer}>
           {props.children}
         </HeaderBar>
         <div className={`navigation-drawer ${open ? 'show' : ''}`}>
           <div className="navigation-drawer-close" onClick={closeFunc}>
-            <Element name="Close" size="big" color={Colors.grey_111} />
+            <Element
+              name="Close"
+              size="big"
+              color={props.iconColor ?? Colors.grey_111}
+            />
           </div>
           <div className="navigation-drawer-items">{props.children}</div>
         </div>
