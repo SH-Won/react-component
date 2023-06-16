@@ -1,6 +1,6 @@
 .popup-drawer {
   position: fixed;
-  width: 50%;
+  width: 55%;
 
   .tablet & {
     width: 70%;
@@ -20,11 +20,16 @@
     right:0;
     transform: translateX(101%);
   }
-  // background: #020a13;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: overlay;
 
   &.show {
     transform: translateX(0%);
+    &.right {
+      box-shadow: -2px 0px 8px rgba(255, 255, 255, 0.2);
+    }
+    &.left{
+      box-shadow: 2px 0px 8px rgba(255, 255, 255, 0.2);
+    }
   }
 }
