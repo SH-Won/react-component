@@ -3,11 +3,11 @@
 .appBar {
   display: flex;
   // background-color: #fff;
+  user-select: none;
   background-color: inherit;
   padding: 14px 40px;
   border-bottom: 1px solid color('line_02');
   align-items: center;
-  // justify-content: space-between;
   &.mobile {
     padding: 14px 20px;
   }
@@ -16,18 +16,20 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    user-select: none;
   }
   & >.logo {
     & >.logo-icon{
       display:flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
+    
     display:flex;
     align-items: center;
     gap:10px;
     & > span {
+      cursor: pointer;
       display:inline-block;
       padding: 4px 10px;
       @include typeface('Heading_2');
