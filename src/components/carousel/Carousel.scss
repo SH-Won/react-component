@@ -67,7 +67,7 @@
     position:absolute;
     bottom:50%;
     left:0;
-    transform : translate(20%,50%) rotateY(180deg);
+    transform : translate(20%,50%) rotate(180deg);
     cursor: pointer;
   }
   & > .progress{
