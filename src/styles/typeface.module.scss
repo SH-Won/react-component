@@ -1,3 +1,11 @@
+// @font-face {
+//   font-family: 'RIDIBatang';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff')
+//     format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
 // Font size
 $typeface-size-map: (
   "Heading_1": 24px,
@@ -84,6 +92,17 @@ $typeface-weight-map: (
 @function typeface-weight($name) {
   @return map-get($map: $typeface-weight-map, $key: $name);
 };
+/*
+리디바탕 글꼴은 개인 및 기업 사용자를 포함한 모든 사용자에게 무료로 제공되며 자유롭게 수정하고 재배포하실 수 있습니다.
+단, 글꼴 자체를 유료로 판매하는 것은 금지하며, 리디바탕 글꼴은 본 저작권 안내와 라이선스 전문을 포함해서 다른 소프트웨어와 번들하거나 재배포 또는 판매가 가능합니다.
+라이선스 전문을 포함하기 어려울 경우, 리디바탕 글꼴의 출처 표기를 권장합니다. 예) 이 페이지는 리디주식회사에서 제공한 리디바탕 글꼴이 사용되어 있습니다.
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+리디바탕의 저작권은 리디주식회사가 소유하고 있습니다.
+*/
+@import url('https://webfontworld.github.io/ridi/RidiBatang.css');
+@import url('https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css');
+// @import url('https://fonts.googleapis.com/css2?family=Inconsolata%3Awght%40500%3B700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap');
 
 @mixin typeface($name) {
   font-size: typeface-size($name);
@@ -97,6 +116,12 @@ $typeface-weight-map: (
   font-weight: typeface-weight($name);
   line-height: typeface-line-height($name);
   font-family: Inconsolata, sans-serif;
+}
+@mixin typeface-ridi($name) {
+  font-size: typeface-size($name);
+  font-weight: typeface-weight($name);
+  line-height: typeface-line-height($name);
+  font-family: RIDIBatang, sans-serif;
 }
 
 :export {

@@ -20,6 +20,7 @@
     justify-content: space-between;
     align-items: center;
     @include typeface('Heading_3');
+    // @include typeface-ridi('Heading_3');
     & > .icon {
       display:flex;
       justify-content: center;

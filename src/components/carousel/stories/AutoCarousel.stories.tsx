@@ -3,7 +3,7 @@ import { RatioCardImage } from '@/components/card'
 import type { Meta, StoryObj } from '@storybook/react'
 import AutoCarousel from '../AutoCarousel'
 import Colors from '../../../styles/colors.module.scss'
-// import { images } from '../../card/stories/Card.stories'
+import { images } from '../../card/stories/Card.stories'
 const meta: Meta<typeof AutoCarousel> = {
   title: 'Carousel',
   component: (props) => {

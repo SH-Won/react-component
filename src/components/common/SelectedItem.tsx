@@ -1,6 +1,6 @@
 import './styles/SelectedItem.scss'
 interface SelectedItemProps {
-  type?: 'normal' | 'border' | 'background'
+  type?: 'normal' | 'border' | 'background' | 'custom'
   size?: 'small' | 'medium' | 'big' | 'custom'
   selected: boolean
   text?: string

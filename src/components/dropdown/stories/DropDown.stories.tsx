@@ -34,10 +34,6 @@ const meta: Meta<typeof DropDown> = {
         <DropDown selected={selected}>
           <OptionList items={items} click={onClickOption} itemSize="small" />
         </DropDown>
-
-        <DropDown selected={selected}>
-          <OptionList items={items} click={onClickOption} itemSize="small" />
-        </DropDown>
       </div>
     )
   },

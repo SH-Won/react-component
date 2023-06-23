@@ -25,5 +25,8 @@ export const colors: {
   green: '#03c75a'
   orange: '#e1a016'
   red: '#da1c26'
+  bg_black : '#020a13',
+  bg_grey:'#696869',
+  bg_indigo :'#13283e'
 }
 export default colors

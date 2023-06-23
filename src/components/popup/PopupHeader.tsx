@@ -1,6 +1,6 @@
 import Colors from '../../styles/colors.module.scss'
 import Element from '../elements/Element'
-import './PopupHeader.scss'
+import './styles/PopupHeader.scss'
 interface Props {
   title?: string
   back?: () => void
@@ -10,12 +10,13 @@ interface Props {
 }
 
 const PopupHeader = (props: Props) => {
+  const isShowProgress = props.maxProgress !== 0 && props.maxProgress
   const style = props.title
     ? {
-        padding: '20px 20px 9px',
+        padding: isShowProgress ? '20px 20px 9px' : '20px',
       }
     : {
-        padding: '16px 16px 7px',
+        padding: isShowProgress ? '16px 16px 7px' : '16px',
       }
   return (
     <div className="popup-header-container" style={style}>
@@ -36,9 +37,10 @@ const PopupHeader = (props: Props) => {
           </div>
         )}
       </div>
-      <div className="popup-header-progress">
-        {props.maxProgress &&
-          Array(props.maxProgress)
+
+      {isShowProgress && (
+        <div className="popup-header-progress">
+          {Array(props.maxProgress)
             .fill(1)
             .map((v, i) => (
               <span
@@ -46,7 +48,8 @@ const PopupHeader = (props: Props) => {
                 className={`${i + v === props.progress ? 'selected' : ''}`}
               ></span>
             ))}
-      </div>
+        </div>
+      )}
     </div>
   )
 }
