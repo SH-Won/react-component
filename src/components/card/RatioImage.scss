@@ -12,11 +12,49 @@
     animation: fade-in .3s linear;
     cursor: pointer;
   }
-  & > div{
-    position:absolute;
+  // & > div{
+  //   position:absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top:0;
+  // }
+  & > .skeletonImg {
+    margin: 0;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height:100%;
     top:0;
+    background-color: #ccc;
+    opacity: 0.6;
+    border-radius: 8px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  /* background: linear-gradient(to right, #f0eaea, #ddd, #fdf9f9); */
+      background: linear-gradient(
+          90deg,
+         rgba(255, 255, 255, 0),
+         rgba(255, 255, 255, 0.6) 40%,
+         rgba(255, 255, 255, 0) 70%
+      );
+      animation: loading 1s infinite linear;
+    }
+  }
+}
+
+
+
+@keyframes loading {
+  0% {
+      transform: translateX(0);
+  }
+  50%,
+  100% {
+      transform: translateX(100%);
   }
 }
 @keyframes fade-in {

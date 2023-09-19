@@ -1330,7 +1330,7 @@ const St = (e) => {
     ] })
   ] }) });
 };
-const pt = ({
+const Mt = ({
   initialCount: e,
   width: n,
   onSelect: o,
@@ -1401,7 +1401,7 @@ const pt = ({
     )) })
   ] });
 };
-const Ot = ({
+const pt = ({
   items: e,
   onSelect: n,
   screen: o
@@ -1436,7 +1436,7 @@ const Ot = ({
     /* @__PURE__ */ t("div", { className: "item-background", style: g })
   ] });
 };
-const zt = (e) => /* @__PURE__ */ t(
+const Ot = (e) => /* @__PURE__ */ t(
   "div",
   {
     className: "common-button",
@@ -1457,52 +1457,21 @@ const zt = (e) => /* @__PURE__ */ t(
     children: e.children
   }
 );
-const $t = (e) => {
+const zt = (e) => {
   const n = () => ({
     height: e.height ?? "280px",
     objectFit: e.objectFit ?? "fill"
   });
   return /* @__PURE__ */ t("div", { className: "card-container", children: /* @__PURE__ */ t("div", { className: "card", children: /* @__PURE__ */ t("img", { src: e.imageUrl, style: n() }) }) });
 };
-const jt = (e) => /* @__PURE__ */ f("div", { className: "group-card", children: [
+const $t = (e) => /* @__PURE__ */ f("div", { className: "group-card", children: [
   e.isSub && /* @__PURE__ */ t(j, { name: "Depth", size: "medium", color: E.grey_111 }),
   /* @__PURE__ */ f("div", { className: "card", children: [
     /* @__PURE__ */ t("img", { className: "card-image", src: e.imageUrl }),
     /* @__PURE__ */ t("div", { className: "card-explain", children: /* @__PURE__ */ t("span", { children: e.label }) })
   ] })
 ] });
-const _e = (e) => {
-  const n = {
-    backgroundColor: `rgba(0,0,0,${e.opacity})`
-  };
-  return /* @__PURE__ */ t(ve.Fragment, { children: e.isOpen && /* @__PURE__ */ t("div", { className: "overlay", style: n, children: e.children }) });
-};
-const It = ({ opacity: e }) => /* @__PURE__ */ t(_e, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
 const Et = (e) => {
-  const n = Array(8).fill(1).map((o, s) => o + s);
-  return /* @__PURE__ */ f(
-    "div",
-    {
-      className: "page-loading-container",
-      style: { height: e.customHeight },
-      children: [
-        /* @__PURE__ */ t("div", { className: "page-loading-wrapper", children: n.map((o) => /* @__PURE__ */ t("div", { className: "loader" }, `loaderKey${o}`)) }),
-        /* @__PURE__ */ t("div", { className: "text", children: e.text })
-      ]
-    }
-  );
-}, ye = (e) => {
-  const n = G(null), o = (s) => {
-    var d;
-    ((d = n.current) == null ? void 0 : d.contains(s.target)) || e();
-  };
-  return ae(() => (window.addEventListener("click", o), () => {
-    window.removeEventListener("click", o);
-  }), []), {
-    ref: n
-  };
-};
-const Pt = (e) => {
   const [n, o] = P(!0), s = e.ratio * 100 + "%";
   return /* @__PURE__ */ f(
     "div",
@@ -1519,17 +1488,19 @@ const Pt = (e) => {
           {
             src: e.imageUrl,
             loading: e.eager ? "eager" : "lazy",
-            onLoad: () => o(!1)
+            onLoad: () => {
+              o(!1);
+            }
           }
         ),
-        n && /* @__PURE__ */ t("div", { children: /* @__PURE__ */ t(Et, { customHeight: "100%" }) })
+        n && /* @__PURE__ */ t("div", { className: "skeletonImg" })
       ]
     }
   );
-}, Dt = (e) => {
+}, jt = (e) => {
   const n = e.ratio ? e.ratio : 1;
   return /* @__PURE__ */ f("div", { className: "poster-card-container", children: [
-    /* @__PURE__ */ t(Pt, { ratio: n, imageUrl: e.imageUrl, click: e.click }),
+    /* @__PURE__ */ t(Et, { ratio: n, imageUrl: e.imageUrl, click: e.click }),
     /* @__PURE__ */ f("div", { className: "poster-card-info", children: [
       /* @__PURE__ */ t("div", { className: "progress-bar", children: /* @__PURE__ */ t(St, { percent: e.voteAverage, size: 34 }) }),
       /* @__PURE__ */ t("span", { className: "title", children: e.title }),
@@ -1537,8 +1508,14 @@ const Pt = (e) => {
     ] })
   ] });
 };
-const At = (e) => /* @__PURE__ */ t(_e, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
-const Wt = (e) => {
+const _e = (e) => {
+  const n = {
+    backgroundColor: `rgba(0,0,0,${e.opacity})`
+  };
+  return /* @__PURE__ */ t(ve.Fragment, { children: e.isOpen && /* @__PURE__ */ t("div", { className: "overlay", style: n, children: e.children }) });
+};
+const It = (e) => /* @__PURE__ */ t(_e, { isOpen: e.isOpen, opacity: 0.6, children: /* @__PURE__ */ t("div", { className: `wrapper ${e.isMobile ? "mobile" : ""}`, children: e.children }) });
+const Dt = (e) => {
   const n = e.maxProgress !== 0 && e.maxProgress, o = e.title ? {
     padding: n ? "20px 20px 9px" : "20px"
   } : {
@@ -1559,7 +1536,7 @@ const Wt = (e) => {
     )) })
   ] });
 };
-const Bt = (e) => {
+const At = (e) => {
   const n = {
     backgroundColor: e.backgroundColor ?? E.bg_black,
     color: e.fontColor ?? E.white
@@ -1576,18 +1553,18 @@ const Bt = (e) => {
     /* @__PURE__ */ t("div", { onClick: e.close, children: /* @__PURE__ */ t(_e, { opacity: 0.5, isOpen: e.isOpen }) })
   ] });
 };
-const Vt = (e) => /* @__PURE__ */ f("div", { className: "notification", children: [
+const Wt = (e) => /* @__PURE__ */ f("div", { className: "notification", children: [
   e.children,
   /* @__PURE__ */ f("div", { className: "info", style: { height: e.height }, children: [
     /* @__PURE__ */ t(j, { name: "Caution", size: "small", color: E.grey_bbb }),
     /* @__PURE__ */ t("span", { children: e.text })
   ] })
 ] });
-const Ft = (e) => {
+const Bt = (e) => {
   const n = `${e.ratio * 100}%`;
   return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: n }, children: /* @__PURE__ */ t("img", { className: "ratio-img", src: e.imageUrl }) });
 };
-const Gt = (e) => {
+const Vt = (e) => {
   const n = e.type ?? "text", [o, s] = P(!1), c = me(() => {
     let g = "";
     return (o || e.searchText) && (g += " focus"), e.screen === "mobile" && (g += " mobile"), g;
@@ -1612,7 +1589,7 @@ const Gt = (e) => {
     )
   ] });
 };
-const Nt = (e) => {
+const Pt = (e) => {
   const n = e.type ?? "normal", o = e.size ?? "medium", s = e.selected ? "selected" : "";
   return /* @__PURE__ */ t(
     "div",
@@ -1630,7 +1607,7 @@ const Nt = (e) => {
       children: e.text ?? e.children
     }
   );
-}, Ht = ({
+}, Ft = ({
   items: e,
   selected: n,
   click: o,
@@ -1639,7 +1616,7 @@ const Nt = (e) => {
 }) => {
   const d = c ?? "medium";
   return /* @__PURE__ */ t("div", { className: `option-list ${s ? "slide" : ""}`, children: /* @__PURE__ */ t("div", { className: "option-items", children: e.map((g) => /* @__PURE__ */ t(
-    Nt,
+    Pt,
     {
       size: d,
       text: g.name,
@@ -1649,7 +1626,7 @@ const Nt = (e) => {
     g.name
   )) }) });
 };
-const Ut = (e) => {
+const Gt = (e) => {
   if (e.totalPages <= 3 + 6 + 2)
     return /* @__PURE__ */ t("ul", { className: "pagination-numbers", children: Array(e.totalPages).fill(1).map((l, u) => l + u).map((l, u) => /* @__PURE__ */ t(
       "li",
@@ -1695,7 +1672,17 @@ const Ut = (e) => {
     ))
   ] });
 };
-const Yt = ({ title: e, children: n }) => {
+const ye = (e) => {
+  const n = G(null), o = (s) => {
+    var d;
+    ((d = n.current) == null ? void 0 : d.contains(s.target)) || e();
+  };
+  return ae(() => (window.addEventListener("click", o), () => {
+    window.removeEventListener("click", o);
+  }), []), {
+    ref: n
+  };
+}, Ht = ({ title: e, children: n }) => {
   const [o, s] = P(!1), [c, d] = P("hidden"), { ref: g } = ye(() => {
     s(!1), d("hidden");
   }), l = () => {
@@ -1807,7 +1794,7 @@ const ir = ({
       d !== 0 && (d === 1 ? s === e ? (c(1), o.current.style.transform = "translateX(-100%)", o.current.style.transition = "none") : c((_) => _ + 1) : s === 1 ? (c(e), c(e), o.current.style.transform = `translateX(-${e * 100}%)`, o.current.style.transition = "none") : c((_) => _ - 1), g(0));
     }
   };
-}, Xt = (e) => {
+}, Ut = (e) => {
   const n = e.items.length, {
     container: o,
     slide: s,
@@ -1838,7 +1825,7 @@ const ir = ({
       ] })
     }
   );
-}, qt = (e) => {
+}, Yt = (e) => {
   const n = e.items.length, [o, s] = P(), [c, d] = P(!1), g = G(), {
     container: l,
     slide: u,
@@ -1914,7 +1901,7 @@ const ir = ({
     }
   );
 };
-const Zt = ({ selected: e, children: n }) => {
+const Xt = ({ selected: e, children: n }) => {
   const [o, s] = P(!1), { ref: c } = ye(() => s(!1));
   return ae(() => {
     const d = setTimeout(() => {
@@ -1935,7 +1922,7 @@ const Zt = ({ selected: e, children: n }) => {
     zr(n, { open: o, selected: e })
   ] });
 };
-const Jt = (e) => {
+const qt = (e) => {
   const { ref: n } = ye(() => d()), [o, s] = P(!1), c = () => {
     s((u) => !u);
     const l = document.querySelector("body");
@@ -1976,34 +1963,49 @@ const Jt = (e) => {
     }
   ) });
 };
+const Zt = ({ opacity: e }) => /* @__PURE__ */ t(_e, { isOpen: !0, opacity: e, children: /* @__PURE__ */ t("div", { className: "loading-content", children: /* @__PURE__ */ t("div", { className: "loading" }) }) });
+const Jt = (e) => {
+  const n = Array(8).fill(1).map((o, s) => o + s);
+  return /* @__PURE__ */ f(
+    "div",
+    {
+      className: "page-loading-container",
+      style: { height: e.customHeight },
+      children: [
+        /* @__PURE__ */ t("div", { className: "page-loading-wrapper", children: n.map((o) => /* @__PURE__ */ t("div", { className: "loader" }, `loaderKey${o}`)) }),
+        /* @__PURE__ */ t("div", { className: "text", children: e.text })
+      ]
+    }
+  );
+};
 export {
-  qt as AutoCarousel,
-  Yt as BasicAccordion,
-  Xt as BasicCarousel,
-  Zt as BasicDropDown,
-  zt as Button,
-  $t as Card,
+  Yt as AutoCarousel,
+  Ht as BasicAccordion,
+  Ut as BasicCarousel,
+  Xt as BasicDropDown,
+  Ot as Button,
+  zt as Card,
   St as CircularProgressBar,
   E as Colors,
   j as Element,
-  jt as GroupCard,
+  $t as GroupCard,
   Tt as HeaderBar,
-  Gt as InputBox,
-  It as LoadingSpinner,
-  Jt as Navigation,
-  Vt as Notification,
-  Ht as OptionList,
+  Vt as InputBox,
+  Zt as LoadingSpinner,
+  qt as Navigation,
+  Wt as Notification,
+  Ft as OptionList,
   _e as OverLay,
-  Et as PageLoadingSpinner,
-  Ut as PaginationNumbers,
-  At as Popup,
-  Wt as PopupBasicHeader,
-  Bt as PopupDrawer,
-  Dt as PosterCard,
-  Pt as RatioCardImage,
-  Ft as RatioImage,
-  Nt as SelectedItem,
-  pt as SettingBar,
-  Ot as ToggleBar,
+  Jt as PageLoadingSpinner,
+  Gt as PaginationNumbers,
+  It as Popup,
+  Dt as PopupBasicHeader,
+  At as PopupDrawer,
+  jt as PosterCard,
+  Et as RatioCardImage,
+  Bt as RatioImage,
+  Pt as SelectedItem,
+  Mt as SettingBar,
+  pt as ToggleBar,
   ye as useCloseEvent
 };
