@@ -24,6 +24,8 @@ interface ToggleBarProps<T> {
   screen: string
   items: T[]
   onSelect: (item: T) => void
+  backGroundColor?: string
+  fontColor?: string
 }
 const ToggleBar = <T extends BaseProps>({
   items,

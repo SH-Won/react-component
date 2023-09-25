@@ -26,6 +26,9 @@
     &.selected {
       color: color('white');
     }
+    & > span {
+      cursor: pointer;
+    }
   }
   z-index: 50;
   & > .item-background {

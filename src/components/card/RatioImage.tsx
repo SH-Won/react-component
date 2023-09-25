@@ -19,11 +19,13 @@ const RatioImage = (props: RatioImageProps) => {
       <img
         src={props.imageUrl}
         loading={props.eager ? 'eager' : 'lazy'}
-        onLoad={() => setLoading(false)}
+        onLoad={() => {
+          setLoading(false)
+        }}
       />
       {loading && (
-        <div>
-          <PageLoadingSpinner customHeight="100%" />
+        <div className="skeletonImg">
+          {/* <PageLoadingSpinner customHeight="100%" /> */}
         </div>
       )}
     </div>
