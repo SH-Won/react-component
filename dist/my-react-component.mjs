@@ -1675,10 +1675,11 @@ const Gt = (e) => {
 const ye = (e) => {
   const n = G(null), o = (s) => {
     var d;
-    ((d = n.current) == null ? void 0 : d.contains(s.target)) || e();
+    const c = (d = n.current) == null ? void 0 : d.contains(s.target);
+    (!c || c && s.target !== n.current) && e();
   };
-  return ae(() => (window.addEventListener("click", o), () => {
-    window.removeEventListener("click", o);
+  return ae(() => (window.addEventListener("click", o, !0), () => {
+    window.removeEventListener("click", o, !0);
   }), []), {
     ref: n
   };
@@ -1943,11 +1944,10 @@ const qt = (e) => {
     "div",
     {
       className: `navigation ${e.fixed ? "fixed" : ""}`,
-      ref: n,
       style: g,
       children: [
         /* @__PURE__ */ t(Tt, { ...e, openDrawer: c, children: e.children }),
-        /* @__PURE__ */ f("div", { className: `navigation-drawer ${o ? "show" : ""}`, children: [
+        /* @__PURE__ */ f("div", { className: `navigation-drawer ${o ? "show" : ""}`, ref: n, children: [
           /* @__PURE__ */ t("div", { className: "navigation-drawer-close", onClick: d, children: /* @__PURE__ */ t(
             j,
             {

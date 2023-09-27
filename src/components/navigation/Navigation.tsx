@@ -42,13 +42,12 @@ const Navigation = (props: NavigationProps) => {
     <>
       <div
         className={`navigation ${props.fixed ? 'fixed' : ''}`}
-        ref={navigation}
         style={style}
       >
         <HeaderBar {...props} openDrawer={openDrawer}>
           {props.children}
         </HeaderBar>
-        <div className={`navigation-drawer ${open ? 'show' : ''}`}>
+        <div className={`navigation-drawer ${open ? 'show' : ''}`} ref={navigation}>
           <div className="navigation-drawer-close" onClick={closeFunc}>
             <Element
               name="Close"

@@ -1,18 +1,18 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from 'react'
 
 const useCloseEvent = (closeEvent : () => void) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const onClick = (e : any) => {
     const isInner = ref.current?.contains(e.target)
-    if(!isInner){
+    if(!isInner || (isInner && e.target !== ref.current)){
       closeEvent()
     }
   }
   useEffect(() => {
-    window.addEventListener('click', onClick)
+    window.addEventListener('click',onClick, true)
     return () => {
-      window.removeEventListener('click',onClick)
+      window.removeEventListener('click',onClick, true)
     }
   },[])
   return {
