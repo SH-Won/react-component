@@ -1675,7 +1675,7 @@ const Gt = (e) => {
 const ye = (e) => {
   const n = G(null), [a, l] = P(location.pathname), c = (u) => {
     var s;
-    ((s = n.current) == null ? void 0 : s.contains(u.target)) || (console.log("is not inner"), e()), l((d) => d !== location.pathname ? (e(), location.pathname) : d);
+    ((s = n.current) == null ? void 0 : s.contains(u.target)) || e(), l((d) => d !== location.pathname ? (e(), location.pathname) : d);
   };
   return ae(() => (window.addEventListener("click", c), () => {
     window.removeEventListener("click", c);
