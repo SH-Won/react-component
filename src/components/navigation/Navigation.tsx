@@ -48,7 +48,7 @@ const Navigation = (props: NavigationProps) => {
         <HeaderBar {...props} openDrawer={openDrawer}>
           {props.children}
         </HeaderBar>
-        <div className={`navigation-drawer ${open ? 'show' : ''}`}>
+        <div className={`navigation-drawer ${open && props.isMobile ? 'show' : ''}`}>
           <div className="navigation-drawer-close" onClick={closeFunc}>
             <Element
               name="Close"
@@ -58,7 +58,7 @@ const Navigation = (props: NavigationProps) => {
           </div>
           <div className="navigation-drawer-items">{props.children}</div>
         </div>
-        {open && <div onClick={closeFunc} className="navigation-overlay"></div>}
+        {(open && props.isMobile) && <div onClick={closeFunc} className="navigation-overlay"></div>}
       </div>
       {/* {open && <div className="navigation-overlay"></div>} */}
     </>

@@ -1,4 +1,4 @@
-import ve, { lazy as Mr, Suspense as Or, useMemo as me, useState as P, useRef as G, useLayoutEffect as be, useEffect as ae, cloneElement as zr } from "react";
+import ve, { lazy as pr, Suspense as Or, useMemo as me, useState as P, useRef as G, useLayoutEffect as be, useEffect as ae, cloneElement as zr } from "react";
 var Q = {}, $r = {
   get exports() {
     return Q;
@@ -47,11 +47,11 @@ var K = {};
 var He;
 function Ir() {
   return He || (He = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = ve, n = Symbol.for("react.element"), a = Symbol.for("react.portal"), l = Symbol.for("react.fragment"), c = Symbol.for("react.strict_mode"), u = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), s = Symbol.for("react.context"), d = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), _ = Symbol.for("react.suspense_list"), x = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), y = Symbol.for("react.offscreen"), M = Symbol.iterator, N = "@@iterator";
+    var e = ve, n = Symbol.for("react.element"), a = Symbol.for("react.portal"), l = Symbol.for("react.fragment"), c = Symbol.for("react.strict_mode"), u = Symbol.for("react.profiler"), g = Symbol.for("react.provider"), s = Symbol.for("react.context"), d = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), _ = Symbol.for("react.suspense_list"), x = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), y = Symbol.for("react.offscreen"), p = Symbol.iterator, N = "@@iterator";
     function X(r) {
       if (r === null || typeof r != "object")
         return null;
-      var i = M && r[M] || r[N];
+      var i = p && r[p] || r[N];
       return typeof i == "function" ? i : null;
     }
     var L = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
@@ -266,14 +266,14 @@ function Ir() {
       } catch (A) {
         if (A && h && typeof A.stack == "string") {
           for (var m = A.stack.split(`
-`), p = h.stack.split(`
-`), T = m.length - 1, S = p.length - 1; T >= 1 && S >= 0 && m[T] !== p[S]; )
+`), M = h.stack.split(`
+`), T = m.length - 1, S = M.length - 1; T >= 1 && S >= 0 && m[T] !== M[S]; )
             S--;
           for (; T >= 1 && S >= 0; T--, S--)
-            if (m[T] !== p[S]) {
+            if (m[T] !== M[S]) {
               if (T !== 1 || S !== 1)
                 do
-                  if (T--, S--, S < 0 || m[T] !== p[S]) {
+                  if (T--, S--, S < 0 || m[T] !== M[S]) {
                     var $ = `
 ` + m[T].replace(" at new ", " at ");
                     return r.displayName && $.includes("<anonymous>") && ($ = $.replace("<anonymous>", r.displayName)), typeof r == "function" && te.set(r, $), $;
@@ -324,13 +324,13 @@ function Ir() {
         }
       return "";
     }
-    var ie = Object.prototype.hasOwnProperty, pe = {}, Me = L.ReactDebugCurrentFrame;
+    var ie = Object.prototype.hasOwnProperty, Me = {}, pe = L.ReactDebugCurrentFrame;
     function oe(r) {
       if (r) {
         var i = r._owner, o = ne(r.type, r._source, i ? i.type : null);
-        Me.setExtraStackFrame(o);
+        pe.setExtraStackFrame(o);
       } else
-        Me.setExtraStackFrame(null);
+        pe.setExtraStackFrame(null);
     }
     function fr(r, i, o, h, k) {
       {
@@ -340,14 +340,14 @@ function Ir() {
             var m = void 0;
             try {
               if (typeof r[b] != "function") {
-                var p = Error((h || "React class") + ": " + o + " type `" + b + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof r[b] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                throw p.name = "Invariant Violation", p;
+                var M = Error((h || "React class") + ": " + o + " type `" + b + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof r[b] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                throw M.name = "Invariant Violation", M;
               }
               m = r[b](i, b, h, o, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
             } catch (T) {
               m = T;
             }
-            m && !(m instanceof Error) && (oe(k), w("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", h || "React class", o, b, typeof m), oe(null)), m instanceof Error && !(m.message in pe) && (pe[m.message] = !0, oe(k), w("Failed %s type: %s", o, m.message), oe(null));
+            m && !(m instanceof Error) && (oe(k), w("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", h || "React class", o, b, typeof m), oe(null)), m instanceof Error && !(m.message in Me) && (Me[m.message] = !0, oe(k), w("Failed %s type: %s", o, m.message), oe(null));
           }
       }
     }
@@ -457,8 +457,8 @@ function Ir() {
     };
     function Rr(r, i, o, h, k) {
       {
-        var C, b = {}, m = null, p = null;
-        o !== void 0 && (ze(o), m = "" + o), _r(i) && (ze(i.key), m = "" + i.key), br(i) && (p = i.ref, yr(i, k));
+        var C, b = {}, m = null, M = null;
+        o !== void 0 && (ze(o), m = "" + o), _r(i) && (ze(i.key), m = "" + i.key), br(i) && (M = i.ref, yr(i, k));
         for (C in i)
           ie.call(i, C) && !vr.hasOwnProperty(C) && (b[C] = i[C]);
         if (r && r.defaultProps) {
@@ -466,11 +466,11 @@ function Ir() {
           for (C in T)
             b[C] === void 0 && (b[C] = T[C]);
         }
-        if (m || p) {
+        if (m || M) {
           var S = typeof r == "function" ? r.displayName || r.name || "Unknown" : r;
-          m && kr(b, S), p && wr(b, S);
+          m && kr(b, S), M && wr(b, S);
         }
-        return Cr(r, m, p, k, h, Z.current, b);
+        return Cr(r, m, M, k, h, Z.current, b);
       }
     }
     var fe = L.ReactCurrentOwner, Ie = L.ReactDebugCurrentFrame;
@@ -597,8 +597,8 @@ Check the top-level render call using <` + o + ">.");
         if (!b) {
           var m = "";
           (r === void 0 || typeof r == "object" && r !== null && Object.keys(r).length === 0) && (m += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
-          var p = xr(k);
-          p ? m += p : m += De();
+          var M = xr(k);
+          M ? m += M : m += De();
           var T;
           r === null ? T = "null" : de(r) ? T = "array" : r !== void 0 && r.$$typeof === n ? (T = "<" + (D(r.type) || "Unknown") + " />", m = " Did you accidentally export a JSX literal instead of a component?") : T = typeof r, w("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", T, m);
         }
@@ -627,8 +627,8 @@ Check the top-level render call using <` + o + ">.");
     function Pr(r, i, o) {
       return Ve(r, i, o, !1);
     }
-    var Nr = Pr, pr = Er;
-    K.Fragment = l, K.jsx = Nr, K.jsxs = pr;
+    var Nr = Pr, Mr = Er;
+    K.Fragment = l, K.jsx = Nr, K.jsxs = Mr;
   }()), K;
 }
 (function(e) {
@@ -1264,7 +1264,7 @@ const ee = Q.Fragment, t = Q.jsx, f = Q.jsxs, Dr = "#6440dd", Ar = "#5934D8", Wr
         return null;
     }
   }, a = () => e.size === "big" ? "30px" : e.size === "medium" ? "24px" : "20px";
-  return Mr(() => ht(/* @__PURE__ */ Object.assign({ "./icons/Adult.tsx": () => Promise.resolve().then(() => gt), "./icons/ArrowLeft.tsx": () => Promise.resolve().then(() => mt), "./icons/Caution.tsx": () => Promise.resolve().then(() => vt), "./icons/Check.tsx": () => Promise.resolve().then(() => bt), "./icons/Close.tsx": () => Promise.resolve().then(() => _t), "./icons/Depth.tsx": () => Promise.resolve().then(() => yt), "./icons/Gear.tsx": () => Promise.resolve().then(() => kt), "./icons/Hamburger.tsx": () => Promise.resolve().then(() => wt), "./icons/Plus.tsx": () => Promise.resolve().then(() => Ct), "./icons/Right.tsx": () => Promise.resolve().then(() => Rt), "./icons/Search.tsx": () => Promise.resolve().then(() => xt), "./icons/Setting.tsx": () => Promise.resolve().then(() => Lt) }), `./icons/${e.name}.tsx`)), /* @__PURE__ */ t(Or, { fallback: null, children: /* @__PURE__ */ t("div", { style: { height: a(), display: "inline-block" }, children: n() }) });
+  return pr(() => ht(/* @__PURE__ */ Object.assign({ "./icons/Adult.tsx": () => Promise.resolve().then(() => gt), "./icons/ArrowLeft.tsx": () => Promise.resolve().then(() => mt), "./icons/Caution.tsx": () => Promise.resolve().then(() => vt), "./icons/Check.tsx": () => Promise.resolve().then(() => bt), "./icons/Close.tsx": () => Promise.resolve().then(() => _t), "./icons/Depth.tsx": () => Promise.resolve().then(() => yt), "./icons/Gear.tsx": () => Promise.resolve().then(() => kt), "./icons/Hamburger.tsx": () => Promise.resolve().then(() => wt), "./icons/Plus.tsx": () => Promise.resolve().then(() => Ct), "./icons/Right.tsx": () => Promise.resolve().then(() => Rt), "./icons/Search.tsx": () => Promise.resolve().then(() => xt), "./icons/Setting.tsx": () => Promise.resolve().then(() => Lt) }), `./icons/${e.name}.tsx`)), /* @__PURE__ */ t(Or, { fallback: null, children: /* @__PURE__ */ t("div", { style: { height: a(), display: "inline-block" }, children: n() }) });
 };
 const Tt = (e) => {
   const n = typeof e.openDrawer == "function", a = typeof e.back == "function", l = e.isMobile ? "appBar mobile" : "appBar";
@@ -1330,7 +1330,7 @@ const St = (e) => {
     ] })
   ] }) });
 };
-const pt = ({
+const Mt = ({
   initialCount: e,
   width: n,
   onSelect: a,
@@ -1343,7 +1343,7 @@ const pt = ({
     key: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString()
   })), [l]), g = e !== void 0 && e < u.length, s = u.length, [d, v] = P(), [_, x] = P(0), [R, y] = P(
     u[g ? e : 0]
-  ), M = (L) => {
+  ), p = (L) => {
     y(L), a == null || a(L);
   }, N = G(null), X = () => {
     var W;
@@ -1373,7 +1373,7 @@ const pt = ({
         {
           className: `progress ${L.order === R.order ? "selected" : ""}`,
           style: { width: _ },
-          onClick: () => M(L),
+          onClick: () => p(L),
           children: /* @__PURE__ */ t(
             "div",
             {
@@ -1401,24 +1401,24 @@ const pt = ({
     )) })
   ] });
 };
-const Mt = ({
+const pt = ({
   items: e,
   onSelect: n,
   screen: a
 }) => {
   const l = G(null), [c, u] = P(0), [g, s] = P({ width: 0, transform: "" }), d = (v) => {
-    var y, M, N;
+    var y, p, N;
     if (c === v.order)
       return;
-    const _ = (y = l.current) == null ? void 0 : y.getBoundingClientRect().left, x = (M = l.current) == null ? void 0 : M.children[v.order].clientWidth, R = ((N = l.current) == null ? void 0 : N.children[v.order].getBoundingClientRect().left) - _;
+    const _ = (y = l.current) == null ? void 0 : y.getBoundingClientRect().left, x = (p = l.current) == null ? void 0 : p.children[v.order].clientWidth, R = ((N = l.current) == null ? void 0 : N.children[v.order].getBoundingClientRect().left) - _;
     u(v.order), n == null || n(v), s({
       width: x,
       transform: `translate(${R - 1}px)`
     });
   };
   return be(() => {
-    var R, y, M;
-    const v = (R = l.current) == null ? void 0 : R.children[c].clientWidth, _ = (y = l.current) == null ? void 0 : y.getBoundingClientRect().left, x = ((M = l.current) == null ? void 0 : M.children[c].getBoundingClientRect().left) - _;
+    var R, y, p;
+    const v = (R = l.current) == null ? void 0 : R.children[c].clientWidth, _ = (y = l.current) == null ? void 0 : y.getBoundingClientRect().left, x = ((p = l.current) == null ? void 0 : p.children[c].getBoundingClientRect().left) - _;
     s({
       width: v,
       transform: `translate(${x - 1}px)`
@@ -1753,7 +1753,7 @@ const ir = ({
         ),
         /* @__PURE__ */ t("div", { className: "right", onClick: u, children: /* @__PURE__ */ t(j, { name: "Right", size: "small", color: E.white }) })
       ] }),
-      /* @__PURE__ */ t("div", { className: "progress", children: Array(e).fill(1).map((M, N) => /* @__PURE__ */ t(
+      /* @__PURE__ */ t("div", { className: "progress", children: Array(e).fill(1).map((p, N) => /* @__PURE__ */ t(
         "div",
         {
           className: `progress-point ${l === N + 1 ? "selected" : ""}`,
@@ -1834,7 +1834,7 @@ const ir = ({
     clickRight: x,
     clickPoint: R,
     touchMove: y,
-    touchRecover: M,
+    touchRecover: p,
     onTransitionEnd: N
   } = or(n);
   be(() => {
@@ -1886,7 +1886,7 @@ const ir = ({
       },
       onTouchEnd: (O) => {
         const I = g.current / 2.5, z = w.current - O.changedTouches[0].pageX;
-        Math.abs(z) >= I ? y(z) : M(), setTimeout(() => {
+        Math.abs(z) >= I ? y(z) : p(), setTimeout(() => {
           a && clearTimeout(a), u(!0);
         }, 2e3);
       },
@@ -1947,7 +1947,7 @@ const qt = (e) => {
       ref: n,
       children: [
         /* @__PURE__ */ t(Tt, { ...e, openDrawer: c, children: e.children }),
-        /* @__PURE__ */ f("div", { className: `navigation-drawer ${a ? "show" : ""}`, children: [
+        /* @__PURE__ */ f("div", { className: `navigation-drawer ${a && e.isMobile ? "show" : ""}`, children: [
           /* @__PURE__ */ t("div", { className: "navigation-drawer-close", onClick: u, children: /* @__PURE__ */ t(
             j,
             {
@@ -1958,7 +1958,7 @@ const qt = (e) => {
           ) }),
           /* @__PURE__ */ t("div", { className: "navigation-drawer-items", children: e.children })
         ] }),
-        a && /* @__PURE__ */ t("div", { onClick: u, className: "navigation-overlay" })
+        a && e.isMobile && /* @__PURE__ */ t("div", { onClick: u, className: "navigation-overlay" })
       ]
     }
   ) });
@@ -2005,7 +2005,7 @@ export {
   Et as RatioCardImage,
   Bt as RatioImage,
   Pt as SelectedItem,
-  pt as SettingBar,
-  Mt as ToggleBar,
+  Mt as SettingBar,
+  pt as ToggleBar,
   ye as useCloseEvent
 };

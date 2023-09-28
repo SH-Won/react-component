@@ -69,9 +69,20 @@ const meta: Meta<typeof Navigation> = {
     return (
       <div>
         <Navigation {...props}>
-          <HeaderItem items={HEADER_MOVIE_OPTION} title='Main' click={() => console.log('1')}/>
-          <span style={{ cursor: 'pointer', padding: '16px' }}>Sub</span>
-          <span style={{ cursor: 'pointer', padding: '16px' }}>Recommend</span>
+          <div className={`header-items ${isMobile ? 'mobile' : ''}`}>
+            <HeaderItem items={HEADER_MOVIE_OPTION} title='Main' click={() => console.log('1')}/>
+            <span style={{ cursor: 'pointer', padding: '16px' }}>Sub</span>
+            <span style={{ cursor: 'pointer', padding: '16px' }}>Recommend</span>
+          </div>
+          <div className={`user-button-container ${isMobile ? 'mobile' : ''}`}>
+            <Button
+            color={Colors.main}
+            fontColor={Colors.white}
+            click={() => console.log('clicked')}
+          >
+            click
+          </Button>
+          </div>
         </Navigation>
 
         <Button
@@ -95,5 +106,6 @@ export const _Navigation: Story = {
     fixed: false,
     iconColor: Colors.bg_black,
     backgroundColor: Colors.white,
+    title: 'Test Navi'
   },
 }

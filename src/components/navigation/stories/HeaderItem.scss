@@ -1,6 +1,26 @@
 @import '../../../styles//typeface.module.scss';
 @import '../../../styles/colors.module.scss';
 // HeaderItemList.tsx
+
+.header-items {
+  display: flex;
+  flex-direction: row;
+  &.mobile {
+    flex-direction: column;
+  }
+}
+.user-button-container {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+  &.mobile  {
+    flex: unset;
+    padding-bottom: 24px;
+  }
+}
+
+
 .header-item {
   padding: 16px;
   display: flex;
