@@ -6,6 +6,7 @@ import Colors from '../../../styles/colors.module.scss'
 import { useState } from 'react'
 import  OptionList  from '../../common/OptionList'
 import './HeaderItem.scss'
+import Accordion from '@/components/accordion/Accordion'
 
 interface HeaderItemProps {
   title: string
@@ -36,23 +37,32 @@ const HEADER_MOVIE_OPTION = [
 const meta: Meta<typeof Navigation> = {
   title: 'Navigation',
   component: (props) => {
-    
+    const isMobile = props.isMobile
     
     const HeaderItem = ({ items, click, title }: HeaderItemProps) => {
       const [open, setOpen] = useState<boolean>(false)
     
       return (
         <div
-          className='header-item'
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
-          onTouchStart={() => setOpen(true)}
-          onTouchEnd={() => setOpen(false)}
+          className={`header-item ${isMobile ? 'mobile' : ''}`}
+          onMouseEnter={() => !isMobile && setOpen(true)}
+          onMouseLeave={() => !isMobile &&  setOpen(false)}
+          onTouchStart={() => setOpen(prev => !prev)}
         >
+          {/* <span className="title">{title}</span> */}
+          {!isMobile ? 
+          <>
           <span className="title">{title}</span>
-          <div style={{ position: 'absolute', width: '90px', top: '100%' }}>
+          <div className="option-container">
             <OptionList items={items} click={click} open={open} itemSize="small" />
           </div>
+          </> :
+          <Accordion border={false} title={title}>
+            <div style={{display:'flex', flexDirection:'column', padding:'inherit'}}>
+             {items.map(item => <span key={item.value}>{item.name}</span>)}
+            </div>
+          </Accordion>
+          }
         </div>
       )
     }

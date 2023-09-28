@@ -17,6 +17,15 @@ const meta: Meta<typeof Accordion> = {
             quod ducimus alias!
           </div>
         </Accordion>
+        <Accordion {...props} border={false}>
+          <div style={{ height: '100%' }} className="children">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui atque
+            alias dignissimos distinctio placeat! Aliquid maiores, totam debitis
+            dicta tempore officia? Nobis porro, architecto pariatur quas maiores
+            quod ducimus alias!
+          </div>
+        </Accordion>
+
       </div>
     )
   },

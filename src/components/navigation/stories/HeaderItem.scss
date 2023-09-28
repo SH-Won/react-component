@@ -10,6 +10,15 @@
   & > .title {
     @include typeface('Paragraph_1_b');
   }
+  & > .option-container {
+    position: absolute;
+    width: 90px;
+    top: 100%;
+    .mobile & {
+      position: unset;
+      top: unset;
+    }
+  }
   .mobile & {
     min-width: 130px;
   }

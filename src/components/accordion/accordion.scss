@@ -1,12 +1,14 @@
 @import '../../styles//typeface.module.scss';
 .basic-accordion {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  &.border {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
   width: 100%;
   overflow: hidden;
 
   & > .children {
-    max-height: 0;
+    max-height: 0px;
     transition: all 0.2s cubic-bezier(0.1, 1.19, 1, 1);
     &.slide {
       max-height: 100vh;

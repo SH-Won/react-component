@@ -1,4 +1,4 @@
-import Colors from '@/styles/colors.module.scss'
+import Colors from '../../styles/colors.module.scss';
 import { useState } from 'react'
 import { Element } from '../elements'
 import './accordion.scss'
@@ -6,9 +6,11 @@ import { useCloseEvent } from '../../util/hook'
 interface AccordionProps {
   title?: string
   children?: JSX.Element | JSX.Element[] | string
+  border? : boolean | undefined
 }
 
-const Accordion = ({ title, children }: AccordionProps) => {
+const Accordion = ({ title, children, border }: AccordionProps) => {
+  const isBorder = border === undefined ? true : false
   const [open, isOpen] = useState<boolean>(false)
   const [overflow, setOverflow] = useState<string>('hidden')
   const { ref: accordion } = useCloseEvent(() => {
@@ -28,7 +30,7 @@ const Accordion = ({ title, children }: AccordionProps) => {
   }
   return (
     <div
-      className="basic-accordion"
+      className={`basic-accordion ${isBorder ? 'border' : ''}`}
       ref={accordion}
       style={{ overflow }}
       onTransitionEnd={onTranstionEnd}
