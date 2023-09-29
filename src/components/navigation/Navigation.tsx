@@ -1,5 +1,5 @@
 import { useCloseEvent } from '../../util/hook'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HeaderBar } from '../bar'
 import { Element } from '../elements'
 import Colors from '../../styles/colors.module.scss'
