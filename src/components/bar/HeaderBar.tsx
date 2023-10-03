@@ -38,7 +38,7 @@ const HeaderBar = (props: Props) => {
         )}
         <span onClick={() => props.back?.(true)}>{props.title}</span>
       </div>
-      {!props.isMobile && props.children}
+      {props.children}
     </div>
   )
 }

@@ -7,10 +7,13 @@ import Close from './icons/Close'
 import Depth from './icons/Depth'
 import Gear from './icons/Gear'
 import Hamburger from './icons/Hamburger'
+import Login from './icons/Login'
+import Logout from './icons/Logout'
 import Plus from './icons/Plus'
 import Right from './icons/Right'
 import Search from './icons/Search'
 import Setting from './icons/Setting'
+import Signup from './icons/Signup'
 
 export interface IconProps {
   size: 'big' | 'medium' | 'small' | 'custom'
@@ -75,6 +78,12 @@ const Element = (props: ElementProps) => {
         return <Search {...props} />
       case 'Setting':
         return <Setting {...props} />
+      case 'Login':
+        return <Login {...props} />
+      case 'Logout':
+        return <Logout {...props} />
+      case 'Signup':
+        return <Signup {...props} />
       default:
         return null
     }
