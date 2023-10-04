@@ -1717,13 +1717,16 @@ const Ht = (e) => {
     /* @__PURE__ */ t("div", { onClick: e.close, children: /* @__PURE__ */ t(_e, { opacity: 0.5, isOpen: e.isOpen }) })
   ] });
 };
-const Ut = (e) => /* @__PURE__ */ d("div", { className: "notification", children: [
-  e.children,
-  /* @__PURE__ */ d("div", { className: "info", style: { height: e.height }, children: [
-    /* @__PURE__ */ t($, { name: "Caution", size: "small", color: E.grey_bbb }),
-    /* @__PURE__ */ t("span", { children: e.text })
-  ] })
-] });
+const Ut = (e) => {
+  const n = e.color ?? E.white;
+  return /* @__PURE__ */ d("div", { className: "notification", children: [
+    e.children,
+    /* @__PURE__ */ d("div", { className: "info", style: { height: e.height, color: n }, children: [
+      /* @__PURE__ */ t($, { name: "Caution", size: "small", color: E.grey_bbb }),
+      /* @__PURE__ */ t("span", { children: e.text })
+    ] })
+  ] });
+};
 const Yt = (e) => {
   const n = `${e.ratio * 100}%`;
   return /* @__PURE__ */ t("div", { className: "image-wrapper", style: { paddingTop: n }, children: /* @__PURE__ */ t("img", { className: "ratio-img", src: e.imageUrl }) });

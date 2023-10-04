@@ -3,7 +3,7 @@
 .notification {
   padding: 16px;
   border-radius: 8px;
-  background-color: color('white');
+  // background-color: color('white');
   & > .info {
     padding: 16px;
     // height:250px;
@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    background-color: color('bg_noti');
+    // background-color: color('bg_noti');
     border-radius: inherit;
     & > span {
       color: color('grey_999');

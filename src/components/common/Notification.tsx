@@ -6,12 +6,14 @@ interface NotifiCationProps {
   text?: string
   title?: string
   height?: string
+  color?: string
 }
 const NotifiCation = (props: NotifiCationProps) => {
+  const color = props.color ?? Colors.white
   return (
     <div className="notification">
       {props.children}
-      <div className="info" style={{ height: props.height }}>
+      <div className="info" style={{ height: props.height, color }}>
         <Element name="Caution" size="small" color={Colors.grey_bbb} />
         <span>{props.text}</span>
       </div>
