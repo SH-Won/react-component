@@ -63,7 +63,7 @@ const ToggleBar = <T extends BaseProps>({
       width,
       transform: `translate(${moveLeft - 1}px)`,
     })
-  }, [screen])
+  }, [screen, bar.current?.children])
   return (
     <div className="toggle-bar" ref={bar}>
       {items.map((item) => (
