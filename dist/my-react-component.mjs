@@ -1841,13 +1841,17 @@ const Zt = (e) => {
   ] });
 };
 const ye = (e) => {
-  const n = H(null), [a, l] = p(location.pathname), c = (f) => {
-    var s;
-    ((s = n.current) == null ? void 0 : s.contains(f.target)) || e(), l((u) => u !== location.pathname ? (e(), location.pathname) : u);
-  };
-  return ae(() => (window.addEventListener("click", c), () => {
-    window.removeEventListener("click", c);
-  }), []), {
+  const n = H(null), [a, l] = p("");
+  return ae(() => {
+    l(location.pathname);
+    const c = (f) => {
+      var s;
+      ((s = n.current) == null ? void 0 : s.contains(f.target)) || e(), l((u) => u !== location.pathname ? (e(), location.pathname) : u);
+    };
+    return window.addEventListener("click", c), () => {
+      window.removeEventListener("click", c);
+    };
+  }, []), {
     ref: n
   };
 }, Jt = ({ title: e, children: n, border: a }) => {
