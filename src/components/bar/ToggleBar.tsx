@@ -1,5 +1,5 @@
 // import { useBreakPoints } from '@/hooks'
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import './styles/ToggleBar.scss'
 // popular toprated trending
 // api endpoint 가 각각 달라서
@@ -35,9 +35,10 @@ const ToggleBar = <T extends BaseProps>({
   const bar = useRef<HTMLDivElement>(null)
   const [selected, setSelected] = useState<number>(0)
   const [backgroundStyle, setBackgroundStyle] = useState<{
-    width: number
-    transform: string
-  }>({ width: 0, transform: '' })
+    width: string
+    transform?: string
+    transition: string
+  }>({ width: '', transform: '', transition: '' })
 
   const onSelelctItem = (item: T) => {
     if (selected === item.order) return
@@ -48,10 +49,11 @@ const ToggleBar = <T extends BaseProps>({
         .left as number) - left
     setSelected(item.order)
     onSelect?.(item)
-    setBackgroundStyle({
-      width: width,
+    setBackgroundStyle((prev) => ({
+      width: `${width}px`,
       transform: `translate(${moveLeft - 1}px)`,
-    })
+      transition: 'transform 0.5s ease',
+    }))
   }
   useLayoutEffect(() => {
     const width = bar.current?.children[selected].clientWidth as number
@@ -60,15 +62,19 @@ const ToggleBar = <T extends BaseProps>({
       (bar.current?.children[selected].getBoundingClientRect().left as number) -
       left
     setBackgroundStyle({
-      width,
+      width: `${width}px`,
       transform: `translate(${moveLeft - 1}px)`,
+      transition: '',
     })
   }, [screen, bar.current?.children])
   return (
     <div className="toggle-bar" ref={bar}>
       {items.map((item) => (
         <div
-          className={`toggle-item ${selected === item.order ? 'selected' : ''}`}
+          className={`toggle-item ${screen} ${
+            selected === item.order ? 'selected' : ''
+          }`}
+          style={{}}
           key={item.id}
           onClick={() => onSelelctItem(item)}
         >
