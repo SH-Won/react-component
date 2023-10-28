@@ -1,3 +1,4 @@
+import { useBreakPoints } from '@/util'
 import type { Meta, StoryObj } from '@storybook/react'
 import ToggleBar from '../ToggleBar'
 
@@ -21,7 +22,9 @@ interface ItemType {
 const meta: Meta<typeof ToggleBar> = {
   title: 'Bar',
   component: (props) => {
-    return <ToggleBar<ItemType> {...props} />
+    const { breakPointsClass } = useBreakPoints()
+
+    return <ToggleBar<ItemType> {...props} screen={breakPointsClass} />
   },
 }
 export default meta

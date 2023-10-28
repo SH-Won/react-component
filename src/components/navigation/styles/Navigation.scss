@@ -2,8 +2,9 @@
 .navigation {
   z-index:10000;
   &.fixed {
-    position:fixed;
+    position:sticky;
     width:100%;
+    top:0
   }
   & > .navigation-drawer {
     z-index:100;
@@ -34,6 +35,8 @@
       display:flex;
       flex-direction: column;
       // gap:8px;
+      // justify-content: space-between;
+      height: 70vh;
       padding:16px 16px;
       user-select: none;
     }

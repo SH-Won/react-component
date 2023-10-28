@@ -1,5 +1,5 @@
 import { useCloseEvent } from '../../util/hook'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HeaderBar } from '../bar'
 import { Element } from '../elements'
 import Colors from '../../styles/colors.module.scss'
@@ -11,7 +11,8 @@ interface NavigationProps {
   iconColor?: string
   backgroundColor?: string
   back: ((isMain: boolean) => void) | undefined
-  children?: JSX.Element | JSX.Element[] | string
+  // children?: JSX.Element | JSX.Element[] | string
+  children?: JSX.Element[]
   fixed?: boolean
 }
 const Navigation = (props: NavigationProps) => {
@@ -42,13 +43,17 @@ const Navigation = (props: NavigationProps) => {
     <>
       <div
         className={`navigation ${props.fixed ? 'fixed' : ''}`}
-        ref={navigation}
         style={style}
+        ref={navigation}
       >
         <HeaderBar {...props} openDrawer={openDrawer}>
-          {props.children}
+          {!props.isMobile ? props.children : props.children![1]}
         </HeaderBar>
-        <div className={`navigation-drawer ${open ? 'show' : ''}`}>
+        <div
+          className={`navigation-drawer ${
+            open && props.isMobile ? 'show' : ''
+          }`}
+        >
           <div className="navigation-drawer-close" onClick={closeFunc}>
             <Element
               name="Close"
@@ -56,9 +61,11 @@ const Navigation = (props: NavigationProps) => {
               color={props.iconColor ?? Colors.grey_111}
             />
           </div>
-          <div className="navigation-drawer-items">{props.children}</div>
+          <div className="navigation-drawer-items">{props.children![0]}</div>
         </div>
-        {open && <div onClick={closeFunc} className="navigation-overlay"></div>}
+        {open && props.isMobile && (
+          <div onClick={closeFunc} className="navigation-overlay"></div>
+        )}
       </div>
       {/* {open && <div className="navigation-overlay"></div>} */}
     </>

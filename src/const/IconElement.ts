@@ -1,8 +1,7 @@
-import { Element } from "@/types/Element";
-import { Colors } from "..";
+import { Element } from '@/types/Element'
+import { Colors } from '..'
 
-
-export const bigElements : Element[] = [
+export const bigElements: Element[] = [
   {
     name: 'Adult',
     color: Colors.grey_111,
@@ -51,12 +50,24 @@ export const bigElements : Element[] = [
     name: 'Setting',
     color: Colors.grey_111,
   },
-].map(element => ({
+  {
+    name: 'Login',
+    color: Colors.grey_111,
+  },
+  {
+    name: 'Logout',
+    color: Colors.grey_111,
+  },
+  {
+    name: 'Signup',
+    color: Colors.grey_111,
+  },
+].map((element) => ({
   ...element,
-  size : 'big'
-})) as Element []
+  size: 'big',
+})) as Element[]
 
-export const mediumElements : Element[] = [
+export const mediumElements: Element[] = [
   {
     name: 'Adult',
     color: Colors.grey_111,
@@ -105,9 +116,21 @@ export const mediumElements : Element[] = [
     name: 'Setting',
     color: Colors.grey_111,
   },
-].map(element => ({
+  {
+    name: 'Login',
+    color: Colors.grey_111,
+  },
+  {
+    name: 'Logout',
+    color: Colors.grey_111,
+  },
+  {
+    name: 'Signup',
+    color: Colors.grey_111,
+  },
+].map((element) => ({
   ...element,
-  size : 'medium'
+  size: 'medium',
 })) as Element[]
 
 export const smallElements: Element[] = [
@@ -159,7 +182,19 @@ export const smallElements: Element[] = [
     name: 'Setting',
     color: Colors.grey_111,
   },
-].map(element => ({
+  {
+    name: 'Login',
+    color: Colors.grey_111,
+  },
+  {
+    name: 'Logout',
+    color: Colors.grey_111,
+  },
+  {
+    name: 'Signup',
+    color: Colors.grey_111,
+  },
+].map((element) => ({
   ...element,
-  size : 'small'
+  size: 'small',
 })) as Element[]

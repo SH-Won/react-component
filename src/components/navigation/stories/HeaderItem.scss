@@ -1,0 +1,45 @@
+@import '../../../styles//typeface.module.scss';
+@import '../../../styles/colors.module.scss';
+// HeaderItemList.tsx
+
+.header-items {
+  display: flex;
+  flex-direction: row;
+  &.mobile {
+    flex-direction: column;
+  }
+}
+.user-button-container {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+  // &.mobile {
+  //   justify-content: center;
+  //   align-items: flex-end;
+  //   // padding-bottom: 24px;
+  // }
+}
+
+.header-item {
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+  & > .title {
+    @include typeface('Paragraph_1_b');
+  }
+  & > .option-container {
+    position: absolute;
+    width: 90px;
+    top: 100%;
+    .mobile & {
+      position: unset;
+      top: unset;
+    }
+  }
+  .mobile & {
+    min-width: 130px;
+  }
+}

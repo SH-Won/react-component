@@ -20,5 +20,6 @@ export const Notification: Story = {
     text: '알 수 없는 이유로 데이터를 불러 올 수 없습니다.',
     title: '',
     height: '',
+    color: 'transparent',
   },
 }
