@@ -55,7 +55,9 @@ const ToggleBar = <T extends BaseProps>({
       transition: 'transform 0.5s ease',
     }))
   }
-  useLayoutEffect(() => {
+
+  useEffect(() => {
+    if (!bar.current?.children.length) return
     const width = bar.current?.children[selected].clientWidth as number
     const left = bar.current?.getBoundingClientRect().left as number
     const moveLeft =

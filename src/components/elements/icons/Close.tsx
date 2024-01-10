@@ -1,4 +1,4 @@
-import { IconProps } from "../Element"
+import { IconProps } from '../Element'
 
 const Close = (props : IconProps) => {
   const size = props.size === 'big' ? '30' : props.size === 'medium' ? '24' : '20'
