@@ -1,6 +1,10 @@
+import { ElementName } from '@/types/Element'
 import { lazy, Suspense } from 'react'
 import Adult from './icons/Adult'
 import ArrowLeft from './icons/ArrowLeft'
+import CalenderNext from './icons/CalenderNext'
+import CalenderPrev from './icons/CalenderPrev'
+import CalenderSelect from './icons/CalenderSelect'
 import Caution from './icons/Caution'
 import Check from './icons/Check'
 import Close from './icons/Close'
@@ -20,7 +24,7 @@ export interface IconProps {
   color?: string
 }
 interface ElementProps extends IconProps {
-  name: string
+  name: ElementName
 }
 const Element = (props: ElementProps) => {
   // const iconComponent = async () => {
@@ -84,6 +88,12 @@ const Element = (props: ElementProps) => {
         return <Logout {...props} />
       case 'Signup':
         return <Signup {...props} />
+      case 'CalenderPrev':
+        return <CalenderPrev />
+      case 'CalenderNext':
+        return <CalenderNext />
+      case 'CalenderSelect':
+        return <CalenderSelect />
       default:
         return null
     }

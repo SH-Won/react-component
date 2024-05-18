@@ -1,0 +1,68 @@
+// caption {
+//   position: absolute;
+//   font-size: 0;
+//   left: -99999px;
+// }
+.table-wrapper {
+  position: relative;
+  padding-top: 24px;
+  & .table-box {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
+.medichis-table {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+  color: #242424;
+  font-size: 12px;
+
+  &.scroll thead tr {
+    position: absolute;
+    top: 0;
+  }
+  tr {
+    display: inline-table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  th {
+    height: 24px;
+    background-color: #dbdbdb;
+    font-weight: 600;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+  }
+  tr td {
+    height: 34px;
+    border-bottom: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 4px;
+  }
+  th,
+  td {
+    text-align: center;
+    &.left {
+      text-align: left;
+    }
+    &.right {
+      text-align: right;
+    }
+  }
+  tbody tr {
+    display: table-row;
+  }
+  .empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    border-bottom: 1px solid #dbdbdb;
+    box-sizing: border-box;
+  }
+}

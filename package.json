@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "@storybook/react": "^7.0.5",
+    "date-fns": "^3.6.0",
     "react": "^18.2.0",
+    "react-datepicker": "^6.9.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.5"
   },
@@ -29,6 +31,7 @@
     "@types/prettier": "^2",
     "@types/prop-types": "^15",
     "@types/react": "^18.0.28",
+    "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
