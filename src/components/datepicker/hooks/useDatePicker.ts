@@ -1,8 +1,5 @@
 import { useState } from "react"
 
-// interface IUseDatePickerProps {
-//   initialDate
-// }
 const useDatePicker = (initialDate : Date | null) => {
   const [date, setDate] = useState(initialDate)
   const handleChange = (changeDate : Date | null) => {
@@ -16,4 +13,4 @@ const useDatePicker = (initialDate : Date | null) => {
 
 
 
-export {useDatePicker}
+export { useDatePicker }

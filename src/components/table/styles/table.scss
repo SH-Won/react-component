@@ -6,9 +6,12 @@
 .table-wrapper {
   position: relative;
   padding-top: 24px;
+  overflow: hidden;
   & .table-box {
+    // overflow: auto;
+    // overflow-x: hidden;
     overflow: auto;
-    overflow-x: hidden;
+    height: 100%;
   }
 }
 .medichis-table {
@@ -19,12 +22,21 @@
   color: #242424;
   font-size: 12px;
 
-  &.scroll thead tr {
-    position: absolute;
-    top: 0;
+  &.scroll {
+    thead tr {
+      position: absolute;
+      top: 0;
+    }
+    tr {
+      display: inline-table;
+    }
+    tbody tr {
+      display: table-row;
+    }
   }
+
   tr {
-    display: inline-table;
+    // display: inline-table;
     width: 100%;
     table-layout: fixed;
   }
@@ -54,9 +66,9 @@
       text-align: right;
     }
   }
-  tbody tr {
-    display: table-row;
-  }
+  // tbody tr {
+  //   display: table-row;
+  // }
   .empty {
     display: flex;
     align-items: center;

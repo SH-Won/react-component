@@ -16,3 +16,6 @@ export interface IScrollTableProps<T> extends ITableHeaderProps, ITableBodyProps
   column: number
   scrollHeight: number
 }
+export interface IBasicTableProps<T> extends ITableHeaderProps, ITableBodyProps<T> {
+  column : number
+}

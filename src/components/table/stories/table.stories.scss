@@ -1,0 +1,16 @@
+.stories__table__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.stories__table__wrapper {
+  width: 100%;
+  height: 70%;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.stories__table__test-warpper {
+}
