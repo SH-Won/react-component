@@ -22,7 +22,7 @@ const InfiniteScrollTableLayout = ({
     if (!isScrollable) {
       scrollElement.current?.scrollTo(0, 0)
     }
-  }, [scrollElement.current])
+  }, [isScrollable])
   return (
     <div className="table-wrapper">
       <div
