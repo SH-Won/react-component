@@ -1,8 +1,9 @@
-import { useMemo } from 'react'
+import { useLayoutEffect, useMemo } from 'react'
 
 interface IScrollTableLayoutProps {
   scrollHeight?: number
   children: JSX.Element | JSX.Element[]
+  isScrollable?: boolean
 }
 const ScrollTableLayout = ({
   scrollHeight,

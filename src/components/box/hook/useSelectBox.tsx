@@ -1,0 +1,2 @@
+const useSelectBox = () => {}
+export { useSelectBox }

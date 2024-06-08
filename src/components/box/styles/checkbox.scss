@@ -1,0 +1,113 @@
+// font-family: 'NanumGothic', sans-serif;
+//     color: #242424;
+//     font-size: 12px;
+//     line-height: 1.5;
+.medhichis-checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // & > .medichis-checkbox + label {
+  //   line-height: 16px;
+  //   display: inline-block;
+  //   height: 100%;
+  //   vertical-align: text-bottom;
+  // }
+  & > .medichis-checkbox + label::before {
+    // transform: unset;
+    // top: 0;
+    // left: 0;
+  }
+}
+.medichis-checkbox {
+  margin: 0;
+  display: none;
+}
+.medichis-checkbox + label {
+  position: relative;
+  // display: block;
+  // width: 100%;
+  cursor: pointer;
+  // line-height: 14px; // 높이조절
+  user-select: none; // 사이즈는 absoulte padding-left 로 나눠야함
+  // padding-left: 18px;
+  line-height: 16px;
+  padding-left: 18px;
+  &::before {
+    width: 14px;
+    height: 14px;
+    font-size: 16px;
+  }
+  & > span {
+    // line-height: 16px;
+    // display: inline-block;
+    // height: 100%;
+    vertical-align: text-bottom;
+  }
+  &.small {
+    // width: 12px;
+    // height: 12px;
+    line-height: 12px;
+    padding-left: 15px;
+    // font-size: 14px; // typeface 추후 필수
+    &::before {
+      width: 12px;
+      height: 12px;
+    }
+    & > span {
+      font-size: 14px;
+    }
+  }
+  &.medium {
+    // width: 14px;
+    // height: 14px;
+    line-height: 16px;
+    padding-left: 18px;
+    // font-size: 16px; // typeface 추후 필수
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+    & > span {
+      font-size: 15px;
+    }
+  }
+  &.big {
+    // width: 16px;
+    // height: 16px;
+    line-height: 17px;
+    padding-left: 20px;
+    // font-size: 18px; // typeface 추후 필수
+    &::before {
+      width: 16px;
+      height: 16px;
+    }
+    & > span {
+      font-size: 17px;
+    }
+  }
+}
+// .medichis-checkbox + label::before {
+//   width: 14px;
+//   height: 14px;
+//   top: 50%;
+//   left: 50%;
+// }
+
+.medichis-checkbox + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: 1px solid #6d6d6d;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+.medichis-checkbox:checked + label::before {
+  // width: 14px;
+  // height: 14px;
+  background: #0078d7 url("../../../images/ico_checkbox.svg") center center no-repeat;
+  background-size: 85% 75%;
+  border: 1px solid #0078d7;
+}
