@@ -1,0 +1,9 @@
+.checkbox-stories-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

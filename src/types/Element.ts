@@ -20,3 +20,6 @@ export type ElementName =
   | 'Login'
   | 'Logout'
   | 'Signup'
+  | 'CalenderNext'
+  | 'CalenderPrev'
+  | 'CalenderSelect'
